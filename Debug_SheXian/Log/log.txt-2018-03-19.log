@@ -1,0 +1,193 @@
+2018-03-19 08:48:08,881 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 08:48:08,893 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 08:48:08,894 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19
+2018-03-19 08:48:14,909 ERROR Form1 trnWruteData1:字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.ZdFT_Packet.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\ZdFT_Packet.cs:行号 166
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 581
+2018-03-19 08:48:14,953 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 08:48:14,954 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 08:48:14,954 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19
+2018-03-19 08:48:14,965 ERROR Form1 trnWruteData1:字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.ZdFT_Packet.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\ZdFT_Packet.cs:行号 166
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 581
+2018-03-19 08:48:19,374 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 08:48:19,375 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 08:48:19,377 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19
+2018-03-19 08:48:19,409 ERROR Form1 trnWruteData1:字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.ZdFT_Packet.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\ZdFT_Packet.cs:行号 166
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 581
+2018-03-19 08:48:24,383 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 08:48:24,384 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 08:48:24,385 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19
+2018-03-19 08:48:24,414 ERROR Form1 trnWruteData1:字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.ZdFT_Packet.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\ZdFT_Packet.cs:行号 166
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 581
+2018-03-19 08:48:29,393 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 08:48:29,393 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 08:48:29,394 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19
+2018-03-19 08:48:29,410 ERROR Form1 trnWruteData1:字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.ZdFT_Packet.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\ZdFT_Packet.cs:行号 166
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 581
+2018-03-19 08:48:38,173 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 08:48:38,174 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 08:48:38,174 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19
+2018-03-19 08:48:38,184 ERROR Form1 trnWruteData1:字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.ZdFT_Packet.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\ZdFT_Packet.cs:行号 166
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 581
+2018-03-19 08:50:49,221 INFO  Form1 tmrGetNeedSend_Tick:1
+2018-03-19 08:50:49,221 ERROR Form1 队列长度：0,要新增：1
+2018-03-19 08:50:49,222 INFO  Form1 要新增:1200000011308000017090132-----2018-03-19
+2018-03-19 08:50:49,223 DEBUG Form1 增加列表1200000011308000017090132
+2018-03-19 08:50:51,424 INFO  Form1 新增后队列长度：1
+2018-03-19 09:11:51,955 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:11:51,958 INFO  Form1 断开连接，不能重新连接，重新初始化：03-19 09:11:51----：sockets:0---register:0
+
+
+2018-03-19 09:12:02,907 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:07,810 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:12,825 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:17,832 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:22,835 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:27,886 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:32,851 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:37,861 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:42,871 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:47,876 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:52,882 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:12:57,890 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:02,903 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:07,908 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:12,961 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:17,919 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:23,019 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:27,942 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:32,945 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:37,949 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:42,960 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:47,973 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:52,981 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:13:57,980 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:02,991 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:07,997 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:13,002 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:18,010 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:23,017 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:28,030 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:33,108 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:38,046 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:43,107 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:48,059 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:53,074 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:14:58,071 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:03,075 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:08,089 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:13,101 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:18,102 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:23,115 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:28,122 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:33,127 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:38,159 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:43,149 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:48,148 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:53,162 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:15:58,174 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:03,173 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:08,179 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:13,188 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:18,194 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:23,210 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:28,206 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:33,217 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:38,231 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:43,238 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:48,257 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:53,248 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:16:58,253 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:03,235 INFO  Form1 断开连接，不能重新连接，重新初始化：03-19 09:17:03----：sockets:0---register:0
+
+
+2018-03-19 09:17:13,821 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:18,728 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:23,735 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:28,744 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:33,748 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:38,763 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:43,798 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:48,769 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:53,777 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:17:58,849 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:03,863 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:08,802 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:13,809 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:18,815 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:23,825 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:28,830 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:33,844 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:38,848 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:43,865 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:48,866 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:53,867 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:18:58,888 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:03,891 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:08,969 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:13,908 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:18,914 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:23,912 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:28,925 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:33,932 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:38,941 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:43,952 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:48,962 INFO  Form1 tmrGetNeedSend_Tick:0
+2018-03-19 09:19:53,963 INFO  Form1 tmrGetNeedSend_Tick:0
+
+2018-03-19 10:52:52,189 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 10:52:52,197 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 10:52:52,198 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19
+2018-03-19 10:53:10,737 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 10:53:11,877 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 10:53:16,372 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19
+2018-03-19 11:09:45,333 INFO  Form1 tmrGetNeedSend_Tick:1
+2018-03-19 11:09:46,202 ERROR Form1 队列长度：0,要新增：1
+2018-03-19 11:09:48,659 INFO  Form1 要新增:1200000011380020017090489-----2018-03-19
+2018-03-19 11:13:44,802 DEBUG Form1 增加列表1200000011380020017090489
+2018-03-19 11:18:48,985 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 11:18:50,581 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 11:19:07,778 INFO  Form1 要新增:120000001130409undefined,-----2018-03-19
+2018-03-19 11:20:14,977 ERROR Form1 trnWruteData1:2000--字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.ZdFT_Packet.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\ZdFT_Packet.cs:行号 166
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 592
+2018-03-19 11:20:21,210 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 11:20:22,972 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 11:20:33,557 INFO  Form1 要新增:120000001130409undefined,-----2018-03-19
+2018-03-19 11:20:35,867 ERROR Form1 trnWruteData1:2000--字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.ZdFT_Packet.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\ZdFT_Packet.cs:行号 166
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 592
+2018-03-19 11:20:41,692 INFO  Form1 tmrGetNeedSend_Tick:2
+2018-03-19 11:20:41,692 ERROR Form1 队列长度：0,要新增：2
+2018-03-19 11:25:18,306 INFO  Form1 要新增:120000001130409undefined,-----2018-03-19
+2018-03-19 11:25:32,748 DEBUG Form1 增加列表120000001130409undefined,
+2018-03-19 11:25:45,094 INFO  Form1 要新增:1200000011320000017090489-----2018-03-19

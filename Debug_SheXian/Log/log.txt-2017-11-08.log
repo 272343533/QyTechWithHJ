@@ -1,0 +1,51 @@
+2017-11-08 00:59:12,261 ERROR Form1 tmrGetNeedSend_Tick:0
+2017-11-08 00:59:23,607 ERROR ZdFT_Packet ReadData.Parse偏移量和长度超出数组的界限，或者计数大于从索引到源集合结尾处的元素数量。
+2017-11-08 00:59:24,348 ERROR Form1 tmrGetNeedSend_Tick:0
+2017-11-08 00:59:27,153 ERROR Form1 tmrGetNeedSend_Tick:0
+2017-11-08 22:24:35,385 ERROR frmstart JX 的新实例
+2017-11-08 22:24:36,290 INFO  frmstart load start:24:36
+2017-11-08 22:25:20,712 ERROR frmstart 13600110001---值不能为 null。
+参数名: type
+2017-11-08 22:25:21,231 INFO  frmstart 在线数量：0
+2017-11-08 22:25:21,432 INFO  frmstart 计讯联接的dtu数量是：0个
+2017-11-08 22:25:29,612 ERROR Error-GetBySql 序列包含一个以上的元素
+2017-11-08 22:25:33,228 ERROR frmstart SendCommand:--errPos:902013311112222-0103000000070408
+2017-11-08 22:25:33,230 ERROR frmstart SendCommand:--errPos:902013922220002-0103000000070408
+2017-11-08 22:25:33,232 ERROR frmstart SendCommand:--errPos:902013600000000-01030000002B05D5
+2017-11-08 22:25:33,238 ERROR frmstart SendCommand:--errPos:902013866668888-01030000002B05D5
+2017-11-08 22:25:33,241 ERROR frmstart SendCommand:--errPos:902013866889999-01030000002B05D5
+2017-11-08 22:25:48,736 ERROR frmstart 没有配置气象数据:13300050111
+2017-11-08 22:25:48,737 ERROR frmstart 没有配置气象数据:13300050113
+2017-11-08 22:25:48,737 ERROR frmstart 没有配置气象数据:13300050114
+2017-11-08 22:25:48,738 ERROR frmstart 没有配置气象数据:13300050115
+2017-11-08 22:25:48,746 ERROR frmstart 没有配置气象数据:13300050116
+2017-11-08 22:25:48,749 ERROR frmstart 没有配置气象数据:13300050117
+2017-11-08 22:25:48,750 ERROR frmstart 没有配置气象数据:13300050118
+2017-11-08 22:25:48,750 ERROR frmstart 没有配置气象数据:13300050119
+2017-11-08 22:25:48,751 ERROR frmstart 没有配置气象数据:13900110110
+2017-11-08 22:25:49,242 ERROR Error-CreateWeatDownCommand 未将对象引用设置到对象的实例。
+2017-11-08 22:25:49,391 ERROR Error-CreateWeatDownCommand 未将对象引用设置到对象的实例。
+2017-11-08 22:25:50,061 ERROR frmstart 没有配置气象数据:13300040010
+2017-11-08 22:25:50,062 ERROR frmstart 没有配置气象数据:13300040011
+2017-11-08 22:25:50,258 ERROR Error-CreateWeatDownCommand 值不能为 null。
+参数名: type
+2017-11-08 22:25:50,429 ERROR Error-CreateWeatDownCommand 值不能为 null。
+参数名: type
+2017-11-08 22:25:50,610 WARN  frmstart 启动计讯服务(Port=6012)无法在 DLL“gprsdll.dll”中找到名为“DLLStartService”的入口点。
+2017-11-08 22:25:50,697 ERROR frmstart start gprs文本长度必须少于 64 个字符。
+参数名: Text
+实际值是 (6002 默认服务已启动);计讯服务6012已启动计讯6012启动失败:无法在 DLL“gprsdll.dll”中找到名为“DLLStartService”的入口点。。
+2017-11-08 22:25:50,699 INFO  frmstart load end:25:50
+2017-11-08 22:25:50,700 ERROR frmstart 没有配置气象数据:13600100001
+2017-11-08 22:25:50,833 ERROR Error-CreateWeatDownCommand 索引超出了数组界限。
+2017-11-08 22:25:50,882 INFO  frmstart 在线数量：0
+2017-11-08 22:25:50,958 INFO  frmstart 计讯联接的dtu数量是：0个
+2017-11-08 22:25:50,983 ERROR Error-CreateWeatDownCommand 值不能为 null。
+参数名: type
+2017-11-08 22:25:51,062 ERROR Error-CreateWeatDownCommand 索引超出了数组界限。
+2017-11-08 22:25:51,102 ERROR Error-CreateWeatDownCommand 值不能为 null。
+参数名: type
+2017-11-08 22:25:57,048 INFO  frmstart 在线数量：0
+2017-11-08 22:25:57,116 INFO  frmstart 计讯联接的dtu数量是：0个
+2017-11-08 22:26:04,761 WARN  frmstart 停止计讯服务:服务尚未启动
+2017-11-08 22:27:11,729 INFO  frmstart 准备解析包:date:2017-11-08 22:26:04;src:13600070001;长度:43- data:010326000000000000012C012C001E001E000000000000000000000000000000004270000041F00000D116

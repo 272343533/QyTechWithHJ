@@ -1,0 +1,50 @@
+2017-11-06 12:06:15,351 ERROR frmstart JX 的新实例
+2017-11-06 12:06:16,014 INFO  frmstart load start:06:15
+2017-11-06 12:06:58,310 INFO  frmstart 在线数量：0
+2017-11-06 12:06:58,575 INFO  frmstart 计讯联接的dtu数量是：0个
+2017-11-06 12:07:11,649 ERROR Error-GetBySql 序列包含一个以上的元素
+2017-11-06 12:07:16,266 INFO  frmstart 在线数量：0
+2017-11-06 12:07:16,325 INFO  frmstart 计讯联接的dtu数量是：0个
+2017-11-06 12:08:01,293 ERROR frmstart SendCommand:--errPos:902013311112222-0103000000070408
+2017-11-06 12:08:01,296 ERROR frmstart SendCommand:--errPos:902013922220002-0103000000070408
+2017-11-06 12:08:01,296 ERROR frmstart SendCommand:--errPos:902013600000000-01030000002B05D5
+2017-11-06 12:08:01,298 ERROR frmstart SendCommand:--errPos:902013866668888-01030000002B05D5
+2017-11-06 12:08:01,298 ERROR frmstart SendCommand:--errPos:902013866889999-01030000002B05D5
+2017-11-06 12:08:07,799 ERROR frmstart 没有配置气象数据:13300050111
+2017-11-06 12:08:07,815 ERROR frmstart 没有配置气象数据:13300050113
+2017-11-06 12:08:07,815 ERROR frmstart 没有配置气象数据:13300050114
+2017-11-06 12:08:07,861 ERROR frmstart 没有配置气象数据:13300050115
+2017-11-06 12:08:07,861 ERROR frmstart 没有配置气象数据:13300050116
+2017-11-06 12:08:07,861 ERROR frmstart 没有配置气象数据:13300050117
+2017-11-06 12:08:07,861 ERROR frmstart 没有配置气象数据:13300050118
+2017-11-06 12:08:07,861 ERROR frmstart 没有配置气象数据:13300050119
+2017-11-06 12:08:07,861 ERROR frmstart 没有配置气象数据:13900110110
+2017-11-06 12:08:08,688 ERROR Error-CreateWeatDownCommand 未将对象引用设置到对象的实例。
+2017-11-06 12:08:08,949 ERROR Error-CreateWeatDownCommand 未将对象引用设置到对象的实例。
+2017-11-06 12:08:09,224 WARN  frmstart 启动计讯服务(Port=6012)无法在 DLL“gprsdll.dll”中找到名为“DLLStartService”的入口点。
+2017-11-06 12:08:09,327 ERROR frmstart start gprs文本长度必须少于 64 个字符。
+参数名: Text
+实际值是 (6002 默认服务已启动);计讯服务6012已启动计讯6012启动失败:无法在 DLL“gprsdll.dll”中找到名为“DLLStartService”的入口点。。
+2017-11-06 12:08:09,342 INFO  frmstart load end:08:09
+2017-11-06 12:08:09,514 INFO  frmstart 在线数量：0
+2017-11-06 12:08:09,561 INFO  frmstart 计讯联接的dtu数量是：0个
+2017-11-06 12:08:09,670 ERROR frmstart 没有配置气象数据:13300040010
+2017-11-06 12:08:09,670 ERROR frmstart 没有配置气象数据:13300040011
+2017-11-06 12:08:09,795 ERROR Error-CreateWeatDownCommand 值不能为 null。
+参数名: type
+2017-11-06 12:08:09,904 ERROR Error-CreateWeatDownCommand 值不能为 null。
+参数名: type
+2017-11-06 12:08:10,122 ERROR frmstart 没有配置气象数据:13600100001
+2017-11-06 12:08:10,231 ERROR Error-CreateWeatDownCommand 索引超出了数组界限。
+2017-11-06 12:08:10,341 ERROR Error-CreateWeatDownCommand 值不能为 null。
+参数名: type
+2017-11-06 12:08:10,465 ERROR Error-CreateWeatDownCommand 索引超出了数组界限。
+2017-11-06 12:08:10,653 ERROR frmstart 没有配置气象数据:13600110001
+2017-11-06 12:08:24,074 WARN  frmstart 停止计讯服务:服务尚未启动
+2017-11-06 16:33:54,065 ERROR Error-GetByPk 在向服务器发送请求时发生传输级错误。 (provider: Session Provider, error: 19 - 物理连接不可用)
+2017-11-06 16:33:54,338 ERROR Error-GetHandDownCmd 10--13600070002---未将对象引用设置到对象的实例。
+2017-11-06 16:35:15,140 ERROR Error-GetBySql 序列包含一个以上的元素
+2017-11-06 16:35:43,396 ERROR Error-GetBySql 序列包含一个以上的元素
+2017-11-06 16:35:53,615 ERROR Error-GetBySql 序列包含一个以上的元素
+2017-11-06 17:09:31,695 ERROR Error-GetBySql 序列包含一个以上的元素
+2017-11-06 17:25:15,483 ERROR Error-GetBySql 序列包含一个以上的元素

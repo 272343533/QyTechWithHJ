@@ -1,0 +1,25 @@
+2017-11-16 11:57:09,544 ERROR Form1 tmrGetNeedSend_Tick:0
+2017-11-16 11:57:12,591 ERROR Form1 tmrGetNeedSend_Tick:0
+2017-11-16 11:59:14,568 ERROR Form1 tmrGetNeedSend_Tick:1
+2017-11-16 11:59:16,365 ERROR Form1 队列长度：0,要新增：1
+2017-11-16 11:59:18,782 INFO  Form1 要新增:1200000011302090017090080-----2017-11-16
+2017-11-16 11:59:32,093 ERROR Form1 索引超出了数组界限。
+System.IndexOutOfRangeException: 索引超出了数组界限。
+   在 DSC_FTHj1.Write130209.Create(String data) 位置 d:\QyTech\TCPLibrary\ZheDaFTGath\Write130209.cs:行号 34
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 539
+2017-11-16 11:59:42,713 ERROR Form1 tmrGetNeedSend_Tick:1
+2017-11-16 11:59:47,617 ERROR Form1 队列长度：0,要新增：1
+2017-11-16 11:59:47,618 INFO  Form1 要新增:1200000011302090017090080-----2017-11-16
+2017-11-16 12:03:49,654 ERROR Form1 字符串的末尾有其他无法分析的字符。
+System.FormatException: 字符串的末尾有其他无法分析的字符。
+   在 System.ParseNumbers.StringToInt(String s, Int32 radix, Int32 flags, Int32* currPos)
+   在 System.Convert.ToInt16(String value, Int32 fromBase)
+   在 DSC_FTHj1.Write130209.Create(String data)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 539
+2017-11-16 12:03:57,617 ERROR Form1 tmrGetNeedSend_Tick:1
+2017-11-16 12:03:57,619 ERROR Form1 队列长度：0,要新增：1
+2017-11-16 12:03:57,620 INFO  Form1 要新增:1200000011302090017090080-----2017-11-16
+2017-11-16 12:04:51,317 ERROR Form1 tmrGetNeedSend_Tick:0
+2017-11-16 12:05:22,368 ERROR Form1 tmrGetNeedSend_Tick:1
+2017-11-16 12:05:22,369 ERROR Form1 队列长度：0,要新增：1
+2017-11-16 12:05:22,448 INFO  Form1 要新增:1200000011302090017090080-----2017-11-16

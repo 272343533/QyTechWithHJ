@@ -1,0 +1,1376 @@
+2017-10-27 16:46:28,819 ERROR Form1 load device:已添加了具有相同键的项。
+2017-10-27 16:48:29,475 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:35,794 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:35,888 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:36,839 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:37,853 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:38,867 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:39,882 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:40,895 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:41,910 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:42,923 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:43,937 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:44,951 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:45,965 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:46,979 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:47,993 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:49,007 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:50,021 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:51,035 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:52,049 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:53,063 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:54,077 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:55,091 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:56,105 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:57,119 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:58,133 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:48:59,147 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:00,162 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:01,175 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:02,189 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:03,205 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:04,217 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:05,231 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:06,245 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:07,259 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:08,274 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:09,287 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:10,301 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:11,316 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:12,331 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:13,344 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:14,358 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:15,372 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:16,387 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:17,399 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:18,413 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:19,428 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:20,442 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:21,456 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:22,469 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:23,483 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:24,497 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:25,512 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:26,525 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:27,539 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:28,554 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:29,569 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:30,583 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:31,596 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:32,610 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:33,624 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:34,637 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:35,651 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:36,665 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:37,679 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:38,694 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:39,711 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:40,722 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:41,735 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:42,749 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:43,763 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:44,777 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:45,792 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:46,807 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:47,821 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:48,834 ERROR Form1 tmrWriteData_Tick
+2017-10-27 16:49:49,849 ERROR Form1 tmrWriteData_Tick
+2017-10-27 17:10:52,341 ERROR Form1 tmrWriteData_Tick
+2017-10-27 17:10:52,481 INFO  Form1 队列长度：0,要新增：4
+2017-10-27 17:11:06,943 ERROR Form1 tmrWriteData_Tick
+2017-10-27 17:11:07,007 INFO  Form1 队列长度：0,要新增：4
+2017-10-27 17:11:28,120 ERROR Error-GetBySql '0017090771' 附近有语法错误。
+2017-10-27 20:42:13,187 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:42:14,467 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:32,834 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:41,357 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:41,699 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:42,713 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:43,727 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:44,741 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:45,755 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:46,769 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:47,783 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:48,797 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:49,811 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:50,840 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:51,839 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:52,853 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:53,867 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:54,881 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:55,895 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:56,909 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:57,923 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:58,937 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:43:59,951 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:00,965 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:02,150 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:02,993 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:04,007 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:05,021 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:06,035 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:07,049 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:08,063 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:09,077 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:10,091 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:11,105 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:12,119 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:13,133 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:14,147 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:15,161 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:44:16,175 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:51:56,913 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:53:28,763 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:53:36,264 INFO  Form1 队列长度：0,要新增：2
+2017-10-27 20:53:46,999 ERROR Error-GetBySql '0017090670' 附近有语法错误。
+2017-10-27 20:54:02,618 ERROR Error-GetBySql '0017090670' 附近有语法错误。
+2017-10-27 20:58:00,390 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:58:16,138 INFO  Form1 队列长度：0,要新增：24
+2017-10-27 20:59:01,479 INFO  Form1 新增后队列长度：24
+2017-10-27 20:59:01,489 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:13,630 INFO  Form1 队列长度：24,要新增：8
+2017-10-27 20:59:13,631 INFO  Form1 新增后队列长度：24
+2017-10-27 20:59:13,632 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:13,736 INFO  Form1 队列长度：24,要新增：1
+2017-10-27 20:59:13,738 INFO  Form1 新增后队列长度：24
+2017-10-27 20:59:14,530 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:15,544 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:16,558 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:17,574 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:18,588 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:19,601 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:20,615 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:21,630 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:22,643 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:23,657 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:24,671 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:25,685 ERROR Form1 tmrWriteData_Tick
+2017-10-27 20:59:26,700 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:00:20,634 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:00:20,924 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:00:25,903 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:00:25,995 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:00:29,055 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:00:30,051 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:00:31,065 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:02:52,269 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:02:56,007 INFO  Form1 队列长度：0,要新增：4
+2017-10-27 21:03:01,988 INFO  Form1 新增后队列长度：4
+2017-10-27 21:03:01,994 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:03:02,116 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 456
+2017-10-27 21:03:02,206 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:03:04,682 INFO  Form1 队列长度：4,要新增：4
+2017-10-27 21:03:04,682 INFO  Form1 新增后队列长度：4
+2017-10-27 21:03:04,685 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:03:04,774 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 456
+2017-10-27 21:03:04,775 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:03:05,522 INFO  Form1 队列长度：4,要新增：4
+2017-10-27 21:03:05,523 INFO  Form1 新增后队列长度：4
+2017-10-27 21:03:05,524 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:03:42,455 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:03:44,982 INFO  Form1 队列长度：0,要新增：4
+2017-10-27 21:03:49,589 INFO  Form1 新增后队列长度：4
+2017-10-27 21:03:49,598 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:03:50,667 INFO  Form1 队列长度：4,要新增：4
+2017-10-27 21:03:50,668 INFO  Form1 新增后队列长度：4
+2017-10-27 21:03:54,762 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:04:12,976 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:04:54,398 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 456
+2017-10-27 21:04:54,411 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:04:56,571 INFO  Form1 队列长度：4,要新增：7
+2017-10-27 21:09:42,315 INFO  Form1 新增后队列长度：11
+2017-10-27 21:09:45,257 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:09:45,328 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:09:45,332 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:17,676 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:17,821 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:17,822 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:18,080 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:19,094 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:19,157 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:19,192 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:20,108 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:21,122 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:22,137 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:23,151 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:24,165 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:24,192 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:24,193 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:25,179 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:26,193 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:27,207 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:28,221 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:29,178 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:29,209 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:29,235 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:30,249 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:31,263 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:32,277 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:33,291 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:34,183 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:34,214 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:34,305 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:35,319 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:36,333 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:37,346 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:38,360 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:39,187 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:39,238 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:39,375 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:40,389 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:41,403 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:42,417 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:43,431 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:44,199 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:44,227 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:44,445 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:45,459 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:46,473 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:47,487 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:48,501 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:49,203 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:49,237 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:49,515 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:50,529 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:51,543 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:52,557 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:53,571 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:54,211 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:54,253 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:54,585 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:55,599 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:56,612 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:57,627 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:58,641 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:10:59,221 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:10:59,255 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:10:59,655 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:00,669 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:01,683 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:02,698 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:03,712 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:04,226 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:04,275 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:04,726 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:05,739 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:06,754 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:07,767 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:08,783 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:09,234 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:09,278 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:09,796 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:10,809 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:11,823 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:12,837 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:13,852 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:14,242 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:14,284 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:14,866 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:15,880 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:16,894 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:17,908 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:18,922 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:19,249 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:19,330 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:19,936 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:20,950 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:21,965 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:22,978 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:23,991 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:24,256 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:24,293 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:25,006 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:26,019 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:27,034 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:28,047 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:29,062 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:29,264 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:29,302 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:30,075 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:31,089 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:32,104 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:33,118 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:34,132 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:34,272 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:34,328 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:35,147 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:36,159 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:37,174 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:38,187 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:39,201 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:39,285 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:39,325 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:40,215 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:41,229 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:42,243 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:43,258 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:44,272 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:44,304 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:44,333 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:45,285 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:46,300 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:47,313 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:48,327 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:49,298 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:49,334 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:49,342 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:50,356 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:51,370 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:52,384 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:53,398 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:54,303 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:54,347 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:54,413 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:55,426 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:56,440 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:57,453 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:58,467 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:11:59,310 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:11:59,341 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:11:59,481 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:00,495 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:01,510 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:02,523 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:03,537 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:04,317 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:04,354 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:04,552 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:05,566 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:06,579 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:07,594 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:08,608 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:09,326 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:09,366 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:09,622 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:10,636 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:11,650 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:12,664 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:13,678 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:14,334 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:14,361 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:14,692 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:15,706 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:16,719 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:17,734 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:18,748 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:19,341 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:19,379 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:19,761 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:20,776 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:21,789 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:22,803 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:23,817 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:24,349 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:24,398 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:24,832 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:25,846 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:26,860 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:27,874 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:28,888 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:29,357 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:29,389 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:29,902 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:30,916 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:31,930 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:32,944 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:33,963 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:34,368 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:34,446 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:34,972 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:35,985 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:36,999 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:38,013 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:39,028 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:39,372 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:39,419 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:40,041 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:41,055 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:42,070 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:43,084 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:44,108 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:44,381 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:44,412 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:45,112 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:46,126 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:47,140 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:48,154 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:49,168 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:49,389 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:49,424 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:50,182 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:51,196 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:52,210 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:53,224 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:54,238 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:54,393 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:54,429 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:12:55,251 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:56,265 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:57,279 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:58,293 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:59,308 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:12:59,404 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:12:59,457 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:00,322 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:01,336 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:02,350 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:03,364 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:04,378 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:04,409 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:04,438 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:05,392 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:06,406 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:07,420 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:08,434 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:09,420 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:09,448 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:09,449 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:10,462 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:11,476 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:12,490 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:13,504 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:14,424 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:14,469 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:14,517 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:15,531 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:16,545 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:17,560 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:18,574 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:19,432 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:19,467 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:19,588 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:20,602 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:21,616 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:22,630 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:23,644 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:24,440 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:24,466 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:24,658 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:25,672 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:26,687 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:27,700 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:28,714 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:29,448 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:29,504 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:29,728 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:30,742 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:31,756 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:32,770 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:33,783 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:34,457 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:34,494 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:34,798 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:35,812 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:36,826 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:37,840 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:38,855 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:39,464 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:39,499 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:39,868 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:40,883 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:41,897 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:42,910 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:43,924 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:44,470 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:44,512 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:44,938 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:45,952 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:46,966 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:47,981 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:48,995 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:49,477 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:49,521 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:50,008 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:51,022 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:52,037 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:53,051 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:54,064 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:54,487 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:54,527 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:13:55,079 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:56,092 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:57,107 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:58,120 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:59,135 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:13:59,493 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:13:59,531 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:00,148 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:01,163 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:02,176 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:03,190 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:04,204 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:04,500 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:04,535 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:05,219 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:06,233 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:07,247 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:08,260 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:09,275 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:09,509 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:09,547 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:10,290 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:11,303 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:12,317 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:13,330 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:14,344 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:14,516 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:14,543 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:15,358 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:16,372 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:17,387 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:18,401 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:19,414 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:19,524 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:19,585 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:20,428 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:21,443 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:22,456 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:23,470 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:24,484 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:24,535 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:24,565 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:25,498 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:26,513 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:27,527 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:28,541 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:29,539 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:29,589 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:29,591 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:30,570 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:31,583 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:32,597 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:33,611 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:34,552 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:34,587 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:34,624 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:35,638 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:36,653 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:37,666 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:38,681 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:39,555 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:39,584 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:39,695 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:40,708 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:41,722 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:42,736 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:43,750 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:44,565 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:44,599 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:44,765 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:45,779 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:46,793 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:47,808 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:48,821 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:49,570 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:49,604 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:49,835 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:50,849 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:51,863 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:52,876 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:53,890 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:54,582 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:54,613 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:54,904 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:55,918 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:56,933 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:57,946 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:58,961 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:14:59,588 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:14:59,618 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:14:59,975 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:00,989 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:02,004 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:03,017 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:04,031 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:04,593 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:04,627 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:05,045 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:06,059 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:07,073 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:08,087 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:09,101 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:09,604 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:09,634 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:10,115 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:11,129 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:12,142 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:13,156 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:14,170 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:14,608 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:14,637 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:15,184 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:16,198 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:17,212 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:18,226 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:19,241 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:19,620 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:19,654 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:20,255 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:21,269 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:22,283 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:23,297 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:24,311 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:24,625 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:24,672 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:25,325 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:26,339 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:27,353 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:28,367 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:29,381 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:29,634 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:29,664 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:30,395 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:31,409 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:32,422 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:33,436 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:34,450 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:34,638 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:34,678 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:35,464 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:36,479 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:37,493 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:38,507 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:39,521 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:39,648 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:39,679 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:40,535 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:41,549 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:42,563 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:43,577 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:44,591 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:44,654 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:44,697 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:45,605 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:46,619 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:47,633 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:48,647 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:49,661 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:49,699 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:49,701 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:50,675 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:51,688 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:52,702 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:53,716 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:54,669 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:54,702 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:54,731 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:55,745 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:56,759 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:57,773 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:58,787 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:15:59,678 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:15:59,746 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:15:59,801 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:00,815 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:01,830 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:02,847 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:03,857 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:04,684 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:16:04,727 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:16:04,871 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:05,885 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:06,899 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:07,913 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:08,927 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:09,691 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:16:09,727 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:16:09,941 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:10,955 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:11,969 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:12,983 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:13,997 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:14,700 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:16:14,727 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:16:15,012 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:16,026 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:17,039 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:18,054 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:19,068 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:19,711 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:16:19,799 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:16:20,082 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:21,096 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:22,109 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:23,124 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:24,137 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:24,715 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:16:24,765 ERROR Form1 值不能为 null。
+参数名: key
+System.ArgumentNullException: 值不能为 null。
+参数名: key
+   在 System.Collections.Generic.Dictionary`2.FindEntry(TKey key)
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e)
+2017-10-27 21:16:25,152 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:28,251 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:16:31,600 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:19:30,290 INFO  Form1 队列长度：11,要新增：1
+2017-10-27 21:20:34,634 INFO  Form1 队列长度：12,要新增：1
+2017-10-27 21:24:34,874 INFO  Form1 队列长度：13,要新增：1
+2017-10-27 21:26:03,588 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:26:06,570 INFO  Form1 队列长度：0,要新增：1
+2017-10-27 21:29:59,574 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:30:02,368 INFO  Form1 队列长度：0,要新增：1
+2017-10-27 21:34:38,585 INFO  Form1 新增后队列长度：1
+2017-10-27 21:34:38,596 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:34:38,628 ERROR Form1 给定关键字不在字典中。
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 456
+2017-10-27 21:34:38,636 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:42,380 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:42,430 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:34:42,471 ERROR Form1 给定关键字不在字典中。
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 456
+2017-10-27 21:34:43,118 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:44,131 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:45,146 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:45,566 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:34:45,597 ERROR Form1 给定关键字不在字典中。
+System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   在 TCPServer.Form1.tmrWriteData_Tick(Object sender, EventArgs e) 位置 d:\QyTech\TCPServer\Form1.cs:行号 456
+2017-10-27 21:34:46,159 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:47,173 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:48,188 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:49,201 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:50,215 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:34:51,929 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:37:26,836 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:37:26,904 INFO  Form1 队列长度：0,要新增：1
+2017-10-27 21:39:42,596 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:43,294 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:44,308 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:45,322 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:46,336 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:47,350 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:48,365 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:49,379 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:50,394 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:51,407 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:52,423 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:53,435 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:54,449 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:55,464 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:56,477 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:57,490 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:58,505 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:39:59,518 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:00,533 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:01,546 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:02,561 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:03,575 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:04,588 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:05,604 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:06,617 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:07,632 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:08,646 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:09,659 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:10,673 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:11,687 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:12,701 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:13,715 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:14,729 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:15,743 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:16,756 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:17,770 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:18,784 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:19,798 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:20,812 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:21,826 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:22,841 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:23,855 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:24,869 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:25,883 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:26,897 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:27,911 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:28,926 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:29,939 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:30,953 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:31,967 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:32,981 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:33,995 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:35,009 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:36,023 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:37,036 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:38,050 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:39,064 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:40,079 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:41,093 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:42,107 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:43,121 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:44,135 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:45,149 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:46,163 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:47,177 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:48,191 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:49,205 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:50,219 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:51,233 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:52,247 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:53,261 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:54,277 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:55,289 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:40:55,330 INFO  Form1 队列长度：0,要新增：1
+2017-10-27 21:41:20,358 INFO  Form1 新增后队列长度：1
+2017-10-27 21:41:20,362 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:41:20,391 INFO  Form1 队列长度：1,要新增：1
+2017-10-27 21:41:20,392 INFO  Form1 新增后队列长度：1
+2017-10-27 21:41:23,334 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:48:25,440 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:48:25,537 INFO  Form1 队列长度：0,要新增：1
+2017-10-27 21:48:33,896 INFO  Form1 新增后队列长度：1
+2017-10-27 21:48:33,909 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:48:33,937 INFO  Form1 队列长度：1,要新增：1
+2017-10-27 21:48:33,938 INFO  Form1 新增后队列长度：1
+2017-10-27 21:48:35,624 INFO  Form1 tmrWriteData_Tick
+2017-10-27 21:59:26,531 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:26,687 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:27,701 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:28,715 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:29,729 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:30,888 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:31,757 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:32,771 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:33,785 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:34,798 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:35,812 ERROR Form1 tmrWriteData_Tick
+2017-10-27 21:59:36,866 ERROR Form1 tmrWriteData_Tick
+2017-10-27 22:00:55,922 ERROR Form1 tmrWriteData_Tick
+2017-10-27 22:00:56,169 ERROR Form1 tmrWriteData_Tick
+2017-10-27 22:00:57,183 ERROR Form1 tmrWriteData_Tick
+2017-10-27 22:00:58,263 ERROR Form1 tmrWriteData_Tick
+2017-10-27 22:00:59,212 ERROR Form1 tmrWriteData_Tick
+2017-10-27 22:01:00,225 ERROR Form1 tmrWriteData_Tick
+
+2017-10-27 22:22:24,595 ERROR Form1 tmrWriteData_Tick
+2017-10-27 22:22:24,680 INFO  Form1 队列长度：0,要新增：11
+2017-10-27 22:22:47,074 INFO  Form1 新增后队列长度：11
+2017-10-27 22:22:47,081 ERROR Form1 tmrWriteData_Tick
+2017-10-27 22:22:47,111 INFO  Form1 队列长度：11,要新增：11
+2017-10-27 22:22:47,112 INFO  Form1 新增后队列长度：11
+2017-10-27 22:22:52,785 INFO  Form1 tmrWriteData_Tick
+2017-10-27 23:12:26,658 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:27,024 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:28,039 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:29,053 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:30,066 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:31,080 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:32,094 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:33,108 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:34,121 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:35,136 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:36,149 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:37,163 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:38,177 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:39,192 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:40,206 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:41,220 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:42,233 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:43,247 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:44,261 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:45,276 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:46,291 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:47,309 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:48,318 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:49,332 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:50,346 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:51,362 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:52,375 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:12:53,388 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:03,744 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:05,513 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:08,502 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:08,598 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:09,612 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:10,627 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:11,640 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:12,654 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:13,667 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:14,682 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:15,695 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:16,709 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:17,723 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:18,737 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:19,753 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:20,766 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:21,780 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:34,249 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:34,961 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:35,975 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:36,989 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:38,004 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:39,018 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:40,032 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:13:55,556 ERROR Form1 tmrWriteData_Tick
+2017-10-27 23:16:33,732 INFO  Form1 队列长度：0,要新增：50

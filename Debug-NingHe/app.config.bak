@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <!--工程师站-->
+    <!--should modified-->
+    <add key="EsIP" value="192.168.1.101" />
+    <add key="EsDataSource" value="boilerhouseyj" />
+    <add key="EsSqlLogin" value="sa" />
+    <add key="EsSqlPwd" value="1" />
+    <!--should modified-->
+    <add key="GlfOrgId" value="48" />
+    <add key="EsOrgCode" value="" />
+    <add key="UpLostDataDeadLine" value="1" />
+    <!--上传未传数据的起始天数，1：所有，-n：前n天  宜君里glf:50 hrz51 -->
+    <!--should modified-->
+    <add key="HrzOrgId" value="51" />
+    <!-- 换热站数据-->
+    <add key="AlarmDt" value="2011-01-04 01:01:01" />
+    <add key="GgdyDt" value="2015-03-26 20:29:23" />
+    <add key="LdyDt" value="2015-03-26 20:29:23" />
+    <add key="HrzJzDt" value="2014-11-24 06:27:06" />
+    <add key="DownTimerInterval" value="5" />
+    <add key="UpTimerInterval" value="60" />
+    <add key="Heating" value="1000" />
+    <add key="Gax" value="2000" />
+    <add key="Dian" value="3000" />
+    <add key="Water" value="4000" />
+    <add key="WaterBeng" value="5000" />
+    <add key="LoopBeng" value="6000" />
+    <!--数据中心服务器-->
+    <add key="HeatingIP" value="luckzzq.vicp.cc,45763" />
+    <add key="HeatingDataSource" value="HeatingDB" />
+    <add key="HeatingSqlLogin" value="sa" />
+    <add key="HeatingSqlPwd" value="luck4567" />
+    <!--数据中心程序-->
+    <add key="QueryTimer" value="45" />
+    <add key="CmdInterval" value="5" />
+    <add key="DTUTimeout" value="135" />
+    <add key="GPRSPort" value="6002" />
+    <add key="SaveTimer" value="15" />
+    <add key="DataRemainDays" value="0" />
+    <add key="DTUPotocolMode" value="0" />
+    <add key="HrzBxcDt" value="2014-10-27 15:52:12" />
+	<add key="OnlySendConnectedFlag" value="false" />
+	<add key="ReStartM" value="0" />
+	<add key="ReStart" value="False" />
+	
+  </appSettings>
+</configuration>
