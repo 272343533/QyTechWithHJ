@@ -1,0 +1,119 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using SunMvcExpress.Dao;
+using QyTech.Core.Common;
+using System.Reflection;
+using QyTech.Express.CodeCreate.Action;
+using QyTech.Express;
+using QyTech.Express.CodeCreate.IDataView;
+
+namespace QyTech.Express.DataPart
+{
+    public class STCommEdit : ISysFunConf
+    {
+        public STCommEdit()
+        {
+            log = log4net.LogManager.GetLogger("单表普通编辑");
+        }
+        public STCommEdit(bsSysFunc fc):base(fc)
+        {
+            log = log4net.LogManager.GetLogger("单表普通编辑");
+
+        }
+        public override void CreateController()
+        {
+            log.Error("for test useful");
+            try
+            {
+                System.IO.StreamWriter sw;
+                //Index action
+                CreateContrObj = new Index();
+                CreateContrObj.Ifc = this;
+                CreateContrObj.CreateFileHead();
+                sw = CreateContrObj.sw;
+
+                CreateContrObj.Create();
+
+                
+                //other action only for add delete edit
+                //FuncOpers=CreateContrObj.FunOperates;
+                bool CreateSaveFlag = false;
+                string ActionName = "";
+                foreach (bsSysFuncOper fo in FuncOpers)
+                {
+                    if (fo.LinkAddr.Substring(0,1)=="{")
+                        ActionName=fo.LinkAddr.Substring(1,fo.LinkAddr.Length -2);
+                    else
+                        ActionName = fo.LinkAddr;
+                    if ((ActionName == "Add" || ActionName == "Edit" )&&!CreateSaveFlag)
+                    {
+                        CreateContrObj.CreateSaveST();
+                        CreateSaveFlag = true;
+                    }
+                    CreateContrObj = ActionFac.Create(ActionName);
+                    CreateContrObj.sw = sw;
+                    CreateContrObj.Ifc = this;
+                    CreateContrObj.Create();
+                }
+
+                base.CreateJsonResult(sw);
+
+              
+            }
+            catch (Exception ex)
+            {
+                log.Error("CreateController:"+ex.Message);
+                throw new Exception(ex.Message);
+            }
+            finally
+            {
+                CreateContrObj.CreateFileEnd();
+            }
+        }
+
+        public override void CreateView()
+        {
+            
+            log.Error("for test veiew");
+            try
+            {
+                IDataViewCreate vObj = new IDataViewCreate();
+                vObj = DataViewFac.Create(fc.FunLayout);
+                vObj.Create(this);
+
+                STCommEdit_Add addobj = new STCommEdit_Add();
+                addobj.Create(this);
+            }
+            catch (Exception ex)
+            {
+                log.Error("CreateView:" + ex.Message);
+                throw new Exception(ex.Message);
+            }
+        }
+
+        //public override void CreateController(ISysFunConf ifc, System.IO.StreamWriter sw)
+        //{ }
+
+        public override void CreateView(System.IO.StreamWriter sw)
+        {
+            try
+            {
+                IDataViewCreate vObj = new IDataViewCreate();
+                vObj = DataViewFac.Create(fc.FunLayout);
+                vObj.Create(this,sw);
+            }
+            catch (Exception ex)
+            {
+                log.Error("CreateView:" + ex.Message);
+                throw new Exception(ex.Message);
+            }
+        }
+        public override void CreateDataInIndex(ISysFunConf ifc, System.IO.StreamWriter sw)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}

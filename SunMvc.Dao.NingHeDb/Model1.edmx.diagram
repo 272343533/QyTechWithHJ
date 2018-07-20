@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78f3ab60a06a41b19c92816b3ae08dd0" Name="关系图1" ZoomLevel="29">
+        <EntityTypeShape EntityType="HjHeatingModel.blBaseInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bs_CopyHisLogo" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsBaseInfo" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsEmployee" Width="1.5" PointX="8.25" PointY="263.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsErrLog" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsField" Width="1.5" PointX="10.5" PointY="286.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsFuncField" Width="1.5" PointX="12.75" PointY="332.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsOperLog" Width="1.5" PointX="12.75" PointY="280" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsOrganize" Width="1.5" PointX="3" PointY="257.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsOrgConf" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsProItemBit" Width="1.5" PointX="13" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsProtItem" Width="1.5" PointX="10.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsProtItemStand" Width="1.5" PointX="10" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsProtItemUnit" Width="1.5" PointX="12.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsProtocal" Width="1.5" PointX="7.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsRole" Width="1.5" PointX="3" PointY="330.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsScreenConf" Width="1.5" PointX="12.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsScreenItemConf" Width="1.5" PointX="14.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsSoftCustInfo" Width="1.5" PointX="0.75" PointY="264.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsSysFun" Width="1.5" PointX="5.25" PointY="334.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsSysFunc" Width="1.5" PointX="7.5" PointY="332.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsSysFuncInterface" Width="1.5" PointX="9.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsSysFuncOper" Width="1.5" PointX="5.25" PointY="340.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsSysFuncQuery" Width="1.5" PointX="9.75" PointY="334.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsTable" Width="1.5" PointX="8.25" PointY="287.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsTreeTable" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsUser" Width="1.5" PointX="10.5" PointY="292.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.bsUserFieldsRel" Width="1.5" PointX="12.75" PointY="294.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.CommNumber" Width="1.5" PointX="5.25" PointY="206.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.CommonData" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.DataTranLog" Width="1.5" PointX="14.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.DetailDevice" Width="1.5" PointX="15" PointY="261" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.Device" Width="1.5" PointX="0.75" PointY="36.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.DeviceType" Width="1.5" PointX="10.5" PointY="273.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.DeviTran2HisDt" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.DtuChangeType" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.DTUProduct" Width="1.5" PointX="12.75" PointY="272" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.EventAlarmManage" Width="1.5" PointX="5.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.EventAlarmRecord" Width="1.5" PointX="20.25" PointY="272.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GGAlarmLimit" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GGRunParamConfig" Width="1.5" PointX="3" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GISCoveringLayer" Width="1.5" PointX="16.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GisNetCorrS" Width="1.5" PointX="5.25" PointY="211" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GisNetSegPoints" Width="1.5" PointX="7.5" PointY="209.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GisNode" Width="1.5" PointX="7.5" PointY="213.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GLAlarmLimit" Width="1.5" PointX="3" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GLParaConfig" Width="1.5" PointX="3" PointY="34.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GLRunParamConfig" Width="1.5" PointX="3" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.GLUnitData" Width="1.5" PointX="3" PointY="56.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HeatingArea" Width="1.5" PointX="5.25" PointY="216.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HeatingRegionDesp" Width="1.5" PointX="16.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HisJLAlarmGatherData" Width="1.5" PointX="20.25" PointY="263.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HJGathData1" Width="1.5" PointX="23.25" PointY="258.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HJGathData2" Width="1.5" PointX="29.25" PointY="254" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HJHrzControlData2Part1" Width="1.5" PointX="26.25" PointY="256.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HJHrzControlData2Part2" Width="1.5" PointX="17.25" PointY="250.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HjParaControlCurve1" Width="1.5" PointX="5.25" PointY="243.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HJPlcParaControl1" Width="1.5" PointX="20.25" PointY="239.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HjPlcParaControlCurve" Width="1.5" PointX="5.25" PointY="223.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.Hrz1stNetOpen" Width="1.5" PointX="5.25" PointY="220" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HrzCommGath" Width="1.5" PointX="11.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HrzDownSet" Width="1.5" PointX="5.25" PointY="238.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HrzGathAlarm" Width="1.5" PointX="13.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HrzGathRange" Width="1.5" PointX="17.25" PointY="361.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HrzRangeAlarmConf" Width="1.5" PointX="32.25" PointY="255.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HrzRunCurve" Width="1.5" PointX="5.25" PointY="265.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HUI_Season" Width="1.5" PointX="8" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HUserGathData" Width="1.5" PointX="15.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HUserInfo" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForDetaHDD" Width="1.5" PointX="15" PointY="290.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForDetailWdRange" Width="1.5" PointX="5.25" PointY="269.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForDetaWea" Width="1.5" PointX="15" PointY="293.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForEnergy" Width="1.5" PointX="23.25" PointY="250.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForGlfWaterFlow" Width="1.5" PointX="5.25" PointY="280.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForOrgWea" Width="1.5" PointX="5.25" PointY="275.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForPricePara" Width="1.5" PointX="5.25" PointY="288.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForWdRange" Width="1.5" PointX="5.25" PointY="291.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.HzForWeaDuring" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.INCollDataHis" Width="1.5" PointX="18" PointY="267.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.MeteorStationPower" Width="1.5" PointX="17.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewBitDataParse" Width="1.5" PointX="18.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewGLCommNet" Width="1.5" PointX="35.25" PointY="252.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewGLUnitData" Width="1.5" PointX="23.25" PointY="274.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewHJGathData1" Width="1.5" PointX="26.25" PointY="240.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewHJGathData2" Width="1.5" PointX="38.25" PointY="254" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewHjPlcParaControlCurve" Width="1.5" PointX="5.25" PointY="297.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewHRZCollectData" Width="1.5" PointX="26.25" PointY="277" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewINCollData" Width="1.5" PointX="18" PointY="263.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewStandDataGlf" Width="1.5" PointX="19.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewStandDataHrz" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewWeaData" Width="1.5" PointX="18" PointY="272" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.ONTimeGLCommNet" Width="1.5" PointX="41.25" PointY="252.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OnTimeHRZCollectData" Width="1.5" PointX="32.25" PointY="238" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OrgRelMeteorStation" Width="1.5" PointX="21.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OrgSysPara" Width="1.5" PointX="5.25" PointY="311.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTGLUnitData" Width="1.5" PointX="21.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTStandDataGlf" Width="1.5" PointX="15.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTStandDataGlfControl1" Width="1.5" PointX="23.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTStandDataHrz" Width="1.5" PointX="17.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTStandDataHrzControl1" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTStandDataHrzControl2" Width="1.5" PointX="25.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTStandDataHrzControl3" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.ParseProtocal" Width="1.5" PointX="29.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.RangeLimit" Width="1.5" PointX="3" PointY="64.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.ScreenDispConf" Width="1.5" PointX="29.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.Stoppage" Width="1.5" PointX="29.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.sysdiagrams" Width="1.5" PointX="29.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.TempCheck" Width="1.5" PointX="29.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.Template" Width="1.5" PointX="5.25" PointY="315.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.Template_Time" Width="1.5" PointX="7.5" PointY="314.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.Template_Wind" Width="1.5" PointX="7.5" PointY="318.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.Timeplate_HeatSeasonSetting" Width="1.5" PointX="29.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpFMTotalOnTime" Width="1.5" PointX="29.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpForHzForDetaWea" Width="1.5" PointX="15" PointY="307.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpHisDataQuery" Width="1.5" PointX="29.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpHrzData" Width="1.5" PointX="31.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpHrzStandData" Width="1.5" PointX="31.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpHzForEnergy" Width="1.5" PointX="31.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpHzForGlfWaterFlow" Width="1.5" PointX="33.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpHzForOrgWea" Width="1.5" PointX="5.25" PointY="321.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpHzForPredictAmonut" Width="1.5" PointX="33.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpNewInCollData" Width="1.5" PointX="33.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.tmpScreenDispValue" Width="1.5" PointX="33.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.TTAutoDownConf" Width="1.5" PointX="15.75" PointY="277.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.TTRunCurveConf" Width="1.5" PointX="15.75" PointY="270.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.WatchCurve" Width="1.5" PointX="33.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.WeaDataHistory" Width="1.5" PointX="21" PointY="268" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.WeatherData" Width="1.5" PointX="33.75" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.WebIndexFunConf" Width="1.5" PointX="3" PointY="338.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.V_AlarmAddress" Width="1.5" PointX="35.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.V_AlarmAddress_1" Width="1.5" PointX="35.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.V_device_luck" Width="1.5" PointX="5.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.v_weatherdata" Width="1.5" PointX="7.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vw_listdevice_luck" Width="1.5" PointX="35.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vw_ywwd_luck" Width="1.5" PointX="35.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwbsUserFields" Width="1.5" PointX="35.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwdllCommNumber" Width="1.5" PointX="35.75" PointY="20.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwdlldtuproduct" Width="1.5" PointX="35.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwdllHrzDownSetShowUser" Width="1.5" PointX="35.75" PointY="30.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwdllHrzRunCurve" Width="1.5" PointX="35.75" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwdllqixiangyifp" Width="1.5" PointX="9.75" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwDTUProductInfo" Width="1.5" PointX="37.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwFuncField" Width="1.5" PointX="37.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwFunOpertions" Width="1.5" PointX="37.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwGisNetCoorSegPoints" Width="1.5" PointX="37.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwHeatingRegionDesp" Width="1.5" PointX="37.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwHRegionDesp" Width="1.5" PointX="37.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwHrzRangeSet" Width="1.5" PointX="37.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwHuserInfoForOrg" Width="1.5" PointX="37.75" PointY="27.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlybsFindAbnormalData" Width="1.5" PointX="11.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlybsRole" Width="1.5" PointX="23.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlybsUser" Width="1.5" PointX="25.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyDetailDevice" Width="1.5" PointX="31.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyDtuOnLine" Width="1.5" PointX="37.75" PointY="38.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyEventAlarmRecord" Width="1.5" PointX="39.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyGprsDetailDevice" Width="1.5" PointX="39.75" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyGprsDetailDeviceCount" Width="1.5" PointX="39.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyGprsDevice" Width="1.5" PointX="7.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyGrzHJHrzControlData2Part1" Width="1.5" PointX="39.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyGrzHJHrzControlData2Part2" Width="1.5" PointX="19.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyGrzHjPlcParaControlCurve" Width="1.5" PointX="27.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHAreaCorrect" Width="1.5" PointX="39.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHjPlcParaControlCurveGrz" Width="1.5" PointX="39.75" PointY="32.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHostLinkPool" Width="1.5" PointX="13.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHrz1stNetOpen" Width="1.5" PointX="33.75" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHrzAutoDownCurveSetting" Width="1.5" PointX="41.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHrzAutoDownCurveSettingOne" Width="1.5" PointX="41.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHrzAutoDownCurveSettingTemp" Width="1.5" PointX="41.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHrzDownSet" Width="1.5" PointX="41.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyHrzIdSimcardNo" Width="1.5" PointX="41.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyNewGLCommNet" Width="1.5" PointX="41.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyNewGLUnitData" Width="1.5" PointX="9.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyNewHJGathData1" Width="1.5" PointX="21.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyNewHRZCollectData" Width="1.5" PointX="29.75" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyNewHrzCollectDataForMultiProtocal" Width="1.5" PointX="43.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyNewHRZCollectDataOnlyHjProtocal" Width="1.5" PointX="5.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyNewHRZCollectDataOnlyWdzProtocal" Width="1.5" PointX="15.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyNewInCollData" Width="1.5" PointX="43.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyOrgDtu" Width="1.5" PointX="43.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyProtocalCodeBySimcardNo" Width="1.5" PointX="43.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyUserRemoteOrganize" Width="1.5" PointX="43.75" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyWeatherDataLast24H" Width="1.5" PointX="35.75" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwlyWeatherPowerCalculate" Width="1.5" PointX="23.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwOrgGis" Width="1.5" PointX="31.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwOrgRelMeteorStation" Width="1.5" PointX="43.75" PointY="44.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwTreeFun" Width="1.5" PointX="45.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwUserFuns" Width="1.5" PointX="45.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwUserOpertions" Width="1.5" PointX="45.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwYXGbsScreenItemConf" Width="1.5" PointX="45.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwYXGCalcul" Width="1.5" PointX="45.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwYXGCalcul2" Width="1.5" PointX="45.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HjHeatingModel.vwzhbEventAlarm" Width="1.5" PointX="45.75" PointY="25.75" IsExpanded="true" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSEMPLOY_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSEMPLOY_RELATIONS_BSSOFTCU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSUSER_RELATIONS_BSEMPLOY" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSFIELD_RELATIONS_BSTABLE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_bsUserFieldsRel_bsField" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSFUNFIE_RELATIONS_BSSYSFUN" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSOPERLO_RELATIONS_BSSOFTCU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSOPERLO_RELATIONS_BSUSER" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSORGANI_RELATIONS_BSSOFTCU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_COMMNUMB_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_DETAILDE_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_DTUPRODU_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GISNETCO_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HEATINGA_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HISHRZ1S_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HISJLALA_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJGATHDA_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJGATHDA2_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJHrzControlData2Part1_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJHrzControlData2Part2_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJPLCPAR_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HjPlcParaControlCurve_bsOrganize" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HjPlcParaControlCurve1_bsOrganize" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HRZDOWNS_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HrzRangeAlarmConf_bsOrganize" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HRZRUNCU_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HZFORDET_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HZFORENE_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HzForGlfWaterFlow_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HZFORORG_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HzForOrgWeather_bsOrganize" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HZFORPRI_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HZFORWDR_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_INCOLLDA_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewGL_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewGLUNIT_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewHJGATHDA_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewHJGATHDA2_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewHjPlcParaControlCurve_bsOrganize" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewHR_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewINCOLLDA_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewWEADATA_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_ONTIMEGL_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_ONTIMEHR_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_ORGSYSPA_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_TEMPLATE_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_TTAutoDownConf_bsOrganize" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_TTRUNCUR_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_WEADATAH_RELATIONS_BSORGANI" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.fkname" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSPROITE_RELATIONS_BSPROTIT" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSPROTITStand_RELATIONS_BSPROTOC" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSROLE_RELATIONS_BSSOFTCU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSUSER_RELATIONS_BSSOFTCU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_WEBINDEX_RELATIONS_BSSOFTCU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_bsSysFunc_bsSysFun" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_bsSysFuncQuery_bsSysFunc" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_BSUSERFI_RELATIONS_BSUSER" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_TTAutoDownConf_bsUser" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_TTRUNCUR_RELATIONS_BSUSER" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_COMMONDA_REFERENCE_DEVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_DETAILDE_RELATIONS_DTUPRODU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_EVENTALA_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HISJLALA_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJGATHDA_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJGATHDA2_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJHrzControlData2Part1_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJHrzControlData2Part2_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HJPLCPAR_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HrzRangeAlarmConf_DetailDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HrzRangeGath_DetailDevice" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HZFORENE_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewGL_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewGLUNIT_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewHJGATHDA_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewHJGATHDA2_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewHR_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_ONTIMEGL_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_ONTIMEHR_RELATIONS_DETAILDE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GGALARML_REFERENCE_DEVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GGRUNPAR_REFERENCE_DEVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GLALARML_REFERENCE_DEVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GLPARACO_REFERENCE_DEVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GLRUNPAR_REFERENCE_DEVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GLUNITDA_REFERENCE_DEVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_RANGELIM_REFERENCE_DEVICE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_DTUProduct_DeviceType" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_EVENTALA_RELATIONS_DTUPRODU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HZFORDET_RELATIONS_DTUPRODU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HzForDetaHDD_RELATIONS_DTUPRODU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_INCOLLDA_RELATIONS_DTUPRODU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewINCOLLDA_RELATIONS_DTUPRODU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_NewWEADATA_RELATIONS_DTUPRODU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_tmpForHzForDetaWea_DTUProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_WEADATAH_RELATIONS_DTUPRODU" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GISNETSE_RELATIONS_GISNETCO" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_GisNode_RELATIONS_GISNETCO" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_HUI_Season_HUserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_Template_Wind_RELATIONS_TEMPLATE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.FK_TIMETEMP_RELATIONS_TEMPLATE" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.bsRoleRightsField" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.bsRolFuncRel" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.bsRolOperRel" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.bsUserRightsOrg" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.bsUserRoleRel" ManuallyRouted="false" />
+        <AssociationConnector Association="HjHeatingModel.UserRelDevice" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewStandDataStr" Width="1.5" PointX="7.868312502218556" PointY="20.354868451298618" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTStandDataStr" Width="1.5" PointX="2.7306896144201467" PointY="31.097113400277269" />
+        <EntityTypeShape EntityType="HjHeatingModel.NewStandDataGldy" Width="1.5" PointX="9.20787717644492" PointY="19.152962723352463" />
+        <EntityTypeShape EntityType="HjHeatingModel.OTStandDataGldy" Width="1.5" PointX="4.7042330581248892" PointY="15.245917684978767" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

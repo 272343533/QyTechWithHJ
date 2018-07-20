@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98CEFAF6-9E78-4DC2-A0B1-69AA7F9F6E21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCPLibrary</RootNamespace>
+    <AssemblyName>TCPLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug_SheXian\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Communication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\QyTech.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\QyTech.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug_SheXian\SunMvcExpress.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstracts\ZClientSocket.cs" />
+    <Compile Include="Abstracts\ZDataBuffer.cs" />
+    <Compile Include="Abstracts\ZMessage.cs" />
+    <Compile Include="Abstracts\ZProxySocket.cs" />
+    <Compile Include="Abstracts\ZServerSocket.cs" />
+    <Compile Include="DefaultImplements\BaseClientSocket.cs" />
+    <Compile Include="DefaultImplements\BaseDataBuffer.cs" />
+    <Compile Include="DefaultImplements\BaseMessage.cs" />
+    <Compile Include="DefaultImplements\BaseProxySocket.cs" />
+    <Compile Include="DefaultImplements\BaseServerSocket.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TCPDelegates.cs" />
+    <Compile Include="ZheDaFTGath\Read0C4003.cs" />
+    <Compile Include="ZheDaFTGath\PackParseFac.cs" />
+    <Compile Include="ZheDaFTGath\ZdFT_Packet.cs" />
+    <Compile Include="ZheDaFTGath\Read0C2003.cs" />
+    <Compile Include="ZheDaFTGath\Write048001.cs" />
+    <Compile Include="ZheDaFTGath\Write130200.cs" />
+    <Compile Include="ZheDaFTGath\Write130800.cs" />
+    <Compile Include="ZheDaFTGath\Write132000.cs" />
+    <Compile Include="ZheDaFTGath\Write134000.cs" />
+    <Compile Include="ZheDaFTGath\Write130101.cs" />
+    <Compile Include="ZheDaFTGath\Write138002.cs" />
+    <Compile Include="ZheDaFTGath\Write130203.cs" />
+    <Compile Include="ZheDaFTGath\Write134001.cs" />
+    <Compile Include="ZheDaFTGath\Write130202.cs" />
+    <Compile Include="ZheDaFTGath\Write130402.cs" />
+    <Compile Include="ZheDaFTGath\Write138009.cs" />
+    <Compile Include="ZheDaFTGath\Write13010A.cs" />
+    <Compile Include="ZheDaFTGath\Write138000.cs" />
+    <Compile Include="ZheDaFTGath\Write130801.cs" />
+    <Compile Include="ZheDaFTGath\Write132001.cs" />
+    <Compile Include="ZheDaFTGath\Write130103.cs" />
+    <Compile Include="ZheDaFTGath\Write132008.cs" />
+    <Compile Include="ZheDaFTGath\Write134008.cs" />
+    <Compile Include="ZheDaFTGath\Write138008.cs" />
+    <Compile Include="ZheDaFTGath\Write130109.cs" />
+    <Compile Include="ZheDaFTGath\Write130209.cs" />
+    <Compile Include="ZheDaFTGath\Write130409.cs" />
+    <Compile Include="ZheDaFTGath\Write130809.cs" />
+    <Compile Include="ZheDaFTGath\Write131009.cs" />
+    <Compile Include="ZheDaFTGath\Write132009.cs" />
+    <Compile Include="ZheDaFTGath\Write134009.cs" />
+    <Compile Include="ZheDaFTGath\Read050402.cs" />
+    <Compile Include="ZheDaFTGath\Read050201.cs" />
+    <Compile Include="ZheDaFTGath\Read050202.cs" />
+    <Compile Include="ZheDaFTGath\Write011000.cs" />
+    <Compile Include="ZheDaFTGath\Write040202.cs" />
+    <Compile Include="ZheDaFTGath\Resp000400.cs" />
+    <Compile Include="ZheDaFTGath\Write550100.cs" />
+    <Compile Include="ZheDaFTGath\Write131000.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DefaultImplements\Read Me.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ZheDaFTGath\Write130400.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

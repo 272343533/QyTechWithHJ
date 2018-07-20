@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{527619F9-82E2-4879-9231-A541429A0498}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QyTech.Express</RootNamespace>
+    <AssemblyName>QyTech.Express</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\PubDir\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\WebPub\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebPub\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\QyTech.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Core.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dllPub\QyTech.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Core.Helpers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebPub\QyTech.Core.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebPub\SunMvcExpress.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XmlConfig, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebPub\XmlConfig.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeCreate\Action\ActionFac.cs" />
+    <Compile Include="CodeCreate\Action\Add.cs" />
+    <Compile Include="CodeCreate\Action\Audit.cs" />
+    <Compile Include="CodeCreate\Action\Del.cs" />
+    <Compile Include="CodeCreate\Action\Edit.cs" />
+    <Compile Include="CodeCreate\Action\Export.cs" />
+    <Compile Include="CodeCreate\Action\GridDel.cs" />
+    <Compile Include="CodeCreate\Action\GridAdd.cs" />
+    <Compile Include="CodeCreate\Action\Import.cs" />
+    <Compile Include="CodeCreate\Action\Index.cs" />
+    <Compile Include="CodeCreate\Action\PCEdit.cs" />
+    <Compile Include="CodeCreate\Action\Suggest.cs" />
+    <Compile Include="CodeCreate\Action\ztreeAdd.cs" />
+    <Compile Include="CodeCreate\Action\ztreeDel.cs" />
+    <Compile Include="CodeCreate\Action\ztreeDrag.cs" />
+    <Compile Include="CodeCreate\Action\ztreeEdit.cs" />
+    <Compile Include="CodeCreate\Action\ztreeDis.cs" />
+    <Compile Include="CodeCreate\Action\GridEdit.cs" />
+    <Compile Include="CodeCreate\Action\GridIndex.cs" />
+    <Compile Include="CodeCreate\IBllCreate.cs" />
+    <Compile Include="CodeCreate\IDataView\DataViewFac.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditCheckbox.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditDate.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditDatetime.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditDecimal.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditElookup.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditText.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\FacDataEditCreate.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditFileup.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditHElookup.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditHidden.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\IDataEditType.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditInteger.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditLookup.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditMlookup.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditMtext.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditRadio.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditSelect.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditSuggext.cs" />
+    <Compile Include="CodeCreate\IDataView\IDataEditType\DataEditTotal.cs" />
+    <Compile Include="CodeCreate\IDataView\STCommEdit_Add.cs" />
+    <Compile Include="CodeCreate\IDataView\PCCommEdit.cs" />
+    <Compile Include="CodeCreate\IDataView\STCommEdit.cs" />
+    <Compile Include="CodeCreate\IDataView\STTreeEdit.cs" />
+    <Compile Include="CodeCreate\IDataView\STGridEdit.cs" />
+    <Compile Include="CodeCreate\IQueryViewCreate.cs" />
+    <Compile Include="CodeCreate\IQueryView\IEditType\EditRadio.cs" />
+    <Compile Include="CodeCreate\IQueryView\Index.cs" />
+    <Compile Include="CodeCreate\IQueryView\IEditType\EditCombox.cs" />
+    <Compile Include="CodeCreate\IQueryView\IEditType\EditDate.cs" />
+    <Compile Include="CodeCreate\IQueryView\IEditType\EditDatetime.cs" />
+    <Compile Include="CodeCreate\IQueryView\ComplexType\ChooseSimpList.cs" />
+    <Compile Include="CodeCreate\IQueryView\IEditType\EditTime.cs" />
+    <Compile Include="CodeCreate\IQueryView\IEditType\EditDecimal.cs" />
+    <Compile Include="CodeCreate\IQueryView\IEditType\EditInt.cs" />
+    <Compile Include="CodeCreate\IQueryView\ComplexType\ChooseSimpTree.cs" />
+    <Compile Include="CodeCreate\IQueryView\ComplexType\ChooseMultiTree.cs" />
+    <Compile Include="CodeCreate\IQueryView\IEditType\EditText.cs" />
+    <Compile Include="CodeCreate\IQueryView\FacQueryView.cs" />
+    <Compile Include="CodeCreate\IQueryView\Top.cs" />
+    <Compile Include="CodeCreate\IQueryView\Left.cs" />
+    <Compile Include="CodeCreate\IQueryView\Right.cs" />
+    <Compile Include="CreateCode.cs" />
+    <Compile Include="DataPart\DataPartFac.cs" />
+    <Compile Include="DataPart\PCCommEdit.cs" />
+    <Compile Include="DataPart\STGridEdit.cs" />
+    <Compile Include="DataPart\STCommEdit.cs" />
+    <Compile Include="DataPart\STTreeEdit.cs" />
+    <Compile Include="IFuncFac.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QueryDecorator\QueryIndex.cs" />
+    <Compile Include="CodeCreate\IControllerCreate.cs" />
+    <Compile Include="CodeCreate\ICSharpMvcCode.cs" />
+    <Compile Include="ISysFunConf.cs" />
+    <Compile Include="CodeCreate\IDataViewCreate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryDecorator\IQueryDecorator.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

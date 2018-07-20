@@ -1,0 +1,2581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="HjHeatingHisModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="HjHeatingHisModelStoreContainer">
+          <EntitySet Name="HisEventAlarmRecord" EntityType="HjHeatingHisModel.Store.HisEventAlarmRecord" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisGLCommNet" EntityType="HjHeatingHisModel.Store.HisGLCommNet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisGLLdy" EntityType="HjHeatingHisModel.Store.HisGLLdy" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisHJGathData1" EntityType="HjHeatingHisModel.Store.HisHJGathData1" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisHJGathData2" EntityType="HjHeatingHisModel.Store.HisHJGathData2" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisHRZWdzData" EntityType="HjHeatingHisModel.Store.HisHRZWdzData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisInCollData" EntityType="HjHeatingHisModel.Store.HisInCollData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisStandDataGldy" EntityType="HjHeatingHisModel.Store.HisStandDataGldy" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisStandDataGlf" EntityType="HjHeatingHisModel.Store.HisStandDataGlf" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisStandDataHrz" EntityType="HjHeatingHisModel.Store.HisStandDataHrz" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HisWeaData" EntityType="HjHeatingHisModel.Store.HisWeaData" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="vwYXGCalCulCurve_BXC1" EntityType="HjHeatingHisModel.Store.vwYXGCalCulCurve_BXC1" store:Type="Views" store:Schema="dbo" store:Name="vwYXGCalCulCurve_BXC1">
+            <DefiningQuery>SELECT 
+      [vwYXGCalCulCurve_BXC1].[Det_Id] AS [Det_Id], 
+      [vwYXGCalCulCurve_BXC1].[H] AS [H], 
+      [vwYXGCalCulCurve_BXC1].[wd] AS [wd], 
+      [vwYXGCalCulCurve_BXC1].[Qt] AS [Qt], 
+      [vwYXGCalCulCurve_BXC1].[T0] AS [T0], 
+      [vwYXGCalCulCurve_BXC1].[T1] AS [T1]
+      FROM [dbo].[vwYXGCalCulCurve_BXC1] AS [vwYXGCalCulCurve_BXC1]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="HisEventAlarmRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DTU_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="VarComment" Type="varchar" MaxLength="500" />
+          <Property Name="GroupName" Type="varchar" MaxLength="100" />
+          <Property Name="AlarmType" Type="varchar" MaxLength="100" />
+          <Property Name="LimitValue" Type="decimal" Scale="2" />
+          <Property Name="Pri" Type="int" />
+          <Property Name="EventHappDT" Type="datetime" />
+          <Property Name="AlarmValue" Type="decimal" Scale="2" />
+          <Property Name="AcrDate" Type="datetime" />
+          <Property Name="ResumeValue" Type="decimal" Scale="2" />
+          <Property Name="EventType" Type="varchar" MaxLength="20" />
+          <Property Name="OperatorName" Type="varchar" MaxLength="20" />
+          <Property Name="OperatDt" Type="datetime" />
+          <Property Name="MachineName" Type="varchar" MaxLength="20" />
+          <Property Name="IOServerName" Type="varchar" MaxLength="20" />
+          <Property Name="EARID" Type="int" />
+        </EntityType>
+        <EntityType Name="HisGLCommNet">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="OTGLCN1" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN2" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN3" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN4" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN5" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN6" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN7" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN8" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN9" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN11" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN10" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN13" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN25" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN35" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN36" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN33" Type="int" />
+          <Property Name="OTGLCN12" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN14" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN15" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN16" Type="int" />
+          <Property Name="OTGLCN17" Type="int" />
+          <Property Name="OTGLCN18" Type="int" />
+          <Property Name="OTGLCN19" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN20" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN21" Type="int" />
+          <Property Name="OTGLCN22" Type="int" />
+          <Property Name="OTGLCN23" Type="int" />
+          <Property Name="OTGLCN26" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN24" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN29" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN27" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN28" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN30" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN31" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN32" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN34" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN36" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN37" Type="int" />
+          <Property Name="JLOTGLCN38" Type="int" />
+          <Property Name="JLOTGLCN39" Type="int" />
+          <Property Name="JLOTGLCN40" Type="int" />
+          <Property Name="JLOTGLCN41" Type="int" />
+          <Property Name="JLOTGLCN42" Type="int" />
+          <Property Name="JLOTGLCN43" Type="int" />
+          <Property Name="JLOTGLCN44" Type="int" />
+          <Property Name="JLOTGLCN45" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN46" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN47" Type="int" />
+          <Property Name="JLOTGLCN48" Type="int" />
+          <Property Name="JLOTGLCN49" Type="int" />
+          <Property Name="JLOTGLCN50" Type="int" />
+          <Property Name="JLOTGLCN51" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN52" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN53" Type="int" />
+          <Property Name="JLOTGLCN54" Type="int" />
+          <Property Name="JLOTGLCN55" Type="int" />
+          <Property Name="JLOTGLCN56" Type="int" />
+          <Property Name="JLOTGLCN57" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN58" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN59" Type="int" />
+          <Property Name="JLOTGLCN60" Type="int" />
+          <Property Name="JLOTGLCN61" Type="int" />
+          <Property Name="JLOTGLCN62" Type="int" />
+          <Property Name="JLOTGLCN63" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN64" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN65" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN66" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN67" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN68" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN69" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN70" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN71" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN72" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN73" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN74" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN75" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN76" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN77" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN78" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN79" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN80" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN81" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN82" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN83" Type="decimal" Scale="2" />
+          <Property Name="JLOTGLCN84" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN1000" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN37" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN38" Type="int" />
+          <Property Name="OTGLCN39" Type="int" />
+          <Property Name="OTGLCN40" Type="int" />
+          <Property Name="OTGLCN41" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN42" Type="int" />
+          <Property Name="OTGLCN43" Type="int" />
+          <Property Name="OTGLCN44" Type="int" />
+          <Property Name="OTGLCN45" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN46" Type="int" />
+          <Property Name="OTGLCN47" Type="int" />
+          <Property Name="OTGLCN48" Type="int" />
+          <Property Name="OTGLCN54" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN55" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN56" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN57" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN58" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN79" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN80" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN59" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN60" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN61" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN62" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN63" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN64" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN65" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN66" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN67" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN68" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN69" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN70" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN71" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN72" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN73" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN74" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN75" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN76" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN77" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN78" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN81" Type="decimal" Scale="2" />
+          <Property Name="OTGLCN82" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisGLLdy">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="LdyNo" Type="int" />
+          <Property Name="OTLDYF1" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF2" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF3" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF4" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF5" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF6" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF7" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF8" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF9" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF10" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF11" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF12" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF13" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF14" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF15" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF16" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF17" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF18" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF19" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF20" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF21" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF22" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF23" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF24" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF25" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF26" Type="int" />
+          <Property Name="OTLDYF27" Type="int" />
+          <Property Name="OTLDYF28" Type="int" />
+          <Property Name="OTLDYF29" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF30" Type="int" />
+          <Property Name="OTLDYF31" Type="int" />
+          <Property Name="OTLDYF32" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF33" Type="int" />
+          <Property Name="OTLDYF36" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF37" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF38" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF39" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF40" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF41" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF42" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF34" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF35" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF43" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF44" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF45" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF46" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF47" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF48" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF49" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF50" Type="decimal" Scale="2" />
+          <Property Name="JLOTLDYF33" Type="decimal" Scale="2" />
+          <Property Name="JLOTLDYF34" Type="decimal" Scale="2" />
+          <Property Name="JLOTLDYF35" Type="decimal" Scale="2" />
+          <Property Name="JLOTLDYF36" Type="decimal" Scale="2" />
+          <Property Name="JLOTLDYF37" Type="int" />
+          <Property Name="JLOTLDYF38" Type="int" />
+          <Property Name="JLOTLDYF39" Type="int" />
+          <Property Name="JLOTLDYF40" Type="int" />
+          <Property Name="JLOTLDYF41" Type="int" />
+          <Property Name="JLOTLDYF42" Type="int" />
+          <Property Name="JLOTLDYF43" Type="int" />
+          <Property Name="JLOTLDYF44" Type="int" />
+          <Property Name="JLOTLDYF45" Type="int" />
+          <Property Name="JLOTLDYF46" Type="int" />
+          <Property Name="JLOTLDYF47" Type="int" />
+          <Property Name="JLOTLDYF48" Type="int" />
+          <Property Name="JLOTLDYF49" Type="int" />
+          <Property Name="OTLDYF1012" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF1014" Type="decimal" />
+          <Property Name="OTLDYF1018" Type="decimal" Scale="2" />
+          <Property Name="OTLDYF1022" Type="numeric" Scale="2" />
+          <Property Name="OTLDYF1029" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisHJGathData1">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="HJGathF1" Type="decimal" Scale="2" />
+          <Property Name="HJGathF2" Type="decimal" Scale="2" />
+          <Property Name="HJGathF3" Type="decimal" Scale="2" />
+          <Property Name="HJGathF4" Type="decimal" Scale="2" />
+          <Property Name="HJGathF5" Type="decimal" Scale="2" />
+          <Property Name="HJGathF6" Type="decimal" Scale="2" />
+          <Property Name="HJGathF7" Type="decimal" Scale="2" />
+          <Property Name="HJGathF8" Type="decimal" Scale="2" />
+          <Property Name="HJGathF9" Type="decimal" Scale="2" />
+          <Property Name="HJGathF10" Type="decimal" Scale="2" />
+          <Property Name="HJGathF11" Type="decimal" Scale="2" />
+          <Property Name="HJGathF12" Type="decimal" Scale="2" />
+          <Property Name="HJGathF13" Type="decimal" Scale="2" />
+          <Property Name="HJGathF14" Type="decimal" Scale="2" />
+          <Property Name="HJGathF15" Type="decimal" Scale="2" />
+          <Property Name="HJGathF16" Type="decimal" Scale="2" />
+          <Property Name="HJGathF17" Type="decimal" Scale="2" />
+          <Property Name="HJGathF18" Type="decimal" Scale="2" />
+          <Property Name="HJGathF19" Type="decimal" Scale="2" />
+          <Property Name="HJGathF20" Type="decimal" Scale="2" />
+          <Property Name="HJGathF21" Type="decimal" Scale="2" />
+          <Property Name="HJGathF22" Type="decimal" Scale="2" />
+          <Property Name="HJGathF26" Type="decimal" Scale="2" />
+          <Property Name="HJGathF27" Type="decimal" Scale="2" />
+          <Property Name="HJGathF28" Type="decimal" Scale="2" />
+          <Property Name="HJGathF29" Type="decimal" Scale="2" />
+          <Property Name="HJGathF31" Type="decimal" Scale="2" />
+          <Property Name="HJGathF35" Type="decimal" Scale="2" />
+          <Property Name="HJGathF36" Type="decimal" Scale="2" />
+          <Property Name="HJGathF37" Type="decimal" Scale="2" />
+          <Property Name="HJGathF38" Type="decimal" Scale="2" />
+          <Property Name="HJGathF40" Type="decimal" Scale="2" />
+          <Property Name="HJGathF44" Type="decimal" Scale="2" />
+          <Property Name="HJGathF45" Type="decimal" Scale="2" />
+          <Property Name="HJGathF46" Type="decimal" Scale="2" />
+          <Property Name="HJGathF47" Type="decimal" Scale="2" />
+          <Property Name="HJGathF49" Type="decimal" Scale="2" />
+          <Property Name="HJGathF54" Type="decimal" Scale="2" />
+          <Property Name="HJGathF56" Type="decimal" Scale="2" />
+          <Property Name="HJGathF58" Type="decimal" Scale="2" />
+          <Property Name="HJGathF59" Type="decimal" Scale="2" />
+          <Property Name="HJGathF61" Type="decimal" Scale="2" />
+          <Property Name="HJGathF65" Type="decimal" Scale="2" />
+          <Property Name="HJGathF66" Type="decimal" Scale="2" />
+          <Property Name="HJGathF7_B0" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B1" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B2" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B3" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B4" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B5" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B6" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B7" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B8" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B9" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B10" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathF7_B11" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFX28" Type="decimal" Scale="2" />
+          <Property Name="HJGathFX29" Type="decimal" Scale="2" />
+          <Property Name="HJGathFX2A" Type="decimal" Scale="2" />
+          <Property Name="HJGathFX2B" Type="decimal" Scale="2" />
+          <Property Name="HJGathF67" Type="decimal" Scale="2" />
+          <Property Name="HJGathF68" Type="decimal" Scale="2" />
+          <Property Name="HJGathF69" Type="decimal" Scale="2" />
+          <Property Name="HJGathF70" Type="decimal" Scale="2" />
+          <Property Name="F1000" Type="decimal" Scale="2" />
+          <Property Name="WD" Type="decimal" Scale="2" />
+          <Property Name="RZ" Type="decimal" Scale="2" />
+          <Property Name="FS" Type="decimal" Scale="2" />
+          <Property Name="InHomeTemp" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisHJGathData2">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="HJGathF0" Type="decimal" Scale="2" />
+          <Property Name="HJGathF2" Type="decimal" Scale="2" />
+          <Property Name="HJGathF4" Type="decimal" Scale="2" />
+          <Property Name="HJGathF6" Type="decimal" Scale="2" />
+          <Property Name="HJGathF8" Type="decimal" Scale="2" />
+          <Property Name="HJGathFA" Type="decimal" Scale="2" />
+          <Property Name="HJGathFC" Type="decimal" Scale="2" />
+          <Property Name="HJGathFD" Type="decimal" Scale="2" />
+          <Property Name="HJGathFE" Type="decimal" Scale="2" />
+          <Property Name="HJGathFF" Type="decimal" Scale="2" />
+          <Property Name="HJGathF10" Type="decimal" Scale="2" />
+          <Property Name="HJGathF12" Type="decimal" Scale="2" />
+          <Property Name="HJGathF14" Type="decimal" Scale="2" />
+          <Property Name="HJGathF16" Type="decimal" Scale="2" />
+          <Property Name="HJGathF18" Type="decimal" Scale="2" />
+          <Property Name="HJGathF1A" Type="decimal" Scale="2" />
+          <Property Name="HJGathF1C" Type="decimal" Scale="2" />
+          <Property Name="HJGathF1E" Type="decimal" Scale="2" />
+          <Property Name="HJGathF20" Type="decimal" Scale="2" />
+          <Property Name="HJGathF22" Type="decimal" Scale="2" />
+          <Property Name="HJGathF24" Type="decimal" Scale="2" />
+          <Property Name="HJGathF26" Type="decimal" Scale="2" />
+          <Property Name="HJGathF28" Type="decimal" Scale="2" />
+          <Property Name="HJGathF29" Type="decimal" Scale="2" />
+          <Property Name="HJGathF2A" Type="decimal" Scale="2" />
+          <Property Name="HJGathF2B" Type="decimal" Scale="2" />
+          <Property Name="HJGathF2C" Type="varchar" MaxLength="10" />
+          <Property Name="HJGathF2D" Type="varchar" MaxLength="10" />
+          <Property Name="HJGathF2E" Type="varchar" MaxLength="10" />
+          <Property Name="HJGathF2F" Type="varchar" MaxLength="10" />
+          <Property Name="HJGathF30" Type="decimal" Scale="2" />
+          <Property Name="HJGathF32" Type="decimal" Scale="2" />
+          <Property Name="HJGathF34" Type="decimal" Scale="2" />
+          <Property Name="HJGathF36" Type="decimal" Scale="2" />
+          <Property Name="HJGathF38" Type="decimal" Scale="2" />
+          <Property Name="HJGathF40" Type="decimal" Scale="2" />
+          <Property Name="HJGathF42" Type="decimal" Scale="2" />
+          <Property Name="HJGathF44" Type="decimal" Scale="2" />
+          <Property Name="HJGathF46" Type="decimal" Scale="2" />
+          <Property Name="HJGathF48" Type="decimal" Scale="2" />
+          <Property Name="HJGathF50" Type="decimal" Scale="2" />
+          <Property Name="HJGathF52" Type="decimal" Scale="2" />
+          <Property Name="HJGathF56" Type="decimal" Scale="2" />
+          <Property Name="HJGathF58" Type="decimal" Scale="2" />
+          <Property Name="HJGathF60" Type="decimal" Scale="2" />
+          <Property Name="HJGathF62" Type="decimal" Scale="2" />
+          <Property Name="HJGathF63" Type="decimal" Scale="2" />
+          <Property Name="HJGathF2C_2F" Type="datetime" />
+          <Property Name="HJGathFC_B0" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B1" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B2" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B3" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B4" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B5" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B6" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B7" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B8" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B9" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B10" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B11" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B12" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B13" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B14" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFC_B15" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B1" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B8" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B9" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B10" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B11" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B12" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B13" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B14" Type="varchar" MaxLength="20" />
+          <Property Name="HJGathFF_B15" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B1" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B2" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B3" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B4" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B5" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B6" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B7" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B8" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B9" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B10" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B11" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B12" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B13" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B14" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath28_B15" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B1" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B2" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B3" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B4" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B5" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B6" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B7" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B8" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B9" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B10" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B11" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B12" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B13" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B14" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath29_B15" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath2A_B0" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath2A_B1" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath2A_B2" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath2A_B3" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath2B_B14" Type="varchar" MaxLength="20" />
+          <Property Name="HJGath2B_B15" Type="varchar" MaxLength="20" />
+          <Property Name="F1000" Type="decimal" Scale="2" />
+          <Property Name="WD" Type="decimal" Scale="2" />
+          <Property Name="RZ" Type="decimal" Scale="2" />
+          <Property Name="FS" Type="decimal" Scale="2" />
+          <Property Name="InHomeTemp" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisHRZWdzData">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="HRZCollOT1" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT2" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT3" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT4" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT5" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT6" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT7" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT8" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT9" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT10" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT11" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT12" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT13" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT14" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT15" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT142" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT152" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT16" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT17" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT162" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT172" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT18" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT19" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT20" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT21" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT22" Type="int" />
+          <Property Name="HRZCollOT23" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT24" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT25" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT26" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT27" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT28" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT29" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT30" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT31" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT32" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT33" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT34" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT35" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT36" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT37" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT38" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT39" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF151" Type="int" />
+          <Property Name="HRZCollOTF102" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF108" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF10A" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF10C" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF10E" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF114" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF116" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF118" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF11A" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF11C" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF11E" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF150" Type="int" />
+          <Property Name="HRZCollOTF152" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF154" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF156" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOTF158" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT100" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT101" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT102" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT103" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT104" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT105" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT106" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT107" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT108" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT109" Type="decimal" Scale="2" />
+          <Property Name="HRZCollOT110" Type="decimal" Scale="2" />
+          <Property Name="F1000" Type="decimal" Scale="2" />
+          <Property Name="InHomeTemp" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisInCollData">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="DtuId" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="DtuId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Dtu_Name" Type="varchar" MaxLength="50" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="INCDWDHis" Type="decimal" Scale="2" />
+          <Property Name="INCDDLHis" Type="decimal" Scale="2" />
+          <Property Name="INCDQDHis" Type="decimal" Scale="2" />
+          <Property Name="HUS_Id" Type="uniqueidentifier" />
+          <Property Name="CommNo" Type="varchar" MaxLength="20" />
+          <Property Name="RegionName" Type="varchar" MaxLength="50" />
+          <Property Name="Hrz_Id" Type="uniqueidentifier" />
+          <Property Name="Hrz_Name" Type="varchar" MaxLength="50" />
+          <Property Name="RoomInfo" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="HisStandDataGldy">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="F1" Type="decimal" Scale="2" />
+          <Property Name="F2" Type="decimal" Scale="2" />
+          <Property Name="F3" Type="decimal" Scale="2" />
+          <Property Name="F4" Type="decimal" Scale="2" />
+          <Property Name="F5" Type="decimal" Scale="2" />
+          <Property Name="F6" Type="decimal" Scale="2" />
+          <Property Name="F7" Type="decimal" Scale="2" />
+          <Property Name="F8" Type="decimal" Scale="2" />
+          <Property Name="F9" Type="decimal" Scale="2" />
+          <Property Name="F10" Type="decimal" Scale="2" />
+          <Property Name="F11" Type="decimal" Scale="2" />
+          <Property Name="F12" Type="decimal" Scale="2" />
+          <Property Name="F13" Type="decimal" Scale="2" />
+          <Property Name="F14" Type="decimal" Scale="2" />
+          <Property Name="F15" Type="decimal" Scale="2" />
+          <Property Name="F16" Type="decimal" Scale="2" />
+          <Property Name="F17" Type="decimal" Scale="2" />
+          <Property Name="F18" Type="decimal" Scale="2" />
+          <Property Name="F19" Type="decimal" Scale="2" />
+          <Property Name="F20" Type="decimal" Scale="2" />
+          <Property Name="F21" Type="decimal" Scale="2" />
+          <Property Name="F22" Type="decimal" Scale="2" />
+          <Property Name="F23" Type="decimal" Scale="2" />
+          <Property Name="F24" Type="decimal" Scale="2" />
+          <Property Name="F25" Type="decimal" Scale="2" />
+          <Property Name="F26" Type="decimal" Scale="2" />
+          <Property Name="F27" Type="decimal" Scale="2" />
+          <Property Name="F28" Type="decimal" Scale="2" />
+          <Property Name="F29" Type="decimal" Scale="2" />
+          <Property Name="F30" Type="decimal" Scale="2" />
+          <Property Name="F31" Type="decimal" Scale="2" />
+          <Property Name="F101" Type="int" />
+          <Property Name="F102" Type="int" />
+          <Property Name="F103" Type="int" />
+          <Property Name="F105" Type="int" />
+          <Property Name="F106" Type="int" />
+          <Property Name="F107" Type="int" />
+          <Property Name="F108" Type="int" />
+          <Property Name="F109" Type="int" />
+          <Property Name="F110" Type="int" />
+          <Property Name="F104" Type="int" />
+          <Property Name="F111" Type="int" />
+          <Property Name="F112" Type="int" />
+          <Property Name="F113" Type="int" />
+          <Property Name="F114" Type="int" />
+          <Property Name="F115" Type="int" />
+          <Property Name="F116" Type="int" />
+          <Property Name="F117" Type="int" />
+          <Property Name="F118" Type="int" />
+          <Property Name="F119" Type="int" />
+          <Property Name="F120" Type="int" />
+          <Property Name="F201" Type="bigint" />
+          <Property Name="F202" Type="bigint" />
+          <Property Name="F203" Type="bigint" />
+          <Property Name="F204" Type="bigint" />
+          <Property Name="F205" Type="bigint" />
+          <Property Name="F206" Type="bigint" />
+          <Property Name="F207" Type="bigint" />
+          <Property Name="F208" Type="bigint" />
+          <Property Name="F209" Type="bigint" />
+          <Property Name="F210" Type="bigint" />
+          <Property Name="F32" Type="decimal" Scale="2" />
+          <Property Name="F33" Type="decimal" Scale="2" />
+          <Property Name="F34" Type="decimal" Scale="2" />
+          <Property Name="F35" Type="decimal" Scale="2" />
+          <Property Name="F36" Type="decimal" Scale="2" />
+          <Property Name="F37" Type="decimal" Scale="2" />
+          <Property Name="F38" Type="decimal" Scale="2" />
+          <Property Name="F39" Type="decimal" Scale="2" />
+          <Property Name="F40" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisStandDataGlf">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="F1" Type="decimal" Scale="2" />
+          <Property Name="F2" Type="decimal" Scale="2" />
+          <Property Name="F3" Type="decimal" Scale="2" />
+          <Property Name="F4" Type="decimal" Scale="2" />
+          <Property Name="F5" Type="decimal" Scale="2" />
+          <Property Name="F6" Type="decimal" Scale="2" />
+          <Property Name="F7" Type="decimal" Scale="2" />
+          <Property Name="F8" Type="decimal" Scale="2" />
+          <Property Name="F9" Type="decimal" Scale="2" />
+          <Property Name="F10" Type="decimal" Scale="2" />
+          <Property Name="F11" Type="decimal" Scale="2" />
+          <Property Name="F12" Type="decimal" Scale="2" />
+          <Property Name="F13" Type="decimal" Scale="2" />
+          <Property Name="F14" Type="decimal" Scale="2" />
+          <Property Name="F15" Type="decimal" Scale="2" />
+          <Property Name="F16" Type="decimal" Scale="2" />
+          <Property Name="F17" Type="decimal" Scale="2" />
+          <Property Name="F18" Type="decimal" Scale="2" />
+          <Property Name="F19" Type="decimal" Scale="2" />
+          <Property Name="F20" Type="decimal" Scale="2" />
+          <Property Name="F21" Type="decimal" Scale="2" />
+          <Property Name="F22" Type="decimal" Scale="2" />
+          <Property Name="F23" Type="decimal" Scale="2" />
+          <Property Name="F24" Type="decimal" Scale="2" />
+          <Property Name="F25" Type="decimal" Scale="2" />
+          <Property Name="F26" Type="decimal" Scale="2" />
+          <Property Name="F27" Type="decimal" Scale="2" />
+          <Property Name="F28" Type="decimal" Scale="2" />
+          <Property Name="F29" Type="decimal" Scale="2" />
+          <Property Name="F30" Type="decimal" Scale="2" />
+          <Property Name="F31" Type="decimal" Scale="2" />
+          <Property Name="F101" Type="int" />
+          <Property Name="F102" Type="int" />
+          <Property Name="F103" Type="int" />
+          <Property Name="F104" Type="int" />
+          <Property Name="F105" Type="int" />
+          <Property Name="F106" Type="int" />
+          <Property Name="F107" Type="int" />
+          <Property Name="F108" Type="int" />
+          <Property Name="F109" Type="int" />
+          <Property Name="F110" Type="int" />
+          <Property Name="F111" Type="int" />
+          <Property Name="F112" Type="int" />
+          <Property Name="F113" Type="int" />
+          <Property Name="F114" Type="int" />
+          <Property Name="F115" Type="int" />
+          <Property Name="F116" Type="int" />
+          <Property Name="F117" Type="int" />
+          <Property Name="F118" Type="int" />
+          <Property Name="F119" Type="int" />
+          <Property Name="F120" Type="int" />
+          <Property Name="F201" Type="bigint" />
+          <Property Name="F202" Type="bigint" />
+          <Property Name="F203" Type="bigint" />
+          <Property Name="F204" Type="bigint" />
+          <Property Name="F205" Type="bigint" />
+          <Property Name="F206" Type="bigint" />
+          <Property Name="F207" Type="bigint" />
+          <Property Name="F208" Type="bigint" />
+          <Property Name="F209" Type="bigint" />
+          <Property Name="F210" Type="bigint" />
+          <Property Name="F32" Type="decimal" Scale="2" />
+          <Property Name="F33" Type="decimal" Scale="2" />
+          <Property Name="F34" Type="decimal" Scale="2" />
+          <Property Name="F35" Type="decimal" Scale="2" />
+          <Property Name="F36" Type="decimal" Scale="2" />
+          <Property Name="F37" Type="decimal" Scale="2" />
+          <Property Name="F38" Type="decimal" Scale="2" />
+          <Property Name="F39" Type="decimal" Scale="2" />
+          <Property Name="F40" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisStandDataHrz">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Det_Name" Type="varchar" MaxLength="50" />
+          <Property Name="bsO_Name" Type="varchar" MaxLength="50" />
+          <Property Name="F1" Type="decimal" Scale="2" />
+          <Property Name="F2" Type="decimal" Scale="2" />
+          <Property Name="F3" Type="decimal" Scale="2" />
+          <Property Name="F4" Type="decimal" Scale="2" />
+          <Property Name="F5" Type="decimal" Scale="2" />
+          <Property Name="F6" Type="decimal" Scale="2" />
+          <Property Name="F7" Type="decimal" Scale="2" />
+          <Property Name="F8" Type="decimal" Scale="2" />
+          <Property Name="F9" Type="decimal" Scale="2" />
+          <Property Name="F10" Type="decimal" Scale="2" />
+          <Property Name="F11" Type="decimal" Scale="2" />
+          <Property Name="F12" Type="decimal" Scale="2" />
+          <Property Name="F13" Type="decimal" Scale="2" />
+          <Property Name="F14" Type="decimal" Scale="2" />
+          <Property Name="F15" Type="decimal" Scale="2" />
+          <Property Name="F16" Type="decimal" Scale="2" />
+          <Property Name="F17" Type="decimal" Scale="2" />
+          <Property Name="F18" Type="decimal" Scale="2" />
+          <Property Name="F19" Type="decimal" Scale="2" />
+          <Property Name="F20" Type="decimal" Scale="2" />
+          <Property Name="F21" Type="decimal" Scale="2" />
+          <Property Name="F22" Type="decimal" Scale="2" />
+          <Property Name="F23" Type="decimal" Scale="2" />
+          <Property Name="F24" Type="decimal" Scale="2" />
+          <Property Name="F25" Type="decimal" Scale="2" />
+          <Property Name="F26" Type="decimal" Scale="2" />
+          <Property Name="F27" Type="decimal" Scale="2" />
+          <Property Name="F28" Type="decimal" Scale="2" />
+          <Property Name="F29" Type="decimal" Scale="2" />
+          <Property Name="F30" Type="decimal" Scale="2" />
+          <Property Name="F31" Type="decimal" Scale="2" />
+          <Property Name="F32" Type="decimal" Scale="2" />
+          <Property Name="F33" Type="decimal" Scale="2" />
+          <Property Name="F34" Type="decimal" Scale="2" />
+          <Property Name="F35" Type="decimal" Scale="2" />
+          <Property Name="F36" Type="decimal" Scale="2" />
+          <Property Name="F37" Type="decimal" Scale="2" />
+          <Property Name="F38" Type="decimal" Scale="2" />
+          <Property Name="F39" Type="decimal" Scale="2" />
+          <Property Name="F40" Type="decimal" Scale="2" />
+          <Property Name="F41" Type="decimal" Scale="2" />
+          <Property Name="F42" Type="decimal" Scale="2" />
+          <Property Name="F43" Type="decimal" Scale="2" />
+          <Property Name="F44" Type="decimal" Scale="2" />
+          <Property Name="F45" Type="decimal" Scale="2" />
+          <Property Name="F101" Type="int" />
+          <Property Name="F102" Type="int" />
+          <Property Name="F103" Type="int" />
+          <Property Name="F104" Type="int" />
+          <Property Name="F105" Type="int" />
+          <Property Name="F106" Type="int" />
+          <Property Name="F107" Type="int" />
+          <Property Name="F108" Type="int" />
+          <Property Name="F109" Type="int" />
+          <Property Name="F110" Type="int" />
+          <Property Name="F111" Type="int" />
+          <Property Name="F112" Type="int" />
+          <Property Name="F113" Type="int" />
+          <Property Name="F114" Type="int" />
+          <Property Name="F115" Type="int" />
+          <Property Name="F116" Type="int" />
+          <Property Name="F117" Type="int" />
+          <Property Name="F118" Type="int" />
+          <Property Name="F119" Type="int" />
+          <Property Name="F120" Type="int" />
+          <Property Name="F121" Type="int" />
+          <Property Name="F122" Type="int" />
+          <Property Name="F123" Type="int" />
+          <Property Name="F201" Type="bigint" />
+          <Property Name="F202" Type="bigint" />
+          <Property Name="F203" Type="bigint" />
+          <Property Name="F204" Type="bigint" />
+          <Property Name="F205" Type="bigint" />
+          <Property Name="F206" Type="bigint" />
+          <Property Name="F207" Type="bigint" />
+          <Property Name="F208" Type="bigint" />
+          <Property Name="F209" Type="bigint" />
+          <Property Name="F210" Type="bigint" />
+          <Property Name="F1000" Type="decimal" Scale="2" />
+          <Property Name="InHomeTemp" Type="decimal" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisWeaData">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="DTU_Id" />
+          </Key>
+          <Property Name="GathDt" Type="datetime" Nullable="false" />
+          <Property Name="bsO_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DTU_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DTU_Name" Type="varchar" MaxLength="50" />
+          <Property Name="WDHis" Type="decimal" Scale="2" />
+          <Property Name="RZHis" Type="decimal" Scale="2" />
+          <Property Name="FSHis" Type="decimal" Scale="2" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“HjHeatingHis.dbo.vwYXGCalCulCurve_BXC1”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="vwYXGCalCulCurve_BXC1">
+          <Key>
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Name="Det_Id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="H" Type="numeric" Precision="38" Scale="6" />
+          <Property Name="wd" Type="decimal" Scale="2" />
+          <Property Name="Qt" Type="decimal" Scale="2" />
+          <Property Name="T0" Type="decimal" Scale="2" />
+          <Property Name="T1" Type="decimal" Scale="2" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HjHeatingHisModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="HjHeatingHisEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="HisEventAlarmRecord" EntityType="HjHeatingHisModel.HisEventAlarmRecord" />
+          <EntitySet Name="HisGLCommNet" EntityType="HjHeatingHisModel.HisGLCommNet" />
+          <EntitySet Name="HisGLLdy" EntityType="HjHeatingHisModel.HisGLLdy" />
+          <EntitySet Name="HisHJGathData1" EntityType="HjHeatingHisModel.HisHJGathData1" />
+          <EntitySet Name="HisHJGathData2" EntityType="HjHeatingHisModel.HisHJGathData2" />
+          <EntitySet Name="HisHRZWdzData" EntityType="HjHeatingHisModel.HisHRZWdzData" />
+          <EntitySet Name="HisInCollData" EntityType="HjHeatingHisModel.HisInCollData" />
+          <EntitySet Name="HisStandDataGldy" EntityType="HjHeatingHisModel.HisStandDataGldy" />
+          <EntitySet Name="HisStandDataGlf" EntityType="HjHeatingHisModel.HisStandDataGlf" />
+          <EntitySet Name="HisStandDataHrz" EntityType="HjHeatingHisModel.HisStandDataHrz" />
+          <EntitySet Name="HisWeaData" EntityType="HjHeatingHisModel.HisWeaData" />
+          <EntitySet Name="vwYXGCalCulCurve_BXC1" EntityType="HjHeatingHisModel.vwYXGCalCulCurve_BXC1" />
+        </EntityContainer>
+        <EntityType Name="HisEventAlarmRecord">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Guid" Name="Id" Nullable="false" />
+          <Property Type="Guid" Name="DTU_Id" Nullable="false" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VarComment" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GroupName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AlarmType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="LimitValue" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="Pri" />
+          <Property Type="DateTime" Name="EventHappDT" Precision="3" />
+          <Property Type="Decimal" Name="AlarmValue" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="AcrDate" Precision="3" />
+          <Property Type="Decimal" Name="ResumeValue" Precision="18" Scale="2" />
+          <Property Type="String" Name="EventType" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OperatorName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="OperatDt" Precision="3" />
+          <Property Type="String" Name="MachineName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IOServerName" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="EARID" />
+        </EntityType>
+        <EntityType Name="HisGLCommNet">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="bsO_Id" Nullable="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="OTGLCN1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN5" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN6" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN7" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN8" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN9" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN11" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN10" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN13" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN25" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN35" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN36" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTGLCN33" />
+          <Property Type="Decimal" Name="OTGLCN12" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN14" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN15" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTGLCN16" />
+          <Property Type="Int32" Name="OTGLCN17" />
+          <Property Type="Int32" Name="OTGLCN18" />
+          <Property Type="Decimal" Name="OTGLCN19" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN20" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTGLCN21" />
+          <Property Type="Int32" Name="OTGLCN22" />
+          <Property Type="Int32" Name="OTGLCN23" />
+          <Property Type="Decimal" Name="OTGLCN26" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN24" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN29" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN27" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN28" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN30" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN31" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN32" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN34" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN36" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="JLOTGLCN37" />
+          <Property Type="Int32" Name="JLOTGLCN38" />
+          <Property Type="Int32" Name="JLOTGLCN39" />
+          <Property Type="Int32" Name="JLOTGLCN40" />
+          <Property Type="Int32" Name="JLOTGLCN41" />
+          <Property Type="Int32" Name="JLOTGLCN42" />
+          <Property Type="Int32" Name="JLOTGLCN43" />
+          <Property Type="Int32" Name="JLOTGLCN44" />
+          <Property Type="Decimal" Name="JLOTGLCN45" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN46" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="JLOTGLCN47" />
+          <Property Type="Int32" Name="JLOTGLCN48" />
+          <Property Type="Int32" Name="JLOTGLCN49" />
+          <Property Type="Int32" Name="JLOTGLCN50" />
+          <Property Type="Decimal" Name="JLOTGLCN51" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN52" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="JLOTGLCN53" />
+          <Property Type="Int32" Name="JLOTGLCN54" />
+          <Property Type="Int32" Name="JLOTGLCN55" />
+          <Property Type="Int32" Name="JLOTGLCN56" />
+          <Property Type="Decimal" Name="JLOTGLCN57" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN58" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="JLOTGLCN59" />
+          <Property Type="Int32" Name="JLOTGLCN60" />
+          <Property Type="Int32" Name="JLOTGLCN61" />
+          <Property Type="Int32" Name="JLOTGLCN62" />
+          <Property Type="Decimal" Name="JLOTGLCN63" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN64" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN65" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN66" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN67" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN68" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN69" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN70" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN71" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN72" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN73" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN74" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN75" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN76" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN77" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN78" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN79" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN80" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN81" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN82" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN83" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTGLCN84" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN1000" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN37" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTGLCN38" />
+          <Property Type="Int32" Name="OTGLCN39" />
+          <Property Type="Int32" Name="OTGLCN40" />
+          <Property Type="Decimal" Name="OTGLCN41" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTGLCN42" />
+          <Property Type="Int32" Name="OTGLCN43" />
+          <Property Type="Int32" Name="OTGLCN44" />
+          <Property Type="Decimal" Name="OTGLCN45" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTGLCN46" />
+          <Property Type="Int32" Name="OTGLCN47" />
+          <Property Type="Int32" Name="OTGLCN48" />
+          <Property Type="Decimal" Name="OTGLCN54" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN55" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN56" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN57" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN58" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN79" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN80" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN59" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN60" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN61" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN62" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN63" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN64" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN65" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN66" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN67" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN68" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN69" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN70" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN71" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN72" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN73" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN74" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN75" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN76" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN77" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN78" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN81" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTGLCN82" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisGLLdy">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="bsO_Id" Nullable="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="LdyNo" />
+          <Property Type="Decimal" Name="OTLDYF1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF5" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF6" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF7" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF8" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF9" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF10" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF11" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF12" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF13" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF14" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF15" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF16" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF17" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF18" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF19" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF20" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF21" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF22" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF23" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF24" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF25" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTLDYF26" />
+          <Property Type="Int32" Name="OTLDYF27" />
+          <Property Type="Int32" Name="OTLDYF28" />
+          <Property Type="Decimal" Name="OTLDYF29" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTLDYF30" />
+          <Property Type="Int32" Name="OTLDYF31" />
+          <Property Type="Decimal" Name="OTLDYF32" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="OTLDYF33" />
+          <Property Type="Decimal" Name="OTLDYF36" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF37" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF38" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF39" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF40" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF41" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF42" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF34" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF35" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF43" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF44" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF45" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF46" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF47" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF48" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF49" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF50" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTLDYF33" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTLDYF34" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTLDYF35" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="JLOTLDYF36" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="JLOTLDYF37" />
+          <Property Type="Int32" Name="JLOTLDYF38" />
+          <Property Type="Int32" Name="JLOTLDYF39" />
+          <Property Type="Int32" Name="JLOTLDYF40" />
+          <Property Type="Int32" Name="JLOTLDYF41" />
+          <Property Type="Int32" Name="JLOTLDYF42" />
+          <Property Type="Int32" Name="JLOTLDYF43" />
+          <Property Type="Int32" Name="JLOTLDYF44" />
+          <Property Type="Int32" Name="JLOTLDYF45" />
+          <Property Type="Int32" Name="JLOTLDYF46" />
+          <Property Type="Int32" Name="JLOTLDYF47" />
+          <Property Type="Int32" Name="JLOTLDYF48" />
+          <Property Type="Int32" Name="JLOTLDYF49" />
+          <Property Type="Decimal" Name="OTLDYF1012" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF1014" Precision="18" Scale="0" />
+          <Property Type="Decimal" Name="OTLDYF1018" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF1022" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="OTLDYF1029" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisHJGathData1">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="Guid" Name="bsO_Id" Nullable="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="HJGathF1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF5" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF6" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF7" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF8" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF9" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF10" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF11" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF12" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF13" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF14" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF15" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF16" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF17" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF18" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF19" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF20" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF21" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF22" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF26" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF27" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF28" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF29" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF31" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF35" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF36" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF37" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF38" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF40" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF44" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF45" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF46" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF47" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF49" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF54" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF56" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF58" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF59" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF61" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF65" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF66" Precision="18" Scale="2" />
+          <Property Type="String" Name="HJGathF7_B0" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B2" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B3" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B4" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B5" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B6" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B7" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B8" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B9" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B10" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF7_B11" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="HJGathFX28" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathFX29" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathFX2A" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathFX2B" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF67" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF68" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF69" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF70" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F1000" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="WD" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="RZ" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FS" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="InHomeTemp" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisHJGathData2">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="Guid" Name="bsO_Id" Nullable="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="HJGathF0" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF6" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF8" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathFA" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathFC" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathFD" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathFE" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathFF" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF10" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF12" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF14" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF16" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF18" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF1A" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF1C" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF1E" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF20" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF22" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF24" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF26" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF28" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF29" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF2A" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF2B" Precision="18" Scale="2" />
+          <Property Type="String" Name="HJGathF2C" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF2D" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF2E" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathF2F" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="HJGathF30" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF32" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF34" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF36" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF38" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF40" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF42" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF44" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF46" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF48" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF50" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF52" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF56" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF58" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF60" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF62" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HJGathF63" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="HJGathF2C_2F" Precision="3" />
+          <Property Type="String" Name="HJGathFC_B0" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B2" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B3" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B4" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B5" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B6" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B7" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B8" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B9" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B10" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B11" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B12" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B13" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B14" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFC_B15" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B8" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B9" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B10" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B11" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B12" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B13" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B14" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGathFF_B15" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B2" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B3" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B4" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B5" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B6" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B7" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B8" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B9" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B10" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B11" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B12" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B13" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B14" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath28_B15" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B2" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B3" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B4" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B5" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B6" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B7" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B8" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B9" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B10" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B11" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B12" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B13" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B14" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath29_B15" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath2A_B0" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath2A_B1" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath2A_B2" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath2A_B3" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath2B_B14" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="HJGath2B_B15" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="F1000" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="WD" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="RZ" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FS" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="InHomeTemp" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisHRZWdzData">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="bsO_Id" Nullable="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="HRZCollOT1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT5" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT6" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT7" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT8" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT9" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT10" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT11" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT12" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT13" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT14" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT15" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT142" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT152" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT16" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT17" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT162" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT172" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT18" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT19" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT20" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT21" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="HRZCollOT22" />
+          <Property Type="Decimal" Name="HRZCollOT23" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT24" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT25" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT26" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT27" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT28" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT29" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT30" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT31" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT32" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT33" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT34" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT35" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT36" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT37" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT38" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT39" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="HRZCollOTF151" />
+          <Property Type="Decimal" Name="HRZCollOTF102" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF108" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF10A" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF10C" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF10E" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF114" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF116" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF118" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF11A" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF11C" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF11E" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="HRZCollOTF150" />
+          <Property Type="Decimal" Name="HRZCollOTF152" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF154" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF156" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOTF158" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT100" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT101" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT102" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT103" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT104" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT105" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT106" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT107" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT108" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT109" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="HRZCollOT110" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F1000" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="InHomeTemp" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisInCollData">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="DtuId" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="DtuId" Nullable="false" />
+          <Property Type="String" Name="Dtu_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="bsO_Id" Nullable="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="INCDWDHis" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="INCDDLHis" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="INCDQDHis" Precision="18" Scale="2" />
+          <Property Type="Guid" Name="HUS_Id" />
+          <Property Type="String" Name="CommNo" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RegionName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="Hrz_Id" />
+          <Property Type="String" Name="Hrz_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RoomInfo" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="HisStandDataGldy">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="Guid" Name="bsO_Id" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="F1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F5" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F6" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F7" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F8" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F9" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F10" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F11" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F12" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F13" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F14" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F15" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F16" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F17" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F18" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F19" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F20" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F21" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F22" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F23" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F24" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F25" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F26" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F27" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F28" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F29" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F30" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F31" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="F101" />
+          <Property Type="Int32" Name="F102" />
+          <Property Type="Int32" Name="F103" />
+          <Property Type="Int32" Name="F105" />
+          <Property Type="Int32" Name="F106" />
+          <Property Type="Int32" Name="F107" />
+          <Property Type="Int32" Name="F108" />
+          <Property Type="Int32" Name="F109" />
+          <Property Type="Int32" Name="F110" />
+          <Property Type="Int32" Name="F104" />
+          <Property Type="Int32" Name="F111" />
+          <Property Type="Int32" Name="F112" />
+          <Property Type="Int32" Name="F113" />
+          <Property Type="Int32" Name="F114" />
+          <Property Type="Int32" Name="F115" />
+          <Property Type="Int32" Name="F116" />
+          <Property Type="Int32" Name="F117" />
+          <Property Type="Int32" Name="F118" />
+          <Property Type="Int32" Name="F119" />
+          <Property Type="Int32" Name="F120" />
+          <Property Type="Int64" Name="F201" />
+          <Property Type="Int64" Name="F202" />
+          <Property Type="Int64" Name="F203" />
+          <Property Type="Int64" Name="F204" />
+          <Property Type="Int64" Name="F205" />
+          <Property Type="Int64" Name="F206" />
+          <Property Type="Int64" Name="F207" />
+          <Property Type="Int64" Name="F208" />
+          <Property Type="Int64" Name="F209" />
+          <Property Type="Int64" Name="F210" />
+          <Property Type="Decimal" Name="F32" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F33" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F34" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F35" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F36" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F37" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F38" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F39" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F40" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisStandDataGlf">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="Guid" Name="bsO_Id" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="F1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F5" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F6" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F7" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F8" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F9" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F10" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F11" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F12" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F13" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F14" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F15" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F16" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F17" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F18" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F19" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F20" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F21" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F22" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F23" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F24" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F25" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F26" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F27" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F28" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F29" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F30" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F31" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="F101" />
+          <Property Type="Int32" Name="F102" />
+          <Property Type="Int32" Name="F103" />
+          <Property Type="Int32" Name="F104" />
+          <Property Type="Int32" Name="F105" />
+          <Property Type="Int32" Name="F106" />
+          <Property Type="Int32" Name="F107" />
+          <Property Type="Int32" Name="F108" />
+          <Property Type="Int32" Name="F109" />
+          <Property Type="Int32" Name="F110" />
+          <Property Type="Int32" Name="F111" />
+          <Property Type="Int32" Name="F112" />
+          <Property Type="Int32" Name="F113" />
+          <Property Type="Int32" Name="F114" />
+          <Property Type="Int32" Name="F115" />
+          <Property Type="Int32" Name="F116" />
+          <Property Type="Int32" Name="F117" />
+          <Property Type="Int32" Name="F118" />
+          <Property Type="Int32" Name="F119" />
+          <Property Type="Int32" Name="F120" />
+          <Property Type="Int64" Name="F201" />
+          <Property Type="Int64" Name="F202" />
+          <Property Type="Int64" Name="F203" />
+          <Property Type="Int64" Name="F204" />
+          <Property Type="Int64" Name="F205" />
+          <Property Type="Int64" Name="F206" />
+          <Property Type="Int64" Name="F207" />
+          <Property Type="Int64" Name="F208" />
+          <Property Type="Int64" Name="F209" />
+          <Property Type="Int64" Name="F210" />
+          <Property Type="Decimal" Name="F32" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F33" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F34" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F35" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F36" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F37" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F38" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F39" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F40" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisStandDataHrz">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="Guid" Name="bsO_Id" Nullable="false" />
+          <Property Type="String" Name="Det_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="bsO_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="F1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F5" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F6" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F7" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F8" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F9" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F10" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F11" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F12" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F13" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F14" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F15" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F16" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F17" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F18" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F19" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F20" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F21" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F22" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F23" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F24" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F25" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F26" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F27" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F28" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F29" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F30" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F31" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F32" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F33" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F34" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F35" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F36" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F37" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F38" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F39" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F40" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F41" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F42" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F43" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F44" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="F45" Precision="18" Scale="2" />
+          <Property Type="Int32" Name="F101" />
+          <Property Type="Int32" Name="F102" />
+          <Property Type="Int32" Name="F103" />
+          <Property Type="Int32" Name="F104" />
+          <Property Type="Int32" Name="F105" />
+          <Property Type="Int32" Name="F106" />
+          <Property Type="Int32" Name="F107" />
+          <Property Type="Int32" Name="F108" />
+          <Property Type="Int32" Name="F109" />
+          <Property Type="Int32" Name="F110" />
+          <Property Type="Int32" Name="F111" />
+          <Property Type="Int32" Name="F112" />
+          <Property Type="Int32" Name="F113" />
+          <Property Type="Int32" Name="F114" />
+          <Property Type="Int32" Name="F115" />
+          <Property Type="Int32" Name="F116" />
+          <Property Type="Int32" Name="F117" />
+          <Property Type="Int32" Name="F118" />
+          <Property Type="Int32" Name="F119" />
+          <Property Type="Int32" Name="F120" />
+          <Property Type="Int32" Name="F121" />
+          <Property Type="Int32" Name="F122" />
+          <Property Type="Int32" Name="F123" />
+          <Property Type="Int64" Name="F201" />
+          <Property Type="Int64" Name="F202" />
+          <Property Type="Int64" Name="F203" />
+          <Property Type="Int64" Name="F204" />
+          <Property Type="Int64" Name="F205" />
+          <Property Type="Int64" Name="F206" />
+          <Property Type="Int64" Name="F207" />
+          <Property Type="Int64" Name="F208" />
+          <Property Type="Int64" Name="F209" />
+          <Property Type="Int64" Name="F210" />
+          <Property Type="Decimal" Name="F1000" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="InHomeTemp" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="HisWeaData">
+          <Key>
+            <PropertyRef Name="GathDt" />
+            <PropertyRef Name="DTU_Id" />
+          </Key>
+          <Property Type="DateTime" Name="GathDt" Nullable="false" Precision="3" />
+          <Property Type="Guid" Name="bsO_Id" Nullable="false" />
+          <Property Type="Guid" Name="DTU_Id" Nullable="false" />
+          <Property Type="String" Name="DTU_Name" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="WDHis" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="RZHis" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FSHis" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="vwYXGCalCulCurve_BXC1">
+          <Key>
+            <PropertyRef Name="Det_Id" />
+          </Key>
+          <Property Type="Guid" Name="Det_Id" Nullable="false" />
+          <Property Type="Decimal" Name="H" Precision="38" Scale="6" />
+          <Property Type="Decimal" Name="wd" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Qt" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="T0" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="T1" Precision="18" Scale="2" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HjHeatingHisModelStoreContainer" CdmEntityContainer="HjHeatingHisEntities">
+          <EntitySetMapping Name="HisEventAlarmRecord">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisEventAlarmRecord">
+              <MappingFragment StoreEntitySet="HisEventAlarmRecord">
+                <ScalarProperty Name="EARID" ColumnName="EARID" />
+                <ScalarProperty Name="IOServerName" ColumnName="IOServerName" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="OperatDt" ColumnName="OperatDt" />
+                <ScalarProperty Name="OperatorName" ColumnName="OperatorName" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="ResumeValue" ColumnName="ResumeValue" />
+                <ScalarProperty Name="AcrDate" ColumnName="AcrDate" />
+                <ScalarProperty Name="AlarmValue" ColumnName="AlarmValue" />
+                <ScalarProperty Name="EventHappDT" ColumnName="EventHappDT" />
+                <ScalarProperty Name="Pri" ColumnName="Pri" />
+                <ScalarProperty Name="LimitValue" ColumnName="LimitValue" />
+                <ScalarProperty Name="AlarmType" ColumnName="AlarmType" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="VarComment" ColumnName="VarComment" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="DTU_Id" ColumnName="DTU_Id" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisGLCommNet">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisGLCommNet">
+              <MappingFragment StoreEntitySet="HisGLCommNet">
+                <ScalarProperty Name="OTGLCN82" ColumnName="OTGLCN82" />
+                <ScalarProperty Name="OTGLCN81" ColumnName="OTGLCN81" />
+                <ScalarProperty Name="OTGLCN78" ColumnName="OTGLCN78" />
+                <ScalarProperty Name="OTGLCN77" ColumnName="OTGLCN77" />
+                <ScalarProperty Name="OTGLCN76" ColumnName="OTGLCN76" />
+                <ScalarProperty Name="OTGLCN75" ColumnName="OTGLCN75" />
+                <ScalarProperty Name="OTGLCN74" ColumnName="OTGLCN74" />
+                <ScalarProperty Name="OTGLCN73" ColumnName="OTGLCN73" />
+                <ScalarProperty Name="OTGLCN72" ColumnName="OTGLCN72" />
+                <ScalarProperty Name="OTGLCN71" ColumnName="OTGLCN71" />
+                <ScalarProperty Name="OTGLCN70" ColumnName="OTGLCN70" />
+                <ScalarProperty Name="OTGLCN69" ColumnName="OTGLCN69" />
+                <ScalarProperty Name="OTGLCN68" ColumnName="OTGLCN68" />
+                <ScalarProperty Name="OTGLCN67" ColumnName="OTGLCN67" />
+                <ScalarProperty Name="OTGLCN66" ColumnName="OTGLCN66" />
+                <ScalarProperty Name="OTGLCN65" ColumnName="OTGLCN65" />
+                <ScalarProperty Name="OTGLCN64" ColumnName="OTGLCN64" />
+                <ScalarProperty Name="OTGLCN63" ColumnName="OTGLCN63" />
+                <ScalarProperty Name="OTGLCN62" ColumnName="OTGLCN62" />
+                <ScalarProperty Name="OTGLCN61" ColumnName="OTGLCN61" />
+                <ScalarProperty Name="OTGLCN60" ColumnName="OTGLCN60" />
+                <ScalarProperty Name="OTGLCN59" ColumnName="OTGLCN59" />
+                <ScalarProperty Name="OTGLCN80" ColumnName="OTGLCN80" />
+                <ScalarProperty Name="OTGLCN79" ColumnName="OTGLCN79" />
+                <ScalarProperty Name="OTGLCN58" ColumnName="OTGLCN58" />
+                <ScalarProperty Name="OTGLCN57" ColumnName="OTGLCN57" />
+                <ScalarProperty Name="OTGLCN56" ColumnName="OTGLCN56" />
+                <ScalarProperty Name="OTGLCN55" ColumnName="OTGLCN55" />
+                <ScalarProperty Name="OTGLCN54" ColumnName="OTGLCN54" />
+                <ScalarProperty Name="OTGLCN48" ColumnName="OTGLCN48" />
+                <ScalarProperty Name="OTGLCN47" ColumnName="OTGLCN47" />
+                <ScalarProperty Name="OTGLCN46" ColumnName="OTGLCN46" />
+                <ScalarProperty Name="OTGLCN45" ColumnName="OTGLCN45" />
+                <ScalarProperty Name="OTGLCN44" ColumnName="OTGLCN44" />
+                <ScalarProperty Name="OTGLCN43" ColumnName="OTGLCN43" />
+                <ScalarProperty Name="OTGLCN42" ColumnName="OTGLCN42" />
+                <ScalarProperty Name="OTGLCN41" ColumnName="OTGLCN41" />
+                <ScalarProperty Name="OTGLCN40" ColumnName="OTGLCN40" />
+                <ScalarProperty Name="OTGLCN39" ColumnName="OTGLCN39" />
+                <ScalarProperty Name="OTGLCN38" ColumnName="OTGLCN38" />
+                <ScalarProperty Name="OTGLCN37" ColumnName="OTGLCN37" />
+                <ScalarProperty Name="OTGLCN1000" ColumnName="OTGLCN1000" />
+                <ScalarProperty Name="JLOTGLCN84" ColumnName="JLOTGLCN84" />
+                <ScalarProperty Name="JLOTGLCN83" ColumnName="JLOTGLCN83" />
+                <ScalarProperty Name="JLOTGLCN82" ColumnName="JLOTGLCN82" />
+                <ScalarProperty Name="JLOTGLCN81" ColumnName="JLOTGLCN81" />
+                <ScalarProperty Name="JLOTGLCN80" ColumnName="JLOTGLCN80" />
+                <ScalarProperty Name="JLOTGLCN79" ColumnName="JLOTGLCN79" />
+                <ScalarProperty Name="JLOTGLCN78" ColumnName="JLOTGLCN78" />
+                <ScalarProperty Name="JLOTGLCN77" ColumnName="JLOTGLCN77" />
+                <ScalarProperty Name="JLOTGLCN76" ColumnName="JLOTGLCN76" />
+                <ScalarProperty Name="JLOTGLCN75" ColumnName="JLOTGLCN75" />
+                <ScalarProperty Name="JLOTGLCN74" ColumnName="JLOTGLCN74" />
+                <ScalarProperty Name="JLOTGLCN73" ColumnName="JLOTGLCN73" />
+                <ScalarProperty Name="JLOTGLCN72" ColumnName="JLOTGLCN72" />
+                <ScalarProperty Name="JLOTGLCN71" ColumnName="JLOTGLCN71" />
+                <ScalarProperty Name="JLOTGLCN70" ColumnName="JLOTGLCN70" />
+                <ScalarProperty Name="JLOTGLCN69" ColumnName="JLOTGLCN69" />
+                <ScalarProperty Name="JLOTGLCN68" ColumnName="JLOTGLCN68" />
+                <ScalarProperty Name="JLOTGLCN67" ColumnName="JLOTGLCN67" />
+                <ScalarProperty Name="JLOTGLCN66" ColumnName="JLOTGLCN66" />
+                <ScalarProperty Name="JLOTGLCN65" ColumnName="JLOTGLCN65" />
+                <ScalarProperty Name="JLOTGLCN64" ColumnName="JLOTGLCN64" />
+                <ScalarProperty Name="JLOTGLCN63" ColumnName="JLOTGLCN63" />
+                <ScalarProperty Name="JLOTGLCN62" ColumnName="JLOTGLCN62" />
+                <ScalarProperty Name="JLOTGLCN61" ColumnName="JLOTGLCN61" />
+                <ScalarProperty Name="JLOTGLCN60" ColumnName="JLOTGLCN60" />
+                <ScalarProperty Name="JLOTGLCN59" ColumnName="JLOTGLCN59" />
+                <ScalarProperty Name="JLOTGLCN58" ColumnName="JLOTGLCN58" />
+                <ScalarProperty Name="JLOTGLCN57" ColumnName="JLOTGLCN57" />
+                <ScalarProperty Name="JLOTGLCN56" ColumnName="JLOTGLCN56" />
+                <ScalarProperty Name="JLOTGLCN55" ColumnName="JLOTGLCN55" />
+                <ScalarProperty Name="JLOTGLCN54" ColumnName="JLOTGLCN54" />
+                <ScalarProperty Name="JLOTGLCN53" ColumnName="JLOTGLCN53" />
+                <ScalarProperty Name="JLOTGLCN52" ColumnName="JLOTGLCN52" />
+                <ScalarProperty Name="JLOTGLCN51" ColumnName="JLOTGLCN51" />
+                <ScalarProperty Name="JLOTGLCN50" ColumnName="JLOTGLCN50" />
+                <ScalarProperty Name="JLOTGLCN49" ColumnName="JLOTGLCN49" />
+                <ScalarProperty Name="JLOTGLCN48" ColumnName="JLOTGLCN48" />
+                <ScalarProperty Name="JLOTGLCN47" ColumnName="JLOTGLCN47" />
+                <ScalarProperty Name="JLOTGLCN46" ColumnName="JLOTGLCN46" />
+                <ScalarProperty Name="JLOTGLCN45" ColumnName="JLOTGLCN45" />
+                <ScalarProperty Name="JLOTGLCN44" ColumnName="JLOTGLCN44" />
+                <ScalarProperty Name="JLOTGLCN43" ColumnName="JLOTGLCN43" />
+                <ScalarProperty Name="JLOTGLCN42" ColumnName="JLOTGLCN42" />
+                <ScalarProperty Name="JLOTGLCN41" ColumnName="JLOTGLCN41" />
+                <ScalarProperty Name="JLOTGLCN40" ColumnName="JLOTGLCN40" />
+                <ScalarProperty Name="JLOTGLCN39" ColumnName="JLOTGLCN39" />
+                <ScalarProperty Name="JLOTGLCN38" ColumnName="JLOTGLCN38" />
+                <ScalarProperty Name="JLOTGLCN37" ColumnName="JLOTGLCN37" />
+                <ScalarProperty Name="JLOTGLCN36" ColumnName="JLOTGLCN36" />
+                <ScalarProperty Name="OTGLCN34" ColumnName="OTGLCN34" />
+                <ScalarProperty Name="OTGLCN32" ColumnName="OTGLCN32" />
+                <ScalarProperty Name="OTGLCN31" ColumnName="OTGLCN31" />
+                <ScalarProperty Name="OTGLCN30" ColumnName="OTGLCN30" />
+                <ScalarProperty Name="OTGLCN28" ColumnName="OTGLCN28" />
+                <ScalarProperty Name="OTGLCN27" ColumnName="OTGLCN27" />
+                <ScalarProperty Name="OTGLCN29" ColumnName="OTGLCN29" />
+                <ScalarProperty Name="OTGLCN24" ColumnName="OTGLCN24" />
+                <ScalarProperty Name="OTGLCN26" ColumnName="OTGLCN26" />
+                <ScalarProperty Name="OTGLCN23" ColumnName="OTGLCN23" />
+                <ScalarProperty Name="OTGLCN22" ColumnName="OTGLCN22" />
+                <ScalarProperty Name="OTGLCN21" ColumnName="OTGLCN21" />
+                <ScalarProperty Name="OTGLCN20" ColumnName="OTGLCN20" />
+                <ScalarProperty Name="OTGLCN19" ColumnName="OTGLCN19" />
+                <ScalarProperty Name="OTGLCN18" ColumnName="OTGLCN18" />
+                <ScalarProperty Name="OTGLCN17" ColumnName="OTGLCN17" />
+                <ScalarProperty Name="OTGLCN16" ColumnName="OTGLCN16" />
+                <ScalarProperty Name="OTGLCN15" ColumnName="OTGLCN15" />
+                <ScalarProperty Name="OTGLCN14" ColumnName="OTGLCN14" />
+                <ScalarProperty Name="OTGLCN12" ColumnName="OTGLCN12" />
+                <ScalarProperty Name="OTGLCN33" ColumnName="OTGLCN33" />
+                <ScalarProperty Name="OTGLCN36" ColumnName="OTGLCN36" />
+                <ScalarProperty Name="OTGLCN35" ColumnName="OTGLCN35" />
+                <ScalarProperty Name="OTGLCN25" ColumnName="OTGLCN25" />
+                <ScalarProperty Name="OTGLCN13" ColumnName="OTGLCN13" />
+                <ScalarProperty Name="OTGLCN10" ColumnName="OTGLCN10" />
+                <ScalarProperty Name="OTGLCN11" ColumnName="OTGLCN11" />
+                <ScalarProperty Name="OTGLCN9" ColumnName="OTGLCN9" />
+                <ScalarProperty Name="OTGLCN8" ColumnName="OTGLCN8" />
+                <ScalarProperty Name="OTGLCN7" ColumnName="OTGLCN7" />
+                <ScalarProperty Name="OTGLCN6" ColumnName="OTGLCN6" />
+                <ScalarProperty Name="OTGLCN5" ColumnName="OTGLCN5" />
+                <ScalarProperty Name="OTGLCN4" ColumnName="OTGLCN4" />
+                <ScalarProperty Name="OTGLCN3" ColumnName="OTGLCN3" />
+                <ScalarProperty Name="OTGLCN2" ColumnName="OTGLCN2" />
+                <ScalarProperty Name="OTGLCN1" ColumnName="OTGLCN1" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisGLLdy">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisGLLdy">
+              <MappingFragment StoreEntitySet="HisGLLdy">
+                <ScalarProperty Name="OTLDYF1029" ColumnName="OTLDYF1029" />
+                <ScalarProperty Name="OTLDYF1022" ColumnName="OTLDYF1022" />
+                <ScalarProperty Name="OTLDYF1018" ColumnName="OTLDYF1018" />
+                <ScalarProperty Name="OTLDYF1014" ColumnName="OTLDYF1014" />
+                <ScalarProperty Name="OTLDYF1012" ColumnName="OTLDYF1012" />
+                <ScalarProperty Name="JLOTLDYF49" ColumnName="JLOTLDYF49" />
+                <ScalarProperty Name="JLOTLDYF48" ColumnName="JLOTLDYF48" />
+                <ScalarProperty Name="JLOTLDYF47" ColumnName="JLOTLDYF47" />
+                <ScalarProperty Name="JLOTLDYF46" ColumnName="JLOTLDYF46" />
+                <ScalarProperty Name="JLOTLDYF45" ColumnName="JLOTLDYF45" />
+                <ScalarProperty Name="JLOTLDYF44" ColumnName="JLOTLDYF44" />
+                <ScalarProperty Name="JLOTLDYF43" ColumnName="JLOTLDYF43" />
+                <ScalarProperty Name="JLOTLDYF42" ColumnName="JLOTLDYF42" />
+                <ScalarProperty Name="JLOTLDYF41" ColumnName="JLOTLDYF41" />
+                <ScalarProperty Name="JLOTLDYF40" ColumnName="JLOTLDYF40" />
+                <ScalarProperty Name="JLOTLDYF39" ColumnName="JLOTLDYF39" />
+                <ScalarProperty Name="JLOTLDYF38" ColumnName="JLOTLDYF38" />
+                <ScalarProperty Name="JLOTLDYF37" ColumnName="JLOTLDYF37" />
+                <ScalarProperty Name="JLOTLDYF36" ColumnName="JLOTLDYF36" />
+                <ScalarProperty Name="JLOTLDYF35" ColumnName="JLOTLDYF35" />
+                <ScalarProperty Name="JLOTLDYF34" ColumnName="JLOTLDYF34" />
+                <ScalarProperty Name="JLOTLDYF33" ColumnName="JLOTLDYF33" />
+                <ScalarProperty Name="OTLDYF50" ColumnName="OTLDYF50" />
+                <ScalarProperty Name="OTLDYF49" ColumnName="OTLDYF49" />
+                <ScalarProperty Name="OTLDYF48" ColumnName="OTLDYF48" />
+                <ScalarProperty Name="OTLDYF47" ColumnName="OTLDYF47" />
+                <ScalarProperty Name="OTLDYF46" ColumnName="OTLDYF46" />
+                <ScalarProperty Name="OTLDYF45" ColumnName="OTLDYF45" />
+                <ScalarProperty Name="OTLDYF44" ColumnName="OTLDYF44" />
+                <ScalarProperty Name="OTLDYF43" ColumnName="OTLDYF43" />
+                <ScalarProperty Name="OTLDYF35" ColumnName="OTLDYF35" />
+                <ScalarProperty Name="OTLDYF34" ColumnName="OTLDYF34" />
+                <ScalarProperty Name="OTLDYF42" ColumnName="OTLDYF42" />
+                <ScalarProperty Name="OTLDYF41" ColumnName="OTLDYF41" />
+                <ScalarProperty Name="OTLDYF40" ColumnName="OTLDYF40" />
+                <ScalarProperty Name="OTLDYF39" ColumnName="OTLDYF39" />
+                <ScalarProperty Name="OTLDYF38" ColumnName="OTLDYF38" />
+                <ScalarProperty Name="OTLDYF37" ColumnName="OTLDYF37" />
+                <ScalarProperty Name="OTLDYF36" ColumnName="OTLDYF36" />
+                <ScalarProperty Name="OTLDYF33" ColumnName="OTLDYF33" />
+                <ScalarProperty Name="OTLDYF32" ColumnName="OTLDYF32" />
+                <ScalarProperty Name="OTLDYF31" ColumnName="OTLDYF31" />
+                <ScalarProperty Name="OTLDYF30" ColumnName="OTLDYF30" />
+                <ScalarProperty Name="OTLDYF29" ColumnName="OTLDYF29" />
+                <ScalarProperty Name="OTLDYF28" ColumnName="OTLDYF28" />
+                <ScalarProperty Name="OTLDYF27" ColumnName="OTLDYF27" />
+                <ScalarProperty Name="OTLDYF26" ColumnName="OTLDYF26" />
+                <ScalarProperty Name="OTLDYF25" ColumnName="OTLDYF25" />
+                <ScalarProperty Name="OTLDYF24" ColumnName="OTLDYF24" />
+                <ScalarProperty Name="OTLDYF23" ColumnName="OTLDYF23" />
+                <ScalarProperty Name="OTLDYF22" ColumnName="OTLDYF22" />
+                <ScalarProperty Name="OTLDYF21" ColumnName="OTLDYF21" />
+                <ScalarProperty Name="OTLDYF20" ColumnName="OTLDYF20" />
+                <ScalarProperty Name="OTLDYF19" ColumnName="OTLDYF19" />
+                <ScalarProperty Name="OTLDYF18" ColumnName="OTLDYF18" />
+                <ScalarProperty Name="OTLDYF17" ColumnName="OTLDYF17" />
+                <ScalarProperty Name="OTLDYF16" ColumnName="OTLDYF16" />
+                <ScalarProperty Name="OTLDYF15" ColumnName="OTLDYF15" />
+                <ScalarProperty Name="OTLDYF14" ColumnName="OTLDYF14" />
+                <ScalarProperty Name="OTLDYF13" ColumnName="OTLDYF13" />
+                <ScalarProperty Name="OTLDYF12" ColumnName="OTLDYF12" />
+                <ScalarProperty Name="OTLDYF11" ColumnName="OTLDYF11" />
+                <ScalarProperty Name="OTLDYF10" ColumnName="OTLDYF10" />
+                <ScalarProperty Name="OTLDYF9" ColumnName="OTLDYF9" />
+                <ScalarProperty Name="OTLDYF8" ColumnName="OTLDYF8" />
+                <ScalarProperty Name="OTLDYF7" ColumnName="OTLDYF7" />
+                <ScalarProperty Name="OTLDYF6" ColumnName="OTLDYF6" />
+                <ScalarProperty Name="OTLDYF5" ColumnName="OTLDYF5" />
+                <ScalarProperty Name="OTLDYF4" ColumnName="OTLDYF4" />
+                <ScalarProperty Name="OTLDYF3" ColumnName="OTLDYF3" />
+                <ScalarProperty Name="OTLDYF2" ColumnName="OTLDYF2" />
+                <ScalarProperty Name="OTLDYF1" ColumnName="OTLDYF1" />
+                <ScalarProperty Name="LdyNo" ColumnName="LdyNo" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisHJGathData1">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisHJGathData1">
+              <MappingFragment StoreEntitySet="HisHJGathData1">
+                <ScalarProperty Name="InHomeTemp" ColumnName="InHomeTemp" />
+                <ScalarProperty Name="FS" ColumnName="FS" />
+                <ScalarProperty Name="RZ" ColumnName="RZ" />
+                <ScalarProperty Name="WD" ColumnName="WD" />
+                <ScalarProperty Name="F1000" ColumnName="F1000" />
+                <ScalarProperty Name="HJGathF70" ColumnName="HJGathF70" />
+                <ScalarProperty Name="HJGathF69" ColumnName="HJGathF69" />
+                <ScalarProperty Name="HJGathF68" ColumnName="HJGathF68" />
+                <ScalarProperty Name="HJGathF67" ColumnName="HJGathF67" />
+                <ScalarProperty Name="HJGathFX2B" ColumnName="HJGathFX2B" />
+                <ScalarProperty Name="HJGathFX2A" ColumnName="HJGathFX2A" />
+                <ScalarProperty Name="HJGathFX29" ColumnName="HJGathFX29" />
+                <ScalarProperty Name="HJGathFX28" ColumnName="HJGathFX28" />
+                <ScalarProperty Name="HJGathF7_B11" ColumnName="HJGathF7_B11" />
+                <ScalarProperty Name="HJGathF7_B10" ColumnName="HJGathF7_B10" />
+                <ScalarProperty Name="HJGathF7_B9" ColumnName="HJGathF7_B9" />
+                <ScalarProperty Name="HJGathF7_B8" ColumnName="HJGathF7_B8" />
+                <ScalarProperty Name="HJGathF7_B7" ColumnName="HJGathF7_B7" />
+                <ScalarProperty Name="HJGathF7_B6" ColumnName="HJGathF7_B6" />
+                <ScalarProperty Name="HJGathF7_B5" ColumnName="HJGathF7_B5" />
+                <ScalarProperty Name="HJGathF7_B4" ColumnName="HJGathF7_B4" />
+                <ScalarProperty Name="HJGathF7_B3" ColumnName="HJGathF7_B3" />
+                <ScalarProperty Name="HJGathF7_B2" ColumnName="HJGathF7_B2" />
+                <ScalarProperty Name="HJGathF7_B1" ColumnName="HJGathF7_B1" />
+                <ScalarProperty Name="HJGathF7_B0" ColumnName="HJGathF7_B0" />
+                <ScalarProperty Name="HJGathF66" ColumnName="HJGathF66" />
+                <ScalarProperty Name="HJGathF65" ColumnName="HJGathF65" />
+                <ScalarProperty Name="HJGathF61" ColumnName="HJGathF61" />
+                <ScalarProperty Name="HJGathF59" ColumnName="HJGathF59" />
+                <ScalarProperty Name="HJGathF58" ColumnName="HJGathF58" />
+                <ScalarProperty Name="HJGathF56" ColumnName="HJGathF56" />
+                <ScalarProperty Name="HJGathF54" ColumnName="HJGathF54" />
+                <ScalarProperty Name="HJGathF49" ColumnName="HJGathF49" />
+                <ScalarProperty Name="HJGathF47" ColumnName="HJGathF47" />
+                <ScalarProperty Name="HJGathF46" ColumnName="HJGathF46" />
+                <ScalarProperty Name="HJGathF45" ColumnName="HJGathF45" />
+                <ScalarProperty Name="HJGathF44" ColumnName="HJGathF44" />
+                <ScalarProperty Name="HJGathF40" ColumnName="HJGathF40" />
+                <ScalarProperty Name="HJGathF38" ColumnName="HJGathF38" />
+                <ScalarProperty Name="HJGathF37" ColumnName="HJGathF37" />
+                <ScalarProperty Name="HJGathF36" ColumnName="HJGathF36" />
+                <ScalarProperty Name="HJGathF35" ColumnName="HJGathF35" />
+                <ScalarProperty Name="HJGathF31" ColumnName="HJGathF31" />
+                <ScalarProperty Name="HJGathF29" ColumnName="HJGathF29" />
+                <ScalarProperty Name="HJGathF28" ColumnName="HJGathF28" />
+                <ScalarProperty Name="HJGathF27" ColumnName="HJGathF27" />
+                <ScalarProperty Name="HJGathF26" ColumnName="HJGathF26" />
+                <ScalarProperty Name="HJGathF22" ColumnName="HJGathF22" />
+                <ScalarProperty Name="HJGathF21" ColumnName="HJGathF21" />
+                <ScalarProperty Name="HJGathF20" ColumnName="HJGathF20" />
+                <ScalarProperty Name="HJGathF19" ColumnName="HJGathF19" />
+                <ScalarProperty Name="HJGathF18" ColumnName="HJGathF18" />
+                <ScalarProperty Name="HJGathF17" ColumnName="HJGathF17" />
+                <ScalarProperty Name="HJGathF16" ColumnName="HJGathF16" />
+                <ScalarProperty Name="HJGathF15" ColumnName="HJGathF15" />
+                <ScalarProperty Name="HJGathF14" ColumnName="HJGathF14" />
+                <ScalarProperty Name="HJGathF13" ColumnName="HJGathF13" />
+                <ScalarProperty Name="HJGathF12" ColumnName="HJGathF12" />
+                <ScalarProperty Name="HJGathF11" ColumnName="HJGathF11" />
+                <ScalarProperty Name="HJGathF10" ColumnName="HJGathF10" />
+                <ScalarProperty Name="HJGathF9" ColumnName="HJGathF9" />
+                <ScalarProperty Name="HJGathF8" ColumnName="HJGathF8" />
+                <ScalarProperty Name="HJGathF7" ColumnName="HJGathF7" />
+                <ScalarProperty Name="HJGathF6" ColumnName="HJGathF6" />
+                <ScalarProperty Name="HJGathF5" ColumnName="HJGathF5" />
+                <ScalarProperty Name="HJGathF4" ColumnName="HJGathF4" />
+                <ScalarProperty Name="HJGathF3" ColumnName="HJGathF3" />
+                <ScalarProperty Name="HJGathF2" ColumnName="HJGathF2" />
+                <ScalarProperty Name="HJGathF1" ColumnName="HJGathF1" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisHJGathData2">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisHJGathData2">
+              <MappingFragment StoreEntitySet="HisHJGathData2">
+                <ScalarProperty Name="InHomeTemp" ColumnName="InHomeTemp" />
+                <ScalarProperty Name="FS" ColumnName="FS" />
+                <ScalarProperty Name="RZ" ColumnName="RZ" />
+                <ScalarProperty Name="WD" ColumnName="WD" />
+                <ScalarProperty Name="F1000" ColumnName="F1000" />
+                <ScalarProperty Name="HJGath2B_B15" ColumnName="HJGath2B_B15" />
+                <ScalarProperty Name="HJGath2B_B14" ColumnName="HJGath2B_B14" />
+                <ScalarProperty Name="HJGath2A_B3" ColumnName="HJGath2A_B3" />
+                <ScalarProperty Name="HJGath2A_B2" ColumnName="HJGath2A_B2" />
+                <ScalarProperty Name="HJGath2A_B1" ColumnName="HJGath2A_B1" />
+                <ScalarProperty Name="HJGath2A_B0" ColumnName="HJGath2A_B0" />
+                <ScalarProperty Name="HJGath29_B15" ColumnName="HJGath29_B15" />
+                <ScalarProperty Name="HJGath29_B14" ColumnName="HJGath29_B14" />
+                <ScalarProperty Name="HJGath29_B13" ColumnName="HJGath29_B13" />
+                <ScalarProperty Name="HJGath29_B12" ColumnName="HJGath29_B12" />
+                <ScalarProperty Name="HJGath29_B11" ColumnName="HJGath29_B11" />
+                <ScalarProperty Name="HJGath29_B10" ColumnName="HJGath29_B10" />
+                <ScalarProperty Name="HJGath29_B9" ColumnName="HJGath29_B9" />
+                <ScalarProperty Name="HJGath29_B8" ColumnName="HJGath29_B8" />
+                <ScalarProperty Name="HJGath29_B7" ColumnName="HJGath29_B7" />
+                <ScalarProperty Name="HJGath29_B6" ColumnName="HJGath29_B6" />
+                <ScalarProperty Name="HJGath29_B5" ColumnName="HJGath29_B5" />
+                <ScalarProperty Name="HJGath29_B4" ColumnName="HJGath29_B4" />
+                <ScalarProperty Name="HJGath29_B3" ColumnName="HJGath29_B3" />
+                <ScalarProperty Name="HJGath29_B2" ColumnName="HJGath29_B2" />
+                <ScalarProperty Name="HJGath29_B1" ColumnName="HJGath29_B1" />
+                <ScalarProperty Name="HJGath28_B15" ColumnName="HJGath28_B15" />
+                <ScalarProperty Name="HJGath28_B14" ColumnName="HJGath28_B14" />
+                <ScalarProperty Name="HJGath28_B13" ColumnName="HJGath28_B13" />
+                <ScalarProperty Name="HJGath28_B12" ColumnName="HJGath28_B12" />
+                <ScalarProperty Name="HJGath28_B11" ColumnName="HJGath28_B11" />
+                <ScalarProperty Name="HJGath28_B10" ColumnName="HJGath28_B10" />
+                <ScalarProperty Name="HJGath28_B9" ColumnName="HJGath28_B9" />
+                <ScalarProperty Name="HJGath28_B8" ColumnName="HJGath28_B8" />
+                <ScalarProperty Name="HJGath28_B7" ColumnName="HJGath28_B7" />
+                <ScalarProperty Name="HJGath28_B6" ColumnName="HJGath28_B6" />
+                <ScalarProperty Name="HJGath28_B5" ColumnName="HJGath28_B5" />
+                <ScalarProperty Name="HJGath28_B4" ColumnName="HJGath28_B4" />
+                <ScalarProperty Name="HJGath28_B3" ColumnName="HJGath28_B3" />
+                <ScalarProperty Name="HJGath28_B2" ColumnName="HJGath28_B2" />
+                <ScalarProperty Name="HJGath28_B1" ColumnName="HJGath28_B1" />
+                <ScalarProperty Name="HJGathFF_B15" ColumnName="HJGathFF_B15" />
+                <ScalarProperty Name="HJGathFF_B14" ColumnName="HJGathFF_B14" />
+                <ScalarProperty Name="HJGathFF_B13" ColumnName="HJGathFF_B13" />
+                <ScalarProperty Name="HJGathFF_B12" ColumnName="HJGathFF_B12" />
+                <ScalarProperty Name="HJGathFF_B11" ColumnName="HJGathFF_B11" />
+                <ScalarProperty Name="HJGathFF_B10" ColumnName="HJGathFF_B10" />
+                <ScalarProperty Name="HJGathFF_B9" ColumnName="HJGathFF_B9" />
+                <ScalarProperty Name="HJGathFF_B8" ColumnName="HJGathFF_B8" />
+                <ScalarProperty Name="HJGathFF_B1" ColumnName="HJGathFF_B1" />
+                <ScalarProperty Name="HJGathFC_B15" ColumnName="HJGathFC_B15" />
+                <ScalarProperty Name="HJGathFC_B14" ColumnName="HJGathFC_B14" />
+                <ScalarProperty Name="HJGathFC_B13" ColumnName="HJGathFC_B13" />
+                <ScalarProperty Name="HJGathFC_B12" ColumnName="HJGathFC_B12" />
+                <ScalarProperty Name="HJGathFC_B11" ColumnName="HJGathFC_B11" />
+                <ScalarProperty Name="HJGathFC_B10" ColumnName="HJGathFC_B10" />
+                <ScalarProperty Name="HJGathFC_B9" ColumnName="HJGathFC_B9" />
+                <ScalarProperty Name="HJGathFC_B8" ColumnName="HJGathFC_B8" />
+                <ScalarProperty Name="HJGathFC_B7" ColumnName="HJGathFC_B7" />
+                <ScalarProperty Name="HJGathFC_B6" ColumnName="HJGathFC_B6" />
+                <ScalarProperty Name="HJGathFC_B5" ColumnName="HJGathFC_B5" />
+                <ScalarProperty Name="HJGathFC_B4" ColumnName="HJGathFC_B4" />
+                <ScalarProperty Name="HJGathFC_B3" ColumnName="HJGathFC_B3" />
+                <ScalarProperty Name="HJGathFC_B2" ColumnName="HJGathFC_B2" />
+                <ScalarProperty Name="HJGathFC_B1" ColumnName="HJGathFC_B1" />
+                <ScalarProperty Name="HJGathFC_B0" ColumnName="HJGathFC_B0" />
+                <ScalarProperty Name="HJGathF2C_2F" ColumnName="HJGathF2C_2F" />
+                <ScalarProperty Name="HJGathF63" ColumnName="HJGathF63" />
+                <ScalarProperty Name="HJGathF62" ColumnName="HJGathF62" />
+                <ScalarProperty Name="HJGathF60" ColumnName="HJGathF60" />
+                <ScalarProperty Name="HJGathF58" ColumnName="HJGathF58" />
+                <ScalarProperty Name="HJGathF56" ColumnName="HJGathF56" />
+                <ScalarProperty Name="HJGathF52" ColumnName="HJGathF52" />
+                <ScalarProperty Name="HJGathF50" ColumnName="HJGathF50" />
+                <ScalarProperty Name="HJGathF48" ColumnName="HJGathF48" />
+                <ScalarProperty Name="HJGathF46" ColumnName="HJGathF46" />
+                <ScalarProperty Name="HJGathF44" ColumnName="HJGathF44" />
+                <ScalarProperty Name="HJGathF42" ColumnName="HJGathF42" />
+                <ScalarProperty Name="HJGathF40" ColumnName="HJGathF40" />
+                <ScalarProperty Name="HJGathF38" ColumnName="HJGathF38" />
+                <ScalarProperty Name="HJGathF36" ColumnName="HJGathF36" />
+                <ScalarProperty Name="HJGathF34" ColumnName="HJGathF34" />
+                <ScalarProperty Name="HJGathF32" ColumnName="HJGathF32" />
+                <ScalarProperty Name="HJGathF30" ColumnName="HJGathF30" />
+                <ScalarProperty Name="HJGathF2F" ColumnName="HJGathF2F" />
+                <ScalarProperty Name="HJGathF2E" ColumnName="HJGathF2E" />
+                <ScalarProperty Name="HJGathF2D" ColumnName="HJGathF2D" />
+                <ScalarProperty Name="HJGathF2C" ColumnName="HJGathF2C" />
+                <ScalarProperty Name="HJGathF2B" ColumnName="HJGathF2B" />
+                <ScalarProperty Name="HJGathF2A" ColumnName="HJGathF2A" />
+                <ScalarProperty Name="HJGathF29" ColumnName="HJGathF29" />
+                <ScalarProperty Name="HJGathF28" ColumnName="HJGathF28" />
+                <ScalarProperty Name="HJGathF26" ColumnName="HJGathF26" />
+                <ScalarProperty Name="HJGathF24" ColumnName="HJGathF24" />
+                <ScalarProperty Name="HJGathF22" ColumnName="HJGathF22" />
+                <ScalarProperty Name="HJGathF20" ColumnName="HJGathF20" />
+                <ScalarProperty Name="HJGathF1E" ColumnName="HJGathF1E" />
+                <ScalarProperty Name="HJGathF1C" ColumnName="HJGathF1C" />
+                <ScalarProperty Name="HJGathF1A" ColumnName="HJGathF1A" />
+                <ScalarProperty Name="HJGathF18" ColumnName="HJGathF18" />
+                <ScalarProperty Name="HJGathF16" ColumnName="HJGathF16" />
+                <ScalarProperty Name="HJGathF14" ColumnName="HJGathF14" />
+                <ScalarProperty Name="HJGathF12" ColumnName="HJGathF12" />
+                <ScalarProperty Name="HJGathF10" ColumnName="HJGathF10" />
+                <ScalarProperty Name="HJGathFF" ColumnName="HJGathFF" />
+                <ScalarProperty Name="HJGathFE" ColumnName="HJGathFE" />
+                <ScalarProperty Name="HJGathFD" ColumnName="HJGathFD" />
+                <ScalarProperty Name="HJGathFC" ColumnName="HJGathFC" />
+                <ScalarProperty Name="HJGathFA" ColumnName="HJGathFA" />
+                <ScalarProperty Name="HJGathF8" ColumnName="HJGathF8" />
+                <ScalarProperty Name="HJGathF6" ColumnName="HJGathF6" />
+                <ScalarProperty Name="HJGathF4" ColumnName="HJGathF4" />
+                <ScalarProperty Name="HJGathF2" ColumnName="HJGathF2" />
+                <ScalarProperty Name="HJGathF0" ColumnName="HJGathF0" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisHRZWdzData">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisHRZWdzData">
+              <MappingFragment StoreEntitySet="HisHRZWdzData">
+                <ScalarProperty Name="InHomeTemp" ColumnName="InHomeTemp" />
+                <ScalarProperty Name="F1000" ColumnName="F1000" />
+                <ScalarProperty Name="HRZCollOT110" ColumnName="HRZCollOT110" />
+                <ScalarProperty Name="HRZCollOT109" ColumnName="HRZCollOT109" />
+                <ScalarProperty Name="HRZCollOT108" ColumnName="HRZCollOT108" />
+                <ScalarProperty Name="HRZCollOT107" ColumnName="HRZCollOT107" />
+                <ScalarProperty Name="HRZCollOT106" ColumnName="HRZCollOT106" />
+                <ScalarProperty Name="HRZCollOT105" ColumnName="HRZCollOT105" />
+                <ScalarProperty Name="HRZCollOT104" ColumnName="HRZCollOT104" />
+                <ScalarProperty Name="HRZCollOT103" ColumnName="HRZCollOT103" />
+                <ScalarProperty Name="HRZCollOT102" ColumnName="HRZCollOT102" />
+                <ScalarProperty Name="HRZCollOT101" ColumnName="HRZCollOT101" />
+                <ScalarProperty Name="HRZCollOT100" ColumnName="HRZCollOT100" />
+                <ScalarProperty Name="HRZCollOTF158" ColumnName="HRZCollOTF158" />
+                <ScalarProperty Name="HRZCollOTF156" ColumnName="HRZCollOTF156" />
+                <ScalarProperty Name="HRZCollOTF154" ColumnName="HRZCollOTF154" />
+                <ScalarProperty Name="HRZCollOTF152" ColumnName="HRZCollOTF152" />
+                <ScalarProperty Name="HRZCollOTF150" ColumnName="HRZCollOTF150" />
+                <ScalarProperty Name="HRZCollOTF11E" ColumnName="HRZCollOTF11E" />
+                <ScalarProperty Name="HRZCollOTF11C" ColumnName="HRZCollOTF11C" />
+                <ScalarProperty Name="HRZCollOTF11A" ColumnName="HRZCollOTF11A" />
+                <ScalarProperty Name="HRZCollOTF118" ColumnName="HRZCollOTF118" />
+                <ScalarProperty Name="HRZCollOTF116" ColumnName="HRZCollOTF116" />
+                <ScalarProperty Name="HRZCollOTF114" ColumnName="HRZCollOTF114" />
+                <ScalarProperty Name="HRZCollOTF10E" ColumnName="HRZCollOTF10E" />
+                <ScalarProperty Name="HRZCollOTF10C" ColumnName="HRZCollOTF10C" />
+                <ScalarProperty Name="HRZCollOTF10A" ColumnName="HRZCollOTF10A" />
+                <ScalarProperty Name="HRZCollOTF108" ColumnName="HRZCollOTF108" />
+                <ScalarProperty Name="HRZCollOTF102" ColumnName="HRZCollOTF102" />
+                <ScalarProperty Name="HRZCollOTF151" ColumnName="HRZCollOTF151" />
+                <ScalarProperty Name="HRZCollOT39" ColumnName="HRZCollOT39" />
+                <ScalarProperty Name="HRZCollOT38" ColumnName="HRZCollOT38" />
+                <ScalarProperty Name="HRZCollOT37" ColumnName="HRZCollOT37" />
+                <ScalarProperty Name="HRZCollOT36" ColumnName="HRZCollOT36" />
+                <ScalarProperty Name="HRZCollOT35" ColumnName="HRZCollOT35" />
+                <ScalarProperty Name="HRZCollOT34" ColumnName="HRZCollOT34" />
+                <ScalarProperty Name="HRZCollOT33" ColumnName="HRZCollOT33" />
+                <ScalarProperty Name="HRZCollOT32" ColumnName="HRZCollOT32" />
+                <ScalarProperty Name="HRZCollOT31" ColumnName="HRZCollOT31" />
+                <ScalarProperty Name="HRZCollOT30" ColumnName="HRZCollOT30" />
+                <ScalarProperty Name="HRZCollOT29" ColumnName="HRZCollOT29" />
+                <ScalarProperty Name="HRZCollOT28" ColumnName="HRZCollOT28" />
+                <ScalarProperty Name="HRZCollOT27" ColumnName="HRZCollOT27" />
+                <ScalarProperty Name="HRZCollOT26" ColumnName="HRZCollOT26" />
+                <ScalarProperty Name="HRZCollOT25" ColumnName="HRZCollOT25" />
+                <ScalarProperty Name="HRZCollOT24" ColumnName="HRZCollOT24" />
+                <ScalarProperty Name="HRZCollOT23" ColumnName="HRZCollOT23" />
+                <ScalarProperty Name="HRZCollOT22" ColumnName="HRZCollOT22" />
+                <ScalarProperty Name="HRZCollOT21" ColumnName="HRZCollOT21" />
+                <ScalarProperty Name="HRZCollOT20" ColumnName="HRZCollOT20" />
+                <ScalarProperty Name="HRZCollOT19" ColumnName="HRZCollOT19" />
+                <ScalarProperty Name="HRZCollOT18" ColumnName="HRZCollOT18" />
+                <ScalarProperty Name="HRZCollOT172" ColumnName="HRZCollOT172" />
+                <ScalarProperty Name="HRZCollOT162" ColumnName="HRZCollOT162" />
+                <ScalarProperty Name="HRZCollOT17" ColumnName="HRZCollOT17" />
+                <ScalarProperty Name="HRZCollOT16" ColumnName="HRZCollOT16" />
+                <ScalarProperty Name="HRZCollOT152" ColumnName="HRZCollOT152" />
+                <ScalarProperty Name="HRZCollOT142" ColumnName="HRZCollOT142" />
+                <ScalarProperty Name="HRZCollOT15" ColumnName="HRZCollOT15" />
+                <ScalarProperty Name="HRZCollOT14" ColumnName="HRZCollOT14" />
+                <ScalarProperty Name="HRZCollOT13" ColumnName="HRZCollOT13" />
+                <ScalarProperty Name="HRZCollOT12" ColumnName="HRZCollOT12" />
+                <ScalarProperty Name="HRZCollOT11" ColumnName="HRZCollOT11" />
+                <ScalarProperty Name="HRZCollOT10" ColumnName="HRZCollOT10" />
+                <ScalarProperty Name="HRZCollOT9" ColumnName="HRZCollOT9" />
+                <ScalarProperty Name="HRZCollOT8" ColumnName="HRZCollOT8" />
+                <ScalarProperty Name="HRZCollOT7" ColumnName="HRZCollOT7" />
+                <ScalarProperty Name="HRZCollOT6" ColumnName="HRZCollOT6" />
+                <ScalarProperty Name="HRZCollOT5" ColumnName="HRZCollOT5" />
+                <ScalarProperty Name="HRZCollOT4" ColumnName="HRZCollOT4" />
+                <ScalarProperty Name="HRZCollOT3" ColumnName="HRZCollOT3" />
+                <ScalarProperty Name="HRZCollOT2" ColumnName="HRZCollOT2" />
+                <ScalarProperty Name="HRZCollOT1" ColumnName="HRZCollOT1" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisInCollData">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisInCollData">
+              <MappingFragment StoreEntitySet="HisInCollData">
+                <ScalarProperty Name="RoomInfo" ColumnName="RoomInfo" />
+                <ScalarProperty Name="Hrz_Name" ColumnName="Hrz_Name" />
+                <ScalarProperty Name="Hrz_Id" ColumnName="Hrz_Id" />
+                <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+                <ScalarProperty Name="CommNo" ColumnName="CommNo" />
+                <ScalarProperty Name="HUS_Id" ColumnName="HUS_Id" />
+                <ScalarProperty Name="INCDQDHis" ColumnName="INCDQDHis" />
+                <ScalarProperty Name="INCDDLHis" ColumnName="INCDDLHis" />
+                <ScalarProperty Name="INCDWDHis" ColumnName="INCDWDHis" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="Dtu_Name" ColumnName="Dtu_Name" />
+                <ScalarProperty Name="DtuId" ColumnName="DtuId" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisStandDataGldy">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisStandDataGldy">
+              <MappingFragment StoreEntitySet="HisStandDataGldy">
+                <ScalarProperty Name="F40" ColumnName="F40" />
+                <ScalarProperty Name="F39" ColumnName="F39" />
+                <ScalarProperty Name="F38" ColumnName="F38" />
+                <ScalarProperty Name="F37" ColumnName="F37" />
+                <ScalarProperty Name="F36" ColumnName="F36" />
+                <ScalarProperty Name="F35" ColumnName="F35" />
+                <ScalarProperty Name="F34" ColumnName="F34" />
+                <ScalarProperty Name="F33" ColumnName="F33" />
+                <ScalarProperty Name="F32" ColumnName="F32" />
+                <ScalarProperty Name="F210" ColumnName="F210" />
+                <ScalarProperty Name="F209" ColumnName="F209" />
+                <ScalarProperty Name="F208" ColumnName="F208" />
+                <ScalarProperty Name="F207" ColumnName="F207" />
+                <ScalarProperty Name="F206" ColumnName="F206" />
+                <ScalarProperty Name="F205" ColumnName="F205" />
+                <ScalarProperty Name="F204" ColumnName="F204" />
+                <ScalarProperty Name="F203" ColumnName="F203" />
+                <ScalarProperty Name="F202" ColumnName="F202" />
+                <ScalarProperty Name="F201" ColumnName="F201" />
+                <ScalarProperty Name="F120" ColumnName="F120" />
+                <ScalarProperty Name="F119" ColumnName="F119" />
+                <ScalarProperty Name="F118" ColumnName="F118" />
+                <ScalarProperty Name="F117" ColumnName="F117" />
+                <ScalarProperty Name="F116" ColumnName="F116" />
+                <ScalarProperty Name="F115" ColumnName="F115" />
+                <ScalarProperty Name="F114" ColumnName="F114" />
+                <ScalarProperty Name="F113" ColumnName="F113" />
+                <ScalarProperty Name="F112" ColumnName="F112" />
+                <ScalarProperty Name="F111" ColumnName="F111" />
+                <ScalarProperty Name="F104" ColumnName="F104" />
+                <ScalarProperty Name="F110" ColumnName="F110" />
+                <ScalarProperty Name="F109" ColumnName="F109" />
+                <ScalarProperty Name="F108" ColumnName="F108" />
+                <ScalarProperty Name="F107" ColumnName="F107" />
+                <ScalarProperty Name="F106" ColumnName="F106" />
+                <ScalarProperty Name="F105" ColumnName="F105" />
+                <ScalarProperty Name="F103" ColumnName="F103" />
+                <ScalarProperty Name="F102" ColumnName="F102" />
+                <ScalarProperty Name="F101" ColumnName="F101" />
+                <ScalarProperty Name="F31" ColumnName="F31" />
+                <ScalarProperty Name="F30" ColumnName="F30" />
+                <ScalarProperty Name="F29" ColumnName="F29" />
+                <ScalarProperty Name="F28" ColumnName="F28" />
+                <ScalarProperty Name="F27" ColumnName="F27" />
+                <ScalarProperty Name="F26" ColumnName="F26" />
+                <ScalarProperty Name="F25" ColumnName="F25" />
+                <ScalarProperty Name="F24" ColumnName="F24" />
+                <ScalarProperty Name="F23" ColumnName="F23" />
+                <ScalarProperty Name="F22" ColumnName="F22" />
+                <ScalarProperty Name="F21" ColumnName="F21" />
+                <ScalarProperty Name="F20" ColumnName="F20" />
+                <ScalarProperty Name="F19" ColumnName="F19" />
+                <ScalarProperty Name="F18" ColumnName="F18" />
+                <ScalarProperty Name="F17" ColumnName="F17" />
+                <ScalarProperty Name="F16" ColumnName="F16" />
+                <ScalarProperty Name="F15" ColumnName="F15" />
+                <ScalarProperty Name="F14" ColumnName="F14" />
+                <ScalarProperty Name="F13" ColumnName="F13" />
+                <ScalarProperty Name="F12" ColumnName="F12" />
+                <ScalarProperty Name="F11" ColumnName="F11" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+                <ScalarProperty Name="F9" ColumnName="F9" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="F6" ColumnName="F6" />
+                <ScalarProperty Name="F5" ColumnName="F5" />
+                <ScalarProperty Name="F4" ColumnName="F4" />
+                <ScalarProperty Name="F3" ColumnName="F3" />
+                <ScalarProperty Name="F2" ColumnName="F2" />
+                <ScalarProperty Name="F1" ColumnName="F1" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisStandDataGlf">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisStandDataGlf">
+              <MappingFragment StoreEntitySet="HisStandDataGlf">
+                <ScalarProperty Name="F40" ColumnName="F40" />
+                <ScalarProperty Name="F39" ColumnName="F39" />
+                <ScalarProperty Name="F38" ColumnName="F38" />
+                <ScalarProperty Name="F37" ColumnName="F37" />
+                <ScalarProperty Name="F36" ColumnName="F36" />
+                <ScalarProperty Name="F35" ColumnName="F35" />
+                <ScalarProperty Name="F34" ColumnName="F34" />
+                <ScalarProperty Name="F33" ColumnName="F33" />
+                <ScalarProperty Name="F32" ColumnName="F32" />
+                <ScalarProperty Name="F210" ColumnName="F210" />
+                <ScalarProperty Name="F209" ColumnName="F209" />
+                <ScalarProperty Name="F208" ColumnName="F208" />
+                <ScalarProperty Name="F207" ColumnName="F207" />
+                <ScalarProperty Name="F206" ColumnName="F206" />
+                <ScalarProperty Name="F205" ColumnName="F205" />
+                <ScalarProperty Name="F204" ColumnName="F204" />
+                <ScalarProperty Name="F203" ColumnName="F203" />
+                <ScalarProperty Name="F202" ColumnName="F202" />
+                <ScalarProperty Name="F201" ColumnName="F201" />
+                <ScalarProperty Name="F120" ColumnName="F120" />
+                <ScalarProperty Name="F119" ColumnName="F119" />
+                <ScalarProperty Name="F118" ColumnName="F118" />
+                <ScalarProperty Name="F117" ColumnName="F117" />
+                <ScalarProperty Name="F116" ColumnName="F116" />
+                <ScalarProperty Name="F115" ColumnName="F115" />
+                <ScalarProperty Name="F114" ColumnName="F114" />
+                <ScalarProperty Name="F113" ColumnName="F113" />
+                <ScalarProperty Name="F112" ColumnName="F112" />
+                <ScalarProperty Name="F111" ColumnName="F111" />
+                <ScalarProperty Name="F110" ColumnName="F110" />
+                <ScalarProperty Name="F109" ColumnName="F109" />
+                <ScalarProperty Name="F108" ColumnName="F108" />
+                <ScalarProperty Name="F107" ColumnName="F107" />
+                <ScalarProperty Name="F106" ColumnName="F106" />
+                <ScalarProperty Name="F105" ColumnName="F105" />
+                <ScalarProperty Name="F104" ColumnName="F104" />
+                <ScalarProperty Name="F103" ColumnName="F103" />
+                <ScalarProperty Name="F102" ColumnName="F102" />
+                <ScalarProperty Name="F101" ColumnName="F101" />
+                <ScalarProperty Name="F31" ColumnName="F31" />
+                <ScalarProperty Name="F30" ColumnName="F30" />
+                <ScalarProperty Name="F29" ColumnName="F29" />
+                <ScalarProperty Name="F28" ColumnName="F28" />
+                <ScalarProperty Name="F27" ColumnName="F27" />
+                <ScalarProperty Name="F26" ColumnName="F26" />
+                <ScalarProperty Name="F25" ColumnName="F25" />
+                <ScalarProperty Name="F24" ColumnName="F24" />
+                <ScalarProperty Name="F23" ColumnName="F23" />
+                <ScalarProperty Name="F22" ColumnName="F22" />
+                <ScalarProperty Name="F21" ColumnName="F21" />
+                <ScalarProperty Name="F20" ColumnName="F20" />
+                <ScalarProperty Name="F19" ColumnName="F19" />
+                <ScalarProperty Name="F18" ColumnName="F18" />
+                <ScalarProperty Name="F17" ColumnName="F17" />
+                <ScalarProperty Name="F16" ColumnName="F16" />
+                <ScalarProperty Name="F15" ColumnName="F15" />
+                <ScalarProperty Name="F14" ColumnName="F14" />
+                <ScalarProperty Name="F13" ColumnName="F13" />
+                <ScalarProperty Name="F12" ColumnName="F12" />
+                <ScalarProperty Name="F11" ColumnName="F11" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+                <ScalarProperty Name="F9" ColumnName="F9" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="F6" ColumnName="F6" />
+                <ScalarProperty Name="F5" ColumnName="F5" />
+                <ScalarProperty Name="F4" ColumnName="F4" />
+                <ScalarProperty Name="F3" ColumnName="F3" />
+                <ScalarProperty Name="F2" ColumnName="F2" />
+                <ScalarProperty Name="F1" ColumnName="F1" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisStandDataHrz">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisStandDataHrz">
+              <MappingFragment StoreEntitySet="HisStandDataHrz">
+                <ScalarProperty Name="InHomeTemp" ColumnName="InHomeTemp" />
+                <ScalarProperty Name="F1000" ColumnName="F1000" />
+                <ScalarProperty Name="F210" ColumnName="F210" />
+                <ScalarProperty Name="F209" ColumnName="F209" />
+                <ScalarProperty Name="F208" ColumnName="F208" />
+                <ScalarProperty Name="F207" ColumnName="F207" />
+                <ScalarProperty Name="F206" ColumnName="F206" />
+                <ScalarProperty Name="F205" ColumnName="F205" />
+                <ScalarProperty Name="F204" ColumnName="F204" />
+                <ScalarProperty Name="F203" ColumnName="F203" />
+                <ScalarProperty Name="F202" ColumnName="F202" />
+                <ScalarProperty Name="F201" ColumnName="F201" />
+                <ScalarProperty Name="F123" ColumnName="F123" />
+                <ScalarProperty Name="F122" ColumnName="F122" />
+                <ScalarProperty Name="F121" ColumnName="F121" />
+                <ScalarProperty Name="F120" ColumnName="F120" />
+                <ScalarProperty Name="F119" ColumnName="F119" />
+                <ScalarProperty Name="F118" ColumnName="F118" />
+                <ScalarProperty Name="F117" ColumnName="F117" />
+                <ScalarProperty Name="F116" ColumnName="F116" />
+                <ScalarProperty Name="F115" ColumnName="F115" />
+                <ScalarProperty Name="F114" ColumnName="F114" />
+                <ScalarProperty Name="F113" ColumnName="F113" />
+                <ScalarProperty Name="F112" ColumnName="F112" />
+                <ScalarProperty Name="F111" ColumnName="F111" />
+                <ScalarProperty Name="F110" ColumnName="F110" />
+                <ScalarProperty Name="F109" ColumnName="F109" />
+                <ScalarProperty Name="F108" ColumnName="F108" />
+                <ScalarProperty Name="F107" ColumnName="F107" />
+                <ScalarProperty Name="F106" ColumnName="F106" />
+                <ScalarProperty Name="F105" ColumnName="F105" />
+                <ScalarProperty Name="F104" ColumnName="F104" />
+                <ScalarProperty Name="F103" ColumnName="F103" />
+                <ScalarProperty Name="F102" ColumnName="F102" />
+                <ScalarProperty Name="F101" ColumnName="F101" />
+                <ScalarProperty Name="F45" ColumnName="F45" />
+                <ScalarProperty Name="F44" ColumnName="F44" />
+                <ScalarProperty Name="F43" ColumnName="F43" />
+                <ScalarProperty Name="F42" ColumnName="F42" />
+                <ScalarProperty Name="F41" ColumnName="F41" />
+                <ScalarProperty Name="F40" ColumnName="F40" />
+                <ScalarProperty Name="F39" ColumnName="F39" />
+                <ScalarProperty Name="F38" ColumnName="F38" />
+                <ScalarProperty Name="F37" ColumnName="F37" />
+                <ScalarProperty Name="F36" ColumnName="F36" />
+                <ScalarProperty Name="F35" ColumnName="F35" />
+                <ScalarProperty Name="F34" ColumnName="F34" />
+                <ScalarProperty Name="F33" ColumnName="F33" />
+                <ScalarProperty Name="F32" ColumnName="F32" />
+                <ScalarProperty Name="F31" ColumnName="F31" />
+                <ScalarProperty Name="F30" ColumnName="F30" />
+                <ScalarProperty Name="F29" ColumnName="F29" />
+                <ScalarProperty Name="F28" ColumnName="F28" />
+                <ScalarProperty Name="F27" ColumnName="F27" />
+                <ScalarProperty Name="F26" ColumnName="F26" />
+                <ScalarProperty Name="F25" ColumnName="F25" />
+                <ScalarProperty Name="F24" ColumnName="F24" />
+                <ScalarProperty Name="F23" ColumnName="F23" />
+                <ScalarProperty Name="F22" ColumnName="F22" />
+                <ScalarProperty Name="F21" ColumnName="F21" />
+                <ScalarProperty Name="F20" ColumnName="F20" />
+                <ScalarProperty Name="F19" ColumnName="F19" />
+                <ScalarProperty Name="F18" ColumnName="F18" />
+                <ScalarProperty Name="F17" ColumnName="F17" />
+                <ScalarProperty Name="F16" ColumnName="F16" />
+                <ScalarProperty Name="F15" ColumnName="F15" />
+                <ScalarProperty Name="F14" ColumnName="F14" />
+                <ScalarProperty Name="F13" ColumnName="F13" />
+                <ScalarProperty Name="F12" ColumnName="F12" />
+                <ScalarProperty Name="F11" ColumnName="F11" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+                <ScalarProperty Name="F9" ColumnName="F9" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="F6" ColumnName="F6" />
+                <ScalarProperty Name="F5" ColumnName="F5" />
+                <ScalarProperty Name="F4" ColumnName="F4" />
+                <ScalarProperty Name="F3" ColumnName="F3" />
+                <ScalarProperty Name="F2" ColumnName="F2" />
+                <ScalarProperty Name="F1" ColumnName="F1" />
+                <ScalarProperty Name="bsO_Name" ColumnName="bsO_Name" />
+                <ScalarProperty Name="Det_Name" ColumnName="Det_Name" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HisWeaData">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.HisWeaData">
+              <MappingFragment StoreEntitySet="HisWeaData">
+                <ScalarProperty Name="FSHis" ColumnName="FSHis" />
+                <ScalarProperty Name="RZHis" ColumnName="RZHis" />
+                <ScalarProperty Name="WDHis" ColumnName="WDHis" />
+                <ScalarProperty Name="DTU_Name" ColumnName="DTU_Name" />
+                <ScalarProperty Name="DTU_Id" ColumnName="DTU_Id" />
+                <ScalarProperty Name="bsO_Id" ColumnName="bsO_Id" />
+                <ScalarProperty Name="GathDt" ColumnName="GathDt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwYXGCalCulCurve_BXC1">
+            <EntityTypeMapping TypeName="HjHeatingHisModel.vwYXGCalCulCurve_BXC1">
+              <MappingFragment StoreEntitySet="vwYXGCalCulCurve_BXC1">
+                <ScalarProperty Name="T1" ColumnName="T1" />
+                <ScalarProperty Name="T0" ColumnName="T0" />
+                <ScalarProperty Name="Qt" ColumnName="Qt" />
+                <ScalarProperty Name="wd" ColumnName="wd" />
+                <ScalarProperty Name="H" ColumnName="H" />
+                <ScalarProperty Name="Det_Id" ColumnName="Det_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="默认值" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

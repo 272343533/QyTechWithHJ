@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using QyTech.Express.CodeCreate;
+using SunMvcExpress.Dao;
+using QyTech.Core.Common;
+
+namespace QyTech.Express.CodeCreate.IQueryView
+{
+    public class Left : IQueryViewCreate
+    {
+        public override void Create(bsSysFuncQuery fq)
+        {
+            IQueryViewCreate leftcreate = FacQueryView.Create(fq.QueryType);
+            leftcreate.Create(fq);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d42b02c2f44a48bd9751e69a268e51a5" Name="关系图1" ZoomLevel="16">
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisEventAlarmRecord" Width="1.5" PointX="0.82353670560919534" PointY="8.5396426955888245" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisGLCommNet" Width="1.5" PointX="9.3418049911697416" PointY="0.93521641238369813" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisGLLdy" Width="1.5" PointX="2.2283372852151921" PointY="11.763845598215166" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisHJGathData1" Width="1.5" PointX="10.669938179976278" PointY="5.1617455655530771" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisHJGathData2" Width="1.5" PointX="6.4555183809509114" PointY="2.3546351056334727" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisHRZWdzData" Width="1.5" PointX="4.7053135413235587" PointY="21.295988167308266" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisInCollData" Width="1.5" PointX="11.583347948074039" PointY="12.741819193932143" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisStandDataGldy" Width="1.5" PointX="5.2316672602815864" PointY="3.3238223061542129" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisStandDataGlf" Width="1.5" PointX="3.1479142397399595" PointY="19.239891895670393" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisStandDataHrz" Width="1.5" PointX="10.920991803948297" PointY="20.147461602532985" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.HisWeaData" Width="1.5" PointX="2.180960108610317" PointY="7.9243211187069864" />
+        <EntityTypeShape EntityType="HjHeatingHisModel.vwYXGCalCulCurve_BXC1" Width="1.5" PointX="6.7711504282295483" PointY="23.337842669029648" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
