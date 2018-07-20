@@ -1,6 +1,0 @@
-2018-02-09 09:12:56,767 ERROR frmstart JX 的新实例
-2018-02-09 09:13:06,893 INFO  GetAllByStorProcedure splyGetClouldStorageData-D6B5BCCC-ACD3-4FD9-B3B6-471A1D410A7E,2
-2018-02-09 09:13:38,513 ERROR Error-GetAllByStorProcedure splyGetClouldStorageData-D6B5BCCC-ACD3-4FD9-B3B6-471A1D410A7E,2-:'-' 附近有语法错误。
-2018-02-09 09:13:59,426 INFO  GetAllByStorProcedure splyGetClouldStorageData-'D6B5BCCC-ACD3-4FD9-B3B6-471A1D410A7E',2
-2018-02-09 09:13:59,633 ERROR Error-GetAllByStorProcedure splyGetClouldStorageData-'D6B5BCCC-ACD3-4FD9-B3B6-471A1D410A7E',2-:找不到存储过程 'splyGetClouldStorageData'。
-2018-02-09 09:14:08,178 INFO  GetAllByStorProcedure splyGetClouldStorageData-'D6B5BCCC-ACD3-4FD9-B3B6-471A1D410A7E',2
