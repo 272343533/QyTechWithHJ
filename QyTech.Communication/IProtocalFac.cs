@@ -33,6 +33,12 @@ namespace QyTech.Communication
             ass = Assembly.LoadFrom(Protocal.Code+@".dll");
           
         }
+
+        /// <summary>
+        /// 数据的最后两个字节表示包的标识
+        /// </summary>
+        /// <param name="packet"></param>
+        /// <returns></returns>
         protected virtual int GetFlagRegHexValue(byte[] packet)
         {
             byte[] buff = new byte[2];
@@ -41,6 +47,12 @@ namespace QyTech.Communication
             int intFlag =BitConverter.ToUInt16(buff, 0);
             return intFlag;
         }
+
+        /// <summary>
+        /// 包数据部分的实际长度，即（包长度-5）/2
+        /// </summary>
+        /// <param name="packet"></param>
+        /// <returns></returns>
         protected int GetFlagWithPacketLength(byte[] packet)
         {
             return (packet.Length-5)/2;

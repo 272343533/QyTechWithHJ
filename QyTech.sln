@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QyTech.Core.Reflection", "DllManager\QyTech.Core.Reflection.csproj", "{FF804F4B-9E02-42CF-BBD9-F52B30BEA16C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QyTech.Core.Common", "QyTech.Core.Common\QyTech.Core.Common.csproj", "{B6CE0A0C-F4F2-4968-8791-522661E6AC8C}"
@@ -96,6 +98,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInHand", "TestInHand\TestInHand.csproj", "{AED9BDC2-B7F0-4C26-A726-796D51410E89}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocalGlfZrGZQ", "ProtocalGlfZrGZQ\ProtocalGlfZrGZQ.csproj", "{EF025197-112C-4546-9982-AFD9F7C0B040}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocalGlfCommon", "ProtocalGlfCommon\ProtocalGlfCommon.csproj", "{B32914FF-FD62-4E2B-945D-81081DA4C65C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtocalGlfJhkh", "ProtocalGlfJhkh\ProtocalGlfJhkh.csproj", "{091D6F81-6FCB-4975-8E8C-559B3560FD19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -579,8 +585,35 @@ Global
 		{EF025197-112C-4546-9982-AFD9F7C0B040}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{EF025197-112C-4546-9982-AFD9F7C0B040}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{EF025197-112C-4546-9982-AFD9F7C0B040}.Release|x86.ActiveCfg = Release|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Debug|x86.Build.0 = Debug|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Release|x86.ActiveCfg = Release|Any CPU
+		{B32914FF-FD62-4E2B-945D-81081DA4C65C}.Release|x86.Build.0 = Release|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Debug|x86.Build.0 = Debug|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Release|x86.ActiveCfg = Release|Any CPU
+		{091D6F81-6FCB-4975-8E8C-559B3560FD19}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED761210-39B2-4C81-8C96-22DF46DF797E}
 	EndGlobalSection
 EndGlobal

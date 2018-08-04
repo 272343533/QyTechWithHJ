@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using log4net;
 namespace InHandDtu
 {
-    public class DtuDll
+    public class DTUdll
     {
 
         public static ILog log = log4net.LogManager.GetLogger("DtuDll");
@@ -42,7 +42,7 @@ namespace InHandDtu
         //BOOL _stdcall DLLCloseModemById(u32t modemId)
         #endregion
 
-        private DTUdll()
+        public DTUdll()
         {
         }
 

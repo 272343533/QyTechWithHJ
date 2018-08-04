@@ -28,7 +28,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Debug-NingHe\</OutputPath>
+    <OutputPath>..\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -69,9 +69,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Debug\SingleInstance.dll</HintPath>
     </Reference>
-    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Debug-NingHe\SunMvcExpress.Dao.dll</HintPath>
+      <HintPath>..\Debug\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
