@@ -230,15 +230,10 @@ namespace QyTech.DtuDll
         {
             InHand_DATA_RECORD idr = new InHand_DATA_RECORD();
             int ret = InHandDtu.do_read_proc(ref idr, mess, false);
-            log.Error("映瀚通ReadData1:" +ret.ToString()+"---"+ mess.ToString());
-          
-         
-
             try
             {
                 if (ret == 0)
                 {
-                    log.Error("映瀚通ReadData1_1:" + idr.m_userid+"--"+idr.m_data_type.ToString()+"--"+idr.m_data_len.ToString()+"--"+idr.m_data_buf.ToString());
                     gdr = TransToRecord(idr);
                 }
             }

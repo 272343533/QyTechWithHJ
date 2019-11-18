@@ -79,10 +79,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.txtBytes = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.txtWcf = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.test2 = new System.Windows.Forms.TextBox();
             this.test1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -143,6 +143,7 @@
             this.启动服务ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.启动服务ToolStripMenuItem.Text = "启动服务";
             this.启动服务ToolStripMenuItem.CheckedChanged += new System.EventHandler(this.启动服务ToolStripMenuItem_CheckedChanged);
+            this.启动服务ToolStripMenuItem.Click += new System.EventHandler(this.启动服务ToolStripMenuItem_Click);
             // 
             // 服务配置ToolStripMenuItem
             // 
@@ -589,10 +590,10 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.txtBytes);
             this.tabPage4.Controls.Add(this.button6);
             this.tabPage4.Controls.Add(this.button5);
             this.tabPage4.Controls.Add(this.txtWcf);
-            this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.test2);
             this.tabPage4.Controls.Add(this.test1);
             this.tabPage4.Controls.Add(this.button2);
@@ -603,9 +604,19 @@
             this.tabPage4.Text = "测试";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // txtBytes
+            // 
+            this.txtBytes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBytes.Location = new System.Drawing.Point(133, 352);
+            this.txtBytes.Multiline = true;
+            this.txtBytes.Name = "txtBytes";
+            this.txtBytes.Size = new System.Drawing.Size(436, 121);
+            this.txtBytes.TabIndex = 7;
+            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(38, 376);
+            this.button6.Location = new System.Drawing.Point(21, 352);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 6;
@@ -615,35 +626,25 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(110, 328);
+            this.button5.Location = new System.Drawing.Point(49, 279);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
+            this.button5.Text = "清空右侧？";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // txtWcf
             // 
-            this.txtWcf.Location = new System.Drawing.Point(209, 162);
+            this.txtWcf.Location = new System.Drawing.Point(161, 98);
             this.txtWcf.Multiline = true;
             this.txtWcf.Name = "txtWcf";
             this.txtWcf.Size = new System.Drawing.Size(278, 224);
             this.txtWcf.TabIndex = 4;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(80, 201);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "pre";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
             // test2
             // 
-            this.test2.Location = new System.Drawing.Point(97, 120);
+            this.test2.Location = new System.Drawing.Point(49, 56);
             this.test2.Name = "test2";
             this.test2.Size = new System.Drawing.Size(246, 21);
             this.test2.TabIndex = 2;
@@ -651,7 +652,7 @@
             // 
             // test1
             // 
-            this.test1.Location = new System.Drawing.Point(97, 79);
+            this.test1.Location = new System.Drawing.Point(49, 15);
             this.test1.Name = "test1";
             this.test1.Size = new System.Drawing.Size(246, 21);
             this.test1.TabIndex = 1;
@@ -659,11 +660,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(97, 161);
+            this.button2.Location = new System.Drawing.Point(49, 97);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 0;
-            this.button2.Text = "test";
+            this.button2.Text = "发送";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -867,11 +868,11 @@
         private System.Windows.Forms.TextBox test2;
         private System.Windows.Forms.TextBox test1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtWcf;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.CheckBox chkIgnoreJxLen;
+        private System.Windows.Forms.TextBox txtBytes;
     }
 }

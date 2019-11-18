@@ -90,6 +90,7 @@ namespace HeatingDSC.Controls
         {
             deviceIdS_ = deviceIdS;
 
+            // List<bsOrganize> regList = EntityManager<bsOrganize>.GetListNoPaging<bsOrganize>("OrganizeStatus = '正常'", "Name desc");
             List<bsOrganize> regList = EntityManager<bsOrganize>.GetListNoPaging<bsOrganize>("", "Name desc");
 
             if (regList.Count != 0)

@@ -51,15 +51,15 @@
     </Reference>
     <Reference Include="HjCommDA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Debug\HjCommDA.dll</HintPath>
+      <HintPath>..\PubDir\HjCommDA.dll</HintPath>
     </Reference>
-    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=x86">
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\PubDir\log4net.dll</HintPath>
+      <HintPath>..\Debug\log4net.dll</HintPath>
     </Reference>
     <Reference Include="QyTech.Communication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Debug\QyTech.Communication.dll</HintPath>
+      <HintPath>..\PubDir\QyTech.Communication.dll</HintPath>
     </Reference>
     <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -71,7 +71,7 @@
     </Reference>
     <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Debug\SunMvcExpress.Dao.dll</HintPath>
+      <HintPath>..\PubDir\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -101,6 +101,7 @@
     <Compile Include="BLL\bllCommNo2PacketListNo.cs" />
     <Compile Include="BLL\Qxy\ParseQxyUpData.cs" />
     <Compile Include="BLL\Qxy\ParseSheXianQxyUpData.cs" />
+    <Compile Include="BLL\Qxy\ParseYsxQxyUpData.cs" />
     <Compile Include="BLL\Qxy\ParseWqQxyUpData.cs" />
     <Compile Include="Controls\ucTvDevice.cs">
       <SubType>UserControl</SubType>

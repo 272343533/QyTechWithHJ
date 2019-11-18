@@ -13,7 +13,10 @@ namespace HeatingDSC.Models
         static public int dtutimeout;
         static public int IntervalBetweenCmds;
         static public int IntervalBetweenGath;
-        static public int gprsComPort;
+        static private int gprsComPort;
+
+        static public int gprsComPort_JX { get; set; }
+        static public int gprsComPort_YHT { get; set; }
 
 
         static private int saveDataTimerInterval;
@@ -87,8 +90,14 @@ namespace HeatingDSC.Models
             IntervalBetweenCmds = int.Parse(XmlConfig.GetValue("CmdInterval"));
             gprsComPort = int.Parse(XmlConfig.GetValue("GPRSPort"));
             IntervalBetweenGath = int.Parse(XmlConfig.GetValue("QueryTimer"));
- 
-            
+            try
+            {
+                gprsComPort_JX = int.Parse(XmlConfig.GetValue("GPRSPort_JX"));//GPRSPort_JX
+                gprsComPort_YHT = int.Parse(XmlConfig.GetValue("GPRSPort_YHT"));
+            }
+            catch { }
+
+
             serverName = XmlConfig.GetValue("HeatingIP");
             dbName = XmlConfig.GetValue("HeatingDataSource");
             saLogin = XmlConfig.GetValue("HeatingSqlLogin");

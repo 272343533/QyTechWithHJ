@@ -24,8 +24,7 @@ namespace HeatingDSC.BLL
 {
     public class ParseQxyUpData:IProtocal
     {
-        public static ILog log = log4net.LogManager.GetLogger("ParseQxyUpData");
-
+       
         //采集数据
         public WeaDataHistory otobj = new WeaDataHistory();
         

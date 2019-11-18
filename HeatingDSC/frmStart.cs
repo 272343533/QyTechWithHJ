@@ -144,7 +144,7 @@ namespace HeatingDSC
                             log.Info("--------" + simno +cmd.bsO_id.ToString()+ "---待判断命令:" + cmd.Command);
                    
                             //更新数据库
-                            string sql = "Convert(varchar(19),SetDt,120)='" + cmd.SetDownTime.ToString("yyyy-MM-dd HH:mm:ss") + "' and bsO_Id='" + cmd.bsO_id.ToString() + "' and SetFlag='0x" + cmd.Command.Substring(4, 4) + "'";
+                            string sql = "Convert(varchar(23),SetDt,121)='" + cmd.SetDownTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "' and bsO_Id='" + cmd.bsO_id.ToString() + "' and SetFlag='0x" + cmd.Command.Substring(4, 4) + "'";
                             log.Info("--------" + simno + cmd.bsO_id.ToString() + "---待判断命令条件:" + sql);
                    
                             HrzDownSet hds = EntityManager<HrzDownSet>.GetBySql<HrzDownSet>(sql);
@@ -152,15 +152,18 @@ namespace HeatingDSC
                             {
                                 if (hds.ValidResponse.Substring(0, 6) == packet.Substring(0, 6))//都只处理前六位
                                 {
-                                    if (packet.Substring(2, 2) == "01")
-                                        hds.SetValues = Convert.ToUInt16(packet.Substring(6, Convert.ToInt16(packet.Substring(4, 2), 16) * 2),16).ToString();
-                                  
+                                    //为什么要赋值呢？ zhwsun 2019-02-27
+                                    //if (packet.Substring(2, 2) == "01")
+                                    //    hds.SetValues = Convert.ToUInt16(packet.Substring(6, Convert.ToInt16(packet.Substring(4, 2), 16) * 2), 16).ToString();
+
                                     hds.DownSuccDt = DateTime.Now;
-                                  
+
                                     EntityManager<HrzDownSet>.Modify<HrzDownSet>(hds);
                                 }
-                                
+
                             }
+                            else if (cmd.Command.Substring(0,4)=="0110")
+                                log.Error("未找到匹配命令！"+cmd.Command+ ":"+ sql);
                             //更新命令
                             if (cmd.Response.Substring(0, 6) == packet.Substring(0, 6))
                             {
@@ -194,24 +197,31 @@ namespace HeatingDSC
             QxyCmds = qud.CreateWdzProtQxy(qxyDtus);
 
 
-            List<DTUProduct> wqqxyDtus = EntityManager<DTUProduct>.GetListNoPaging<DTUProduct>(" bsp_Id =68 and CommNo not in ('13311112222','13922220002')", "CommNo");// in ('13866889999','13866668888','13600000000')", "CommNo");
+            List<DTUProduct> wqqxyDtus = EntityManager<DTUProduct>.GetListNoPaging<DTUProduct>(" bsp_Id =68 and CommNo not in ('13311112222','13922220002','18611111111')", "CommNo");// in ('13866889999','13866668888','13600000000')", "CommNo");
             HeatingDSC.BLL.ParseWqQxyUpData qud1 = new HeatingDSC.BLL.ParseWqQxyUpData();
             QxyCmds.AddRange(qud1.CreateProtQxy(wqqxyDtus));
 
-
+            List<DTUProduct> ysxqxyDtus = EntityManager<DTUProduct>.GetListNoPaging<DTUProduct>(" bsp_Id =68 and CommNo in ('18611111111')", "CommNo");// in ('13866889999','13866668888','13600000000')", "CommNo");
+            HeatingDSC.BLL.ParseYsxQxyUpData ysx = new HeatingDSC.BLL.ParseYsxQxyUpData();
+            QxyCmds.AddRange(ysx.CreateProtQxy(ysxqxyDtus));
+ 
             List<bsProtocal> bsps = EntityManager<bsProtocal>.GetListNoPaging<bsProtocal>("", "Id");
             List<vwlyProtocalCodeBySimcardNo> vws;
             foreach (bsProtocal bsp in bsps)
             {
-                slProtocal.Add(bsp.Id, bsp);
-
-                vws = EntityManager<vwlyProtocalCodeBySimcardNo>.GetListNoPaging<vwlyProtocalCodeBySimcardNo>("CommNo is not null and CommNo!='' and bsP_Id=" + bsp.Id.ToString(), "CommNo");
-                foreach (vwlyProtocalCodeBySimcardNo v in vws)
+                try
                 {
-                    int proAndcommMap = bllCommNo2PacketListNo.GetPacketListNo(bsp.Id, v.CommNo);
-                    if (!NeedParsePackets.ContainsKey(proAndcommMap))
-                        NeedParsePackets.Add(proAndcommMap, new List<GPRS_DATA_RECORD>());
+                    slProtocal.Add(bsp.Id, bsp);
+
+                    vws = EntityManager<vwlyProtocalCodeBySimcardNo>.GetListNoPaging<vwlyProtocalCodeBySimcardNo>("CommNo is not null and CommNo!='' and bsP_Id=" + bsp.Id.ToString(), "CommNo");
+                    foreach (vwlyProtocalCodeBySimcardNo v in vws)
+                    {
+                        int proAndcommMap = bllCommNo2PacketListNo.GetPacketListNo(bsp.Id, v.CommNo);
+                        if (!NeedParsePackets.ContainsKey(proAndcommMap))
+                            NeedParsePackets.Add(proAndcommMap, new List<GPRS_DATA_RECORD>());
+                    }
                 }
+                catch { }
             }
             bsps = null;
             
@@ -264,7 +274,7 @@ namespace HeatingDSC
             }
 
 
-            List<vwlyGprsDetailDevice> detailobjs = EntityManager<vwlyGprsDetailDevice>.GetListNoPaging<vwlyGprsDetailDevice>("", "DTU_Id");
+            List<vwlyGprsDetailDevice> detailobjs = EntityManager<vwlyGprsDetailDevice>.GetListNoPaging<vwlyGprsDetailDevice>("", "DTU_Id,Convert(int,SubDevNo)");
             foreach (vwlyGprsDetailDevice det in detailobjs)
             {
                 if (!slDtuDetailDevice.ContainsKey(det.DTU_Id))
@@ -299,7 +309,7 @@ namespace HeatingDSC
                 {
                         dev = objs[d];
                 //为了测试
-                        if (dev.CommNo == "15100010001")
+                        if (dev.CommNo == "13300010011")
                     {
                         int a = 100;
                         a++;
@@ -310,7 +320,7 @@ namespace HeatingDSC
                         b++;
                     }
 
-                    if (pre_bsP_Id != -1 && pre_bsP_Id != dev.bsP_Id)
+                    if (pre_bsP_Id != dev.bsP_Id)//pre_bsP_Id != -1 && pre_bsP_Id != dev.bsP_Id
                     {
                         ass = Assembly.LoadFrom(dev.bsP_Code + ".dll");
                         type = ass.GetType("QyTech." + dev.bsP_Code + ".ProtocalFac");
@@ -339,19 +349,36 @@ namespace HeatingDSC
                         }
                         else
                         {
-                           
-                                for (int i = 0; i < Methods.Length && i < slDtuDetailDevice[dev.Id].Count; i++)
-                                {
-                                    string meth = Methods[i];
-                                    classmethod = meth.Split(new char[] { '.' });
-                                    type = ass.GetType("QyTech." + dev.bsP_Code + "." + classmethod[0]);
-                                    PacketFac = Activator.CreateInstance(type, dev.bsP_Id);
+                            for (int i = 0; i < Methods.Length && i < slDtuDetailDevice[dev.Id].Count; i++)
+                            {
+                                //int subdevnoindex = Convert.ToInt16(slDtuDetailDevice[dev.Id][i].SubDevNo); //有的存放的不是从0开始，所以需要下面转换一下
+                                //modified on 2019-01-28??? 
+                                int subdevnoindex = GetIndexByDetailSubNo(slDtuDetailDevice[dev.Id],slDtuDetailDevice[dev.Id][i].SubDevNo);//实际subdevno存放的索引，采集命令序列的索引
+                                string meth = Methods[subdevnoindex];
+                                classmethod = meth.Split(new char[] { '.' });
+                                type = ass.GetType("QyTech." + dev.bsP_Code + "." + classmethod[0]);
+                                PacketFac = Activator.CreateInstance(type, dev.bsP_Id);
 
-                                    PfMethod = type.GetMethod(classmethod[1], new Type[] { Type.GetType("System.String") });
-                                    cmd = (DeviceCmd)PfMethod.Invoke(PacketFac, new object[] { dev.CommNo });
-                                    cmd.ExpiredTime = DateTime.MaxValue;
-                                    slDeviceCmdsNoraml[dev.CommNo].Add(cmd);
-                                }
+                                PfMethod = type.GetMethod(classmethod[1], new Type[] { Type.GetType("System.String") });
+                                cmd = (DeviceCmd)PfMethod.Invoke(PacketFac, new object[] { dev.CommNo });
+                                cmd.ExpiredTime = DateTime.MaxValue;
+                                slDeviceCmdsNoraml[dev.CommNo].Add(cmd);
+                            }
+                                ////原来不区分，子设备不可缺少 modified by zhwsun on 2018-11-03
+                                //for (int i = 0; i < Methods.Length && i < slDtuDetailDevice[dev.Id].Count; i++)
+                                //{
+                                //    string meth = Methods[i];
+                                //    classmethod = meth.Split(new char[] { '.' });
+                                //    type = ass.GetType("QyTech." + dev.bsP_Code + "." + classmethod[0]);
+                                //    PacketFac = Activator.CreateInstance(type, dev.bsP_Id);
+
+                                //    PfMethod = type.GetMethod(classmethod[1], new Type[] { Type.GetType("System.String") });
+                                //    cmd = (DeviceCmd)PfMethod.Invoke(PacketFac, new object[] { dev.CommNo });
+                                //    cmd.ExpiredTime = DateTime.MaxValue;
+                                //    slDeviceCmdsNoraml[dev.CommNo].Add(cmd);
+                                //}
+                            //以下不用了
+
                             //    if (dev.bsP_Id != 278) //子设备和命令一样，就是每个命令单独的
                             //    { }
                             //else
@@ -379,12 +406,22 @@ namespace HeatingDSC
                 }
                 catch (Exception ex)
                 {
-                    log.Error(dev.CommNo + "---" + ex.Message);
+                    log.Error("InitDataFromDb CreateCmd:"+dev.CommNo + "---" + ex.Message);
                     continue;
                 }
             }
         }
 
+        public int GetIndexByDetailSubNo(List<vwlyGprsDetailDevice> dets,string subno)
+        {
+           for(int i=0;i<dets.Count;i++)
+            {
+                vwlyGprsDetailDevice det = dets[i];
+                if (det.SubDevNo == subno)
+                    return i;
+            }
+            return -1;
+        }
 
         /// <summary>
         /// 云存储采集，下载命令的增加
@@ -445,14 +482,8 @@ namespace HeatingDSC
             return false;
         }
 
-
-
-
-     
-
         private void CreateWeatDownCommand()
         {
-
             List<vwlyWeatherPowerCalculate> wpcs = EntityManager<vwlyWeatherPowerCalculate>.GetListNoPaging<vwlyWeatherPowerCalculate>("", "");
             slOrgWeatherDatas.Clear();
             foreach (vwlyWeatherPowerCalculate wpc in wpcs)
@@ -529,7 +560,7 @@ namespace HeatingDSC
                     }
                     else
                     {
-                        log.Error("没有配置气象数据:" + simno);
+                        log.Info("没有配置气象数据:" + simno);
                     }
                   
                 }
@@ -545,7 +576,7 @@ namespace HeatingDSC
             while (!m_Terminated)
             {
                 GetHandDownCmd();
-                Thread.Sleep(5000);
+                Thread.Sleep(ProgParams.IntervalBetweenCmds*1000);
             }
         }
 
@@ -579,10 +610,14 @@ namespace HeatingDSC
                 List<vwlyHrzDownSet> hds = EntityManager<vwlyHrzDownSet>.GetListNoPaging<vwlyHrzDownSet>("", "SetDt");
                 foreach (vwlyHrzDownSet hd in hds)
                 {
-                    //if (hd.bsO_Name == "西湖道小学公建") ;
+                    //if (!hd.FlagDesp.Contains  ("曲线"))//测试曲线，忘了关闭
                     //{
-                    //    break;
+                    //    continue;
                     //}
+                    if (hd.OperType == "0x05")//为了本地测试使用
+                    {
+                        int a = 0;
+                    }
                     try
                     {
                         IProtocalFac pf = new IProtocalFac(slProtocalCodeBySimno[hd.CommNo]);
@@ -590,6 +625,7 @@ namespace HeatingDSC
                         IProtocal pro = pf.Create(addr);
 
                         ErrFlag = 90;
+
                         if (hd.DownCmd != null && !hd.DownCmd.Equals(""))//如果已有命令，表明下发过，直接使用原来的数据。但是不包括05的线圈命令
                         {
                             if (hd.OperType == "0x05")
@@ -598,7 +634,7 @@ namespace HeatingDSC
                                 cmd = new DeviceCmd();
                                 cmd.bsO_id = hd.bsO_Id;
                                 cmd.bsP_Id = (int)hd.bsP_Id;
-                                cmd.Command = hd.DownCmd;
+                                cmd.Command = "0105" + hd.SetFlag.Substring(2) + hd.SetValues;
                                 cmd.CommandDesp = hd.FlagDesp;
                                 cmd.CommNo = hd.CommNo;
                                 cmd.DefFlag = "";
@@ -606,11 +642,28 @@ namespace HeatingDSC
                                 cmd.NeedSendTime = hd.SetDt;// hd.DownDt.Value;//原来为什么直接写呢？2017-11-09
 
                                 cmd.SendCmd = CommFunc.HexCmd2Bytes(cmd.Command);// System.Text.Encoding.Default.GetBytes(cmd.Command);
-                                cmd.SendCmd = ModbusCommand.GetBytesAfterCalculateCrc16(cmd.SendCmd);//增加校验位
+                                cmd.SendCmd = ModbusCommand.GetBytesAfterCalculateCrc16(cmd.SendCmd);
+                                //
+                                cmd.Response = cmd.Command;
                                 cmd.Command = CommFunc.Bytes2HexCmd(cmd.SendCmd);
                                 cmd.bsO_id = hd.bsO_Id;
-                                cmd.Response = hd.ValidResponse;
                                 cmd.SetDownTime = hd.SetDt;
+                                //cmd = new DeviceCmd();
+                                //cmd.bsO_id = hd.bsO_Id;
+                                //cmd.bsP_Id = (int)hd.bsP_Id;
+                                //cmd.Command = hd.DownCmd;
+                                //cmd.CommandDesp = hd.FlagDesp;
+                                //cmd.CommNo = hd.CommNo;
+                                //cmd.DefFlag = "";
+                                //cmd.ExpiredTime = DateTime.Now.AddMinutes(5);
+                                //cmd.NeedSendTime = hd.SetDt;// hd.DownDt.Value;//原来为什么直接写呢？2017-11-09
+
+                                //cmd.SendCmd = CommFunc.HexCmd2Bytes(cmd.Command);// System.Text.Encoding.Default.GetBytes(cmd.Command);
+                                //cmd.SendCmd = ModbusCommand.GetBytesAfterCalculateCrc16(cmd.SendCmd);//增加校验位
+                                //cmd.Command = CommFunc.Bytes2HexCmd(cmd.SendCmd);
+                                //cmd.bsO_id = hd.bsO_Id;
+                                //cmd.Response = hd.ValidResponse;
+                                //cmd.SetDownTime = hd.SetDt;
 
                                 #endregion
                             }
@@ -651,9 +704,9 @@ namespace HeatingDSC
                                 cmd.SendCmd = CommFunc.HexCmd2Bytes(cmd.Command);// System.Text.Encoding.Default.GetBytes(cmd.Command);
                                 cmd.SendCmd = ModbusCommand.GetBytesAfterCalculateCrc16(cmd.SendCmd);
                                 //
-                                //cmd.Command = CommFunc.Bytes2HexCmd(cmd.SendCmd);
-                                cmd.bsO_id = hd.bsO_Id;
                                 cmd.Response = cmd.Command;
+                                cmd.Command = CommFunc.Bytes2HexCmd(cmd.SendCmd);
+                                cmd.bsO_id = hd.bsO_Id;
                                 cmd.SetDownTime = hd.SetDt;
 
                                 #endregion
@@ -702,7 +755,7 @@ namespace HeatingDSC
                         {
                             #region 多地址同时下发
                             ErrFlag = 90;
-                            if (hd.OperType == "0x03") //全部读取该地址所在包数据----读
+                            if (hd.OperType == "0x03"|| hd.OperType=="0x01") //全部读取该地址所在包数据----读
                             {
                                 ErrFlag = 85;
 
@@ -752,7 +805,7 @@ namespace HeatingDSC
                                     slDeviceCmdsUnNoraml[hd.CommNo].Add(cmd);
                                 }
                                 ErrFlag = 10;
-                                HrzDownSet hddb = EntityManager<HrzDownSet>.GetBySql<HrzDownSet>("Convert(varchar(20),Setdt,120)='" + hd.SetDt.ToString("yyyy-MM-dd HH:mm:ss") + "' and bsO_Id='" + hd.bsO_Id + "' and SetFlag='" + hd.SetFlag + "'");
+                                HrzDownSet hddb = EntityManager<HrzDownSet>.GetBySql<HrzDownSet>("Convert(varchar(23),Setdt,121)='" + hd.SetDt.ToString("yyyy-MM-dd HH:mm:ss.fff") + "' and bsO_Id='" + hd.bsO_Id + "' and SetFlag='" + hd.SetFlag + "'");
                                 hddb.DownCmd = cmd.Command;
                                 hddb.DownDt = DateTime.Now;
                                 hddb.ValidResponse = cmd.Response;
@@ -828,6 +881,7 @@ namespace HeatingDSC
 
         public frmStart()
         {
+           
             InitializeComponent();
         }
 
@@ -897,6 +951,9 @@ namespace HeatingDSC
 
             try
             {
+                this.notifyIcon1.Text = "正在处理界面数据";
+                this.ucTvDevice1.RefreshTreeAllDevice();
+
 
                 this.notifyIcon1.Text = "程序正在从数据库中初始化数据......";//123//
                 InitDataFromDb();
@@ -907,8 +964,7 @@ namespace HeatingDSC
                 return;
             }
           
-            this.notifyIcon1.Text = "正在处理界面数据";
-            this.ucTvDevice1.RefreshTreeAllDevice();
+
             this.notifyIcon1.Text = "正在启动Gprs服务";
             //trWrite_Tick(null, null);
             启动服务ToolStripMenuItem.Checked = true;
@@ -920,6 +976,14 @@ namespace HeatingDSC
 
         private void SendNormalCommand()
         {
+            //获取最大命令数量
+            int maxCmdCount = 1;
+            foreach (string key in slDeviceCmdsNoraml.Keys)
+            {
+                if (maxCmdCount < slDeviceCmdsNoraml[key].Count)
+                    maxCmdCount = slDeviceCmdsNoraml[key].Count;
+            }
+
             while (!m_Terminated)
             {
                 try
@@ -931,7 +995,7 @@ namespace HeatingDSC
                     }
 
                     CreateWeatDownCommand();//获取气象数据，然后发送
-                    for (int jz = 0; jz < 9 + 1; jz++)
+                    for (int jz = 0; jz < maxCmdCount; jz++)
                     {
                         foreach (string key in slDeviceCmdsNoraml.Keys)
                         {
@@ -1121,21 +1185,27 @@ namespace HeatingDSC
 
 
         //启动GPRS服务
-        private bool StartGPRSServer()
+        private bool StartGPRSServer(int gprsport)
         {
            
             StringBuilder mess = new StringBuilder(100);
-            Gprs.StartGprsServer(this.Handle, ProgParams.GprsComPort, WM_DTU, ref mess);
+            Gprs.StartGprsServer(this.Handle, gprsport, WM_DTU, ref mess);
             string strmess= mess.ToString();
-            if (strmess.Length > 50)
-            {
-                this.notifyIcon1.Text += "(" + ProgParams.GprsComPort.ToString() + " 默认服务已启动)";
-                return true;
-            }
-            else
+            if (strmess.IndexOf("Failed")>=0)
             {
                 this.notifyIcon1.Text += "(" + strmess + ")";
                 return false;
+            }
+            else if (strmess.IndexOf("已启动端口" + ProgParams.GprsComPort.ToString()) >= 0)
+            {
+                this.notifyIcon1.Text += ";" + ProgParams.GprsComPort.ToString() + "默认服务已启动)";
+                return true;
+                
+            }
+            else
+            {
+                this.notifyIcon1.Text += ";" + ProgParams.GprsComPort.ToString() + "默认服务启动)";
+                return true;
             }
         }
 
@@ -1182,31 +1252,6 @@ namespace HeatingDSC
         {
             if (!rbNoReDisp.Checked && txtCommNo.Text == recdPtr.m_userid)
             {
-
-                if (rbOnlyData.Checked && recdPtr.m_data_type == 0x09)
-                {
-                    this.txtReceiveData.Text = recdPtr.m_userid + " " + recdPtr.m_recv_date + " " + IProtocal.bytes2Hex(recdPtr.m_data_buf, recdPtr.m_data_len) + "\r\n" + this.txtReceiveData.Text;
-                    if (this.txtReceiveData.Lines.Length >= 50)
-                    {
-                        rbNoReDisp.Checked = true;
-                    }
-                }
-                else if (rbAll.Checked)
-                {
-                    this.txtReceiveData.Text = recdPtr.m_userid + " " + recdPtr.m_recv_date + " " + (recdPtr.m_data_type == 0x01 ? "注册" : (recdPtr.m_data_type == 0x02 ? "注销" : (recdPtr.m_data_type == 0x04 ? "无效" : recdPtr.m_data_type.ToString()))) + " " + IProtocal.bytes2Hex(recdPtr.m_data_buf, recdPtr.m_data_len) + "\r\n" + this.txtReceiveData.Text;
-                    if (this.txtReceiveData.Lines.Length >= 100)
-                    {
-                        rbNoReDisp.Checked = true;
-                    }
-                }
-            }
-        }
-
-        private void WriteDisp(GPRS_DATA_RECORD recdPtr)
-        {
-            if (!rbNoReDisp.Checked && txtCommNo.Text == recdPtr.m_userid)
-            {
-
                 if (rbOnlyData.Checked && recdPtr.m_data_type == 0x09)
                 {
                     this.txtReceiveData.Text = recdPtr.m_userid + " " + recdPtr.m_recv_date + " " + IProtocal.bytes2Hex(recdPtr.m_data_buf, recdPtr.m_data_len) + "\r\n" + this.txtReceiveData.Text;
@@ -1253,7 +1298,6 @@ namespace HeatingDSC
                     //    log.Info("WndProc收到包:" + recdPtr.m_userid + " length:" + recdPtr.m_data_len.ToString() + "  type:" + recdPtr.m_data_type.ToString() + " data:" + IProtocal.bytes2Hex(recdPtr.m_data_buf, recdPtr.m_data_len));
                     //}
                     //catch { }
-                    WriteDisp(recdPtr);
                     switch (recdPtr.m_data_type)
                     {
                         case 0x01:
@@ -1347,6 +1391,11 @@ namespace HeatingDSC
                                 HeatingDSC.BLL.ParseSheXianQxyUpData pqu = new HeatingDSC.BLL.ParseSheXianQxyUpData();
                                 pqu.Parse(recdPtr);
                             }
+                            else if (recdPtr.m_userid == "18611111111")
+                            {
+                                HeatingDSC.BLL.ParseYsxQxyUpData pqu = new HeatingDSC.BLL.ParseYsxQxyUpData();
+                                pqu.Parse(recdPtr);
+                            }
                             else
                             {
                                 int bsP_Id = slProtocalCodeBySimno[recdPtr.m_userid];
@@ -1401,8 +1450,6 @@ namespace HeatingDSC
 
                     if (ihFlag)
                     {
-                        WriteDisp(recdPtr);
-
                         //1 收到心跳包， 2收到退出包，3 收到登录包，9 收到终端发上来的数据，
                         switch (recdPtr.m_data_type)
                         {
@@ -1418,7 +1465,7 @@ namespace HeatingDSC
                                         {
                                             slConnectedBySimno.Add(user_info.m_userid, slProtocalCodeBySimno[user_info.m_userid].ToString());
 
-                                            if (!this.ucTvDevice1.ChangeColorBySimcardNo(recdPtr.m_userid, Color.Green))
+                                            if (!this.ucTvDevice1.ChangeColorBySimcardNo(recdPtr.m_userid, Color.Yellow))
                                             {
                                                 this.txtSimNoUn.Text += recdPtr.m_userid + " registered,刷新树不成功\r\n";
                                             }
@@ -1488,10 +1535,8 @@ namespace HeatingDSC
                                 {
                                     log.Error("NeedParsePackets 数据链不能增加数据：" + recdPtr.m_userid + "该包会被舍弃:");
                                 }
-
                                 break;
                         }
-
                     }
                 }
                 catch (Exception ex)
@@ -1646,7 +1691,7 @@ namespace HeatingDSC
                 IProtocal product = new IProtocal();
                 packet = product.bytes2HexForThread(buff);
 
-                if (recdPtr.m_data_len == 8 || packet.Substring(2, 2) == "05" || packet.Substring(2, 2) == "01")
+                if (packet.Substring(0,4)!="0101" && (recdPtr.m_data_len == 8 || packet.Substring(2, 2) == "05" || packet.Substring(2, 2) == "01"))
                 {
                     if (!"011001100006,0110001A0006".Contains(packet.Substring(0, 12)))//鸿觉(两个一样),万德气象//气象数据不解析
                     {
@@ -1995,6 +2040,7 @@ namespace HeatingDSC
         /// <returns></returns>
         public int SendCommand(DeviceCmd cmd)
         {
+           
             int ret=-1;
             int errPos = 10000;
             try
@@ -2008,6 +2054,8 @@ namespace HeatingDSC
                 //    }
                 //    return 9999;
                 //}
+                if (cmd.CommNo==null ||cmd.CommNo == "" || cmd.Command == "")
+                    return ret;
                 errPos = 7000;
                 if (chkSend.Checked && this.txtCommNo.Text == cmd.CommNo)
                 {
@@ -2386,181 +2434,196 @@ namespace HeatingDSC
         {
             int i, iMaxDTUAmount;
             GPRS_USER_INFO ui = new GPRS_USER_INFO();
-            DateTime t_now, t_update;
+            DateTime t_now, t_update,t_loginDt;
 
             //#region 计讯
             //获取开发包支持的最大连接数
-            iMaxDTUAmount = Gprs.get_online_user_amount();
-            log.Info("在线数量：" + iMaxDTUAmount.ToString());
-            //OpSimNo.Clear();
-            for (i = 0; i < iMaxDTUAmount; i++)
+            if (ProgParams.GprsComPort > 0)
             {
-                try
-                {
-                    ui.m_status = 0;
-                    //获取指定位置的DTU信息
-                    Gprs.get_user_at(i, ref ui);
-                    if (1 == ui.m_status)
-                    {
-                        //取当前系统时间
-                        t_now = DateTime.Now;
-                        //取m_update_time的时间
-                        t_update = Convert.ToDateTime(m_update_timeToDT(ui.m_update_time));
-                        //用当前时间比较最后一次更新的时间
-                        TimeSpan ts = new TimeSpan();
-                        ts = t_now - t_update;
-                        if (ts.TotalSeconds >= ProgParams.dtutimeout)
-                        {
-                            if (OpSimNo.ContainsKey(ui.m_userid))
-                            {
-                                //if (OpSimNo[ui.m_userid].IndexOf("已掉线")==-1)
-                                OpSimNo[ui.m_userid] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "超时(" + ProgParams.dtutimeout.ToString() + ")";
-                                //else
-                                //    OpSimNo[ui.m_userid] = OpSimNo[ui.m_userid] +DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                            }
-                            //OpSimNo.Remove(ui.m_userid);
-                            // Gprs.do_close_one_user2(ui.m_userid, null);
-                        }
-                        else
-                        {
-                            if (!OpSimNo.ContainsKey(ui.m_userid))
-                                OpSimNo.Add(ui.m_userid, ui.m_logon_date + "---" + t_update.ToString("MM-dd HH:mm:ss") + "   ");
-                            else
-                                OpSimNo[ui.m_userid] = ui.m_logon_date + "---" + t_update.ToString("MM-dd HH:mm:ss") + "   ";
-
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    log.Error("dtutimeout:" + ex.InnerException + "-" + ex.Message);
-                }
-
-            }
-
-            //处理计讯服务的dtu状态
-            lock (JxDtuOperateStatus)
-            {
-                List<DtuInfo> jxstatus = this.GetDtuLinkStatus();
-                log.Info("计讯联接的dtu数量是：" + jxstatus.Count.ToString() + "个");
-                foreach (DtuInfo di in jxstatus)
+                iMaxDTUAmount = Gprs.get_online_user_amount();
+                log.Info("在线数量：" + iMaxDTUAmount.ToString());
+                //OpSimNo.Clear();
+                for (i = 0; i < iMaxDTUAmount; i++)
                 {
                     try
                     {
-                        log.Error(di.PhoneNO + ":" + di.DynIP + ":" + di.ID.ToString() + ":" + di.LastActTime.ToShortTimeString() + ":" + di.ConnectTime.ToShortTimeString());
-
-                        if (!dtu_JxInfoFromCommNo.ContainsKey(di.PhoneNO))
+                        ui.m_status = 0;
+                        //获取指定位置的DTU信息
+                        Gprs.get_user_at(i, ref ui);
+                        if (1 == ui.m_status)
                         {
-                            dtu_JxInfoFromCommNo.Add(di.PhoneNO, di);
-                        }
-                        if (!dtu_JxInfoFromIdToCommNo.ContainsKey(di.ID))
-                        {
-                            dtu_JxInfoFromIdToCommNo.Add(di.ID, di.PhoneNO);
-                        }
-
-                        t_now = DateTime.Now;
-                        //取m_update_time的时间
-                        t_update = di.LastActTime;
-                        //用当前时间比较最后一次更新的时间
-                        TimeSpan ts = new TimeSpan();
-                        ts = t_now - t_update;
-                        //if (ts.TotalSeconds >= ProgParams.dtutimeout)
-                        //{
-                        //    if (OpSimNo.ContainsKey(di.PhoneNO))
-                        //    {
-                        //        //if (OpSimNo[ui.m_userid].IndexOf("已掉线")==-1)
-                        //        OpSimNo[di.PhoneNO] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "超时(" + ProgParams.dtutimeout.ToString() + ")";
-                        //        //else
-                        //        //    OpSimNo[ui.m_userid] = OpSimNo[ui.m_userid] +DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                        //    }
-                        //    //OpSimNo.Remove(ui.m_userid);
-                        //    // Gprs.do_close_one_user2(ui.m_userid, null);
-                        //}
-                        //else
-                        //{
-                        if (!OpSimNo.ContainsKey(di.PhoneNO))
-                            OpSimNo.Add(di.PhoneNO, di.ConnectTime.ToString("yyyy-MM-dd HH:mm:ss") + "---" + t_update.ToString("MM-dd HH:mm:ss") + "   " + di.ID.ToString("X"));
-                        else
-                            OpSimNo[di.PhoneNO] = di.ConnectTime.ToString("yyyy-MM-dd HH:mm:ss") + "---" + t_update.ToString("MM-dd HH:mm:ss") + "   " + di.ID.ToString("X");
-
-                        //}
-
-
-                        if (!slConnectedBySimno.ContainsKey(di.PhoneNO))
-                        {
-                            slConnectedBySimno.Add(di.PhoneNO, slProtocalCodeBySimno[di.PhoneNO]);
-
-                            if (!this.ucTvDevice1.ChangeColorBySimcardNo(di.PhoneNO, Color.Brown))
+                            //取当前系统时间
+                            t_now = DateTime.Now;
+                            //取m_update_time的时间
+                            t_loginDt = Convert.ToDateTime(m_update_timeToDT(ui.m_logon_date));
+                            t_update = Convert.ToDateTime(m_update_timeToDT(ui.m_update_time));
+                            if (t_loginDt > t_update)
+                                t_update = t_loginDt;
+                            
+                            //用当前时间比较最后一次更新的时间
+                            TimeSpan ts = new TimeSpan();
+                            ts = t_now - t_update;
+                            if (ts.TotalSeconds >= ProgParams.dtutimeout)
                             {
-                                this.txtSimNoUn.Text += di.PhoneNO + " registered,刷新树不成功\r\n";
+                                if (OpSimNo.ContainsKey(ui.m_userid))
+                                {
+                                    //if (OpSimNo[ui.m_userid].IndexOf("已掉线")==-1)
+                                    OpSimNo[ui.m_userid] = t_now.ToString("yyyy-MM-dd HH:mm:ss") + "超时(" + t_update.ToString("yyyy-MM-dd HH:mm:ss")+ ")";
+                                    //else
+                                    //    OpSimNo[ui.m_userid] = OpSimNo[ui.m_userid] +DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                                }
+                                //OpSimNo.Remove(ui.m_userid);
+                                // Gprs.do_close_one_user2(ui.m_userid, null);
+                            }
+                            else
+                            {
+                                if (!OpSimNo.ContainsKey(ui.m_userid))
+                                    OpSimNo.Add(ui.m_userid, ui.m_logon_date + "---" + t_update.ToString("MM-dd HH:mm:ss") + "   ");
+                                else
+                                    OpSimNo[ui.m_userid] = ui.m_logon_date + "---" + t_update.ToString("MM-dd HH:mm:ss") + "   ";
+
                             }
                         }
-
-
-
-
                     }
                     catch (Exception ex)
                     {
-                        log.Error("dtutimeout——Jx:" + ex.InnerException + "-" + ex.Message);
+                        log.Error("dtutimeout:" + ex.InnerException + "-" + ex.Message);
                     }
-                }
 
-                foreach (string phoneno in slDtuDevice.Keys)
+                }
+            }
+            //处理计讯服务的dtu状态
+            if (ProgParams.gprsComPort_JX > 0)
+            {
+                lock (JxDtuOperateStatus)
                 {
-                    continue;
-                    bool findflag = false;
-                    DtuInfo di = new DtuInfo() ;
-                    for (int d = 0; d < jxstatus.Count;d++ )
+                    List<DtuInfo> jxstatus = this.GetDtuLinkStatus();
+                    log.Info("计讯联接的dtu数量是：" + jxstatus.Count.ToString() + "个");
+                    foreach (DtuInfo di in jxstatus)
                     {
-                        if (phoneno == jxstatus[d].PhoneNO)
-                        {
-                            findflag = true;
-                            di = jxstatus[d];
-                            break;
-                        }
-                    }
-                    if (findflag)
-                    {
-                        //设置数据库中在线状态
                         try
                         {
+                            //log.Error("超时判断trDtuTimeOut:"+di.PhoneNO + ":" + di.DynIP + ":" + di.ID.ToString() + ":" + di.LastActTime.ToShortTimeString() + ":" + di.ConnectTime.ToShortTimeString());
 
-                            DTUProduct dtu = EntityManager<DTUProduct>.GetByPk<DTUProduct>("Id", slDtuDevice[di.PhoneNO].Id);
-                            dtu.OnLine = true;
-                            dtu.OnLineDt = DateTime.Now;
-                            EntityManager<DTUProduct>.Modify<DTUProduct>(dtu);
+                            if (!dtu_JxInfoFromCommNo.ContainsKey(di.PhoneNO))
+                            {
+                                dtu_JxInfoFromCommNo.Add(di.PhoneNO, di);
+                            }
+                            if (!dtu_JxInfoFromIdToCommNo.ContainsKey(di.ID))
+                            {
+                                dtu_JxInfoFromIdToCommNo.Add(di.ID, di.PhoneNO);
+                            }
+
+                            t_now = DateTime.Now;
+                            //取m_update_time的时间
+                            t_update = di.LastActTime< di.ConnectTime? di.ConnectTime: di.LastActTime;
+                            //用当前时间比较最后一次更新的时间
+                            TimeSpan ts = new TimeSpan();
+                            ts = t_now - t_update;
+                            if (ts.TotalSeconds >= ProgParams.dtutimeout)
+                            {
+                                if (OpSimNo.ContainsKey(di.PhoneNO))
+                                {
+                                    //if (OpSimNo[ui.m_userid].IndexOf("已掉线")==-1)
+                                    OpSimNo[di.PhoneNO] = t_update.ToString("yyyy-MM-dd HH:mm:ss") + "超时(" + ProgParams.dtutimeout.ToString() + ")" + "   " + di.ID.ToString("X");
+                                    //else
+                                    //    OpSimNo[ui.m_userid] = OpSimNo[ui.m_userid] +DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                                }
+                                //OpSimNo.Remove(ui.m_userid);
+                                // Gprs.do_close_one_user2(ui.m_userid, null);
+                            }
+                            else
+                            {
+                                if (!OpSimNo.ContainsKey(di.PhoneNO))
+                                    OpSimNo.Add(di.PhoneNO, di.ConnectTime.ToString("yyyy-MM-dd HH:mm:ss") + "---" + t_update.ToString("MM-dd HH:mm:ss") + "   " + di.ID.ToString("X"));
+                                else
+                                    OpSimNo[di.PhoneNO] = di.ConnectTime.ToString("yyyy-MM-dd HH:mm:ss") + "---" + t_update.ToString("MM-dd HH:mm:ss") + "   " + di.ID.ToString("X");
+
+                            }
+
+
+                            if (!slConnectedBySimno.ContainsKey(di.PhoneNO))
+                            {
+                                slConnectedBySimno.Add(di.PhoneNO, slProtocalCodeBySimno[di.PhoneNO]);
+
+                                if (!this.ucTvDevice1.ChangeColorBySimcardNo(di.PhoneNO, Color.Brown))
+                                {
+                                    this.txtSimNoUn.Text += di.PhoneNO + " registered,刷新树不成功\r\n";
+                                }
+                            }
                         }
                         catch (Exception ex)
                         {
-                            log.Error(phoneno + " 2计讯在线：" + ex.Message);
+                            log.Error("dtutimeout——Jx:" + ex.InnerException + "-" + ex.Message);
                         }
                     }
-                    else
+                    ////刷新左侧树  宏电模块有时突然变为2000年5月28日，此时不可用
+                    //foreach (string commno in OpSimNo.Keys)
+                    //{
+                    //    if (OpSimNo[commno].Contains("超时"))
+                    //    {
+                           
+                    //        if (!this.ucTvDevice1.ChangeColorBySimcardNo(commno, Color.Gray))
+                    //        {
+                    //            this.txtSimNoUn.Text += commno + " registered,刷新树不成功\r\n";
+                    //        }
+                    //    }
+                    //}
+                    foreach (string phoneno in slDtuDevice.Keys)
                     {
-                        //设置数据库中在线状态
-                        try
+                        continue;
+                        bool findflag = false;
+                        DtuInfo di = new DtuInfo();
+                        for (int d = 0; d < jxstatus.Count; d++)
                         {
-                            
-                            DTUProduct dtu = EntityManager<DTUProduct>.GetByPk<DTUProduct>("Id", slDtuDevice[phoneno].Id);
-                           // if (dtu.TranType == "无线--计讯")
-                           // {
+                            if (phoneno == jxstatus[d].PhoneNO)
+                            {
+                                findflag = true;
+                                di = jxstatus[d];
+                                break;
+                            }
+                        }
+                        if (findflag)
+                        {
+                            //设置数据库中在线状态
+                            try
+                            {
+
+                                DTUProduct dtu = EntityManager<DTUProduct>.GetByPk<DTUProduct>("Id", slDtuDevice[di.PhoneNO].Id);
+                                dtu.OnLine = true;
+                                dtu.OnLineDt = DateTime.Now;
+                                EntityManager<DTUProduct>.Modify<DTUProduct>(dtu);
+                            }
+                            catch (Exception ex)
+                            {
+                                log.Error(phoneno + " 2计讯在线：" + ex.Message);
+                            }
+                        }
+                        else
+                        {
+                            //设置数据库中在线状态
+                            try
+                            {
+
+                                DTUProduct dtu = EntityManager<DTUProduct>.GetByPk<DTUProduct>("Id", slDtuDevice[phoneno].Id);
+                                // if (dtu.TranType == "无线--计讯")
+                                // {
                                 if (dtu.OnLineDt != null && dtu.OnLineDt.Value.AddMinutes(5) < DateTime.Now)
                                 {
                                     dtu.OnLine = false;
-                                   // dtu.OnLineDt = DateTime.Now;
+                                    // dtu.OnLineDt = DateTime.Now;
                                     EntityManager<DTUProduct>.Modify<DTUProduct>(dtu);
                                 }
-                           // }
-                        }
-                        catch (Exception ex)
-                        {
-                            log.Error(phoneno + " 1计讯在线：" + ex.Message);
+                                // }
+                            }
+                            catch (Exception ex)
+                            {
+                                log.Error(phoneno + " 1计讯在线：" + ex.Message);
+                            }
                         }
                     }
                 }
             }
-
             RefreshRegisters(OpSimNo);
         }
         private DateTime m_update_timeToDT(string upddt)
@@ -2707,18 +2770,24 @@ namespace HeatingDSC
                     #region 启动服务
                     this.notifyIcon1.Text = ""; 
                     //计讯通讯方式();
-                    string ret = this.startServer((ushort)(ProgParams.GprsComPort + 10));
-                    this.notifyIcon1.Text += ";" + ret;
-                    tmrJiXunDtuData.Enabled = true;
-
+                   if (ProgParams.gprsComPort_JX != 0)
+                    {
+                        string ret = this.startServer((ushort)(ProgParams.gprsComPort_JX));
+                        this.notifyIcon1.Text += ";" + ret;
+                        tmrJiXunDtuData.Enabled = true;
+                    }
                     //映瀚通 通讯方式
-                    StringBuilder mess = new StringBuilder(1000);
-                    bool flag = inhandServ.StartService(this.Handle, 6022,mess);
-                    this.notifyIcon1.Text += ";"+ "6022服务启动";
-
+                    if (ProgParams.gprsComPort_YHT != 0)
+                    {
+                        StringBuilder mess = new StringBuilder(1000);
+                        bool flag = inhandServ.StartService(this.Handle, ProgParams.gprsComPort_YHT, mess);
+                        this.notifyIcon1.Text += ";" + ProgParams.gprsComPort_YHT.ToString()+"启动";
+                    }
                     //宏电通讯方式
-                    StartGPRSServer();
-
+                    if (ProgParams.GprsComPort != 0)
+                    {
+                        StartGPRSServer(ProgParams.GprsComPort);
+                    }
                     // flag = inhandServ.StopService();
 
                     #endregion
@@ -2753,16 +2822,6 @@ namespace HeatingDSC
             {
                 log.Error("start gprs" + ex.Message);
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ucTvDevice1_delNodeMouseClickHandler(bsOrganize org,string CommNo)
@@ -2833,14 +2892,12 @@ namespace HeatingDSC
         {
             try
             {
-                log.Info("准备接收计讯数据！");
                 lock (JxDtuOperateStatus)
                 {
                     List<GPRS_DATA_RECORD> gdrs = new List<GPRS_DATA_RECORD>();
 
                     List<ModemDataStruct> jxdata = this.GetDtuData();
-                    log.Info("接收计讯数据！数据有：" + jxdata.Count.ToString());
-
+                   
                     foreach (ModemDataStruct mds in jxdata)
                     {
                         GPRS_DATA_RECORD gdr = new GPRS_DATA_RECORD();
@@ -2956,6 +3013,10 @@ namespace HeatingDSC
         }
 
 
+        /// <summary>
+        /// 计讯连接状态
+        /// </summary>
+        /// <returns></returns>
         public List<DtuInfo> GetDtuLinkStatus()
         {
             List<DtuInfo> dtuTB = new List<DtuInfo>();
@@ -3100,8 +3161,8 @@ namespace HeatingDSC
                     GPRS_DATA_RECORD recdPtr = new GPRS_DATA_RECORD();
                     recdPtr.m_recv_date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
-                    recdPtr.m_userid = "15100010001";
-                    datatest = "0103AC00000000000000424286000042080000428A00000000001D41F000000000001F42000000420400000000000042080000420C0000421000004214000042180000421C000042200000422400000000002A0000002B4230000042340000423800000000002F42400000424400004248000000000033425000004254000042580000425C0000426000004264000042680000426C000042700000427400000000003E0000003F428000004282000054B6";
+                    recdPtr.m_userid = this.txtCommNo.Text;// "15500010001";
+                    datatest = txtBytes.Text;// "010334448840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000039800000003D89";
 
                     
                     datatest = datatest.Replace(" ", "");
@@ -3133,8 +3194,15 @@ namespace HeatingDSC
                     //obj.Parse(recdPtr);
 
                     GetHandDownCmd();
-
-                    ProcessData(recdPtr);
+                    if (recdPtr.m_userid == "18611111111")
+                    {
+                        HeatingDSC.BLL.ParseYsxQxyUpData pqu = new HeatingDSC.BLL.ParseYsxQxyUpData();
+                        pqu.Parse(recdPtr);
+                    }
+                    else
+                    {
+                        ProcessData(recdPtr);
+                    }
                 }
                 catch (Exception ex)
                 {
