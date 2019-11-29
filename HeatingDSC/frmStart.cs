@@ -142,28 +142,31 @@ namespace HeatingDSC
                            
                             DeviceCmd cmd = slDeviceCmdsUnNoraml[simno][i];
                             log.Info("--------" + simno +cmd.bsO_id.ToString()+ "---待判断命令:" + cmd.Command);
-                   
-                            //更新数据库
-                            string sql = "Convert(varchar(23),SetDt,121)='" + cmd.SetDownTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "' and bsO_Id='" + cmd.bsO_id.ToString() + "' and SetFlag='0x" + cmd.Command.Substring(4, 4) + "'";
-                            log.Info("--------" + simno + cmd.bsO_id.ToString() + "---待判断命令条件:" + sql);
-                   
-                            HrzDownSet hds = EntityManager<HrzDownSet>.GetBySql<HrzDownSet>(sql);
-                            if (hds != null)
+                            if (cmd.Response.Substring(0, 6) == packet.Substring(0, 6))
                             {
-                                if (hds.ValidResponse.Substring(0, 6) == packet.Substring(0, 6))//都只处理前六位
+                                //更新数据库
+                                string sql = "Convert(varchar(23),SetDt,121)='" + cmd.SetDownTime.ToString("yyyy-MM-dd HH:mm:ss.fff") + "' and bsO_Id='" + cmd.bsO_id.ToString() + "' and SetFlag='0x" + cmd.Command.Substring(4, 4) + "'";
+                                log.Info("--------" + simno + cmd.bsO_id.ToString() + "---待判断命令条件:" + sql);
+
+                                HrzDownSet hds = EntityManager<HrzDownSet>.GetBySql<HrzDownSet>(sql);
+                                if (hds != null)
                                 {
-                                    //为什么要赋值呢？ zhwsun 2019-02-27
-                                    //if (packet.Substring(2, 2) == "01")
-                                    //    hds.SetValues = Convert.ToUInt16(packet.Substring(6, Convert.ToInt16(packet.Substring(4, 2), 16) * 2), 16).ToString();
+                                    //if (hds.ValidResponse.Substring(0, 6) == packet.Substring(0, 6))//都只处理前六位
+                                    //{
+                                        //为什么要赋值呢？ zhwsun 2019-02-27
+                                        //if (packet.Substring(2, 2) == "01")
+                                        //    hds.SetValues = Convert.ToUInt16(packet.Substring(6, Convert.ToInt16(packet.Substring(4, 2), 16) * 2), 16).ToString();
+                                        hds.DownDt = cmd.NeedSendTime;
+                                        hds.DownCmd = cmd.Command;
+                                        hds.ValidResponse = cmd.Response;
+                                        hds.DownSuccDt = DateTime.Now;
 
-                                    hds.DownSuccDt = DateTime.Now;
-
-                                    EntityManager<HrzDownSet>.Modify<HrzDownSet>(hds);
+                                        EntityManager<HrzDownSet>.Modify<HrzDownSet>(hds);
+                                    //}
                                 }
-
+                                else if (cmd.Command.Substring(0, 4) == "0110")
+                                    log.Error("未找到匹配命令！" + cmd.Command + ":" + sql);
                             }
-                            else if (cmd.Command.Substring(0,4)=="0110")
-                                log.Error("未找到匹配命令！"+cmd.Command+ ":"+ sql);
                             //更新命令
                             if (cmd.Response.Substring(0, 6) == packet.Substring(0, 6))
                             {
@@ -607,6 +610,7 @@ namespace HeatingDSC
             try
             {
                 DeviceCmd cmd = new DeviceCmd();
+              
                 List<vwlyHrzDownSet> hds = EntityManager<vwlyHrzDownSet>.GetListNoPaging<vwlyHrzDownSet>("", "SetDt");
                 foreach (vwlyHrzDownSet hd in hds)
                 {
@@ -639,8 +643,8 @@ namespace HeatingDSC
                                 cmd.CommNo = hd.CommNo;
                                 cmd.DefFlag = "";
                                 cmd.ExpiredTime = DateTime.Now.AddMinutes(5);
-                                cmd.NeedSendTime = hd.SetDt;// hd.DownDt.Value;//原来为什么直接写呢？2017-11-09
-
+                                //cmd.NeedSendTime = DateTime.Now; // modified on 1019-11-19 hd.SetDt;// hd.DownDt.Value;//原来为什么直接写呢？2017-11-09
+                                
                                 cmd.SendCmd = CommFunc.HexCmd2Bytes(cmd.Command);// System.Text.Encoding.Default.GetBytes(cmd.Command);
                                 cmd.SendCmd = ModbusCommand.GetBytesAfterCalculateCrc16(cmd.SendCmd);
                                 //
@@ -677,7 +681,7 @@ namespace HeatingDSC
                                 cmd.CommNo = hd.CommNo;
                                 cmd.DefFlag = "";
                                 cmd.ExpiredTime = hd.DownDt.Value.AddMinutes(5);
-                                cmd.NeedSendTime = hd.DownDt.Value;
+                                //cmd.NeedSendTime = DateTime.Now;// hd.DownDt.Value;
                                 cmd.Response = hd.ValidResponse;
                                 cmd.SendCmd = CommFunc.HexCmd2Bytes(cmd.Command);// System.Text.Encoding.Default.GetBytes(cmd.Command);
                                 //cmd.SendCmd = ModbusCommand.GetBytesAfterCalculateCrc16(cmd.SendCmd);//增加校验位，已经有了呀？
@@ -699,7 +703,7 @@ namespace HeatingDSC
                                 cmd.CommNo = hd.CommNo;
                                 cmd.DefFlag = "";
                                 cmd.ExpiredTime = DateTime.Now.AddMinutes(5);
-                                cmd.NeedSendTime = hd.SetDt;// hd.DownDt.Value;//原来为什么直接写呢？2017-11-09
+                                //cmd.NeedSendTime = DateTime.Now; //hd.SetDt;// hd.DownDt.Value;//原来为什么直接写呢？2017-11-09
 
                                 cmd.SendCmd = CommFunc.HexCmd2Bytes(cmd.Command);// System.Text.Encoding.Default.GetBytes(cmd.Command);
                                 cmd.SendCmd = ModbusCommand.GetBytesAfterCalculateCrc16(cmd.SendCmd);
@@ -773,11 +777,14 @@ namespace HeatingDSC
 
                             cmd.bsO_id = slbsO_IdWithCommNo[cmd.CommNo];
                             cmd.SetDownTime = hd.SetDt;
+                            //cmd.NeedSendTime = DateTime.Now;
                             ErrFlag = 60;
                             #endregion
 
                         }
-                        cmd.ExpiredTime = DateTime.MaxValue;
+
+                        cmd.NeedSendTime = DateTime.Now;
+                        cmd.ExpiredTime = cmd.NeedSendTime.AddMinutes(5); //DateTime.MaxValue;
                          
                         ErrFlag = 50;
 
@@ -805,12 +812,20 @@ namespace HeatingDSC
                                     slDeviceCmdsUnNoraml[hd.CommNo].Add(cmd);
                                 }
                                 ErrFlag = 10;
-                                HrzDownSet hddb = EntityManager<HrzDownSet>.GetBySql<HrzDownSet>("Convert(varchar(23),Setdt,121)='" + hd.SetDt.ToString("yyyy-MM-dd HH:mm:ss.fff") + "' and bsO_Id='" + hd.bsO_Id + "' and SetFlag='" + hd.SetFlag + "'");
-                                hddb.DownCmd = cmd.Command;
-                                hddb.DownDt = DateTime.Now;
-                                hddb.ValidResponse = cmd.Response;
+                                if (hd.SetDt.AddSeconds(30) < DateTime.Now)
+                                {
+                                    HrzDownSet hddb = EntityManager<HrzDownSet>.GetBySql<HrzDownSet>("Convert(varchar(23),Setdt,121)='" + hd.SetDt.ToString("yyyy-MM-dd HH:mm:ss.fff") + "' and bsO_Id='" + hd.bsO_Id + "' and SetFlag='" + hd.SetFlag + "'");
 
-                                EntityManager<HrzDownSet>.Modify<HrzDownSet>(hddb);
+                                    if (hddb.DownDt == null)
+                                    {
+                                        hddb.DownCmd = cmd.Command;
+                                        hddb.DownDt = DateTime.Now;
+                                        hddb.ValidResponse = cmd.Response;
+
+                                        EntityManager<HrzDownSet>.Modify<HrzDownSet>(hddb);
+                                    }
+                                }
+                                
                             }
 
                        }

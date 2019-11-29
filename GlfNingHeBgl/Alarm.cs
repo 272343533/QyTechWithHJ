@@ -17,6 +17,7 @@ namespace QyTech.GlfNingHeBgl
 {
     public class Alarm: IProtocal
     {
+        private int hrzNo =2;
 
         public Alarm(int bsP_Id)
             : base(bsP_Id)
@@ -40,7 +41,7 @@ namespace QyTech.GlfNingHeBgl
             {
                 HrzGathAlarm obj = new HrzGathAlarm();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
-                obj.Det_Id = (Guid)hrzjzs[0].Id;
+                obj.Det_Id = (Guid)hrzjzs[hrzNo].Id;
                 obj.bsO_Id = Org.Id;
 
                 int bufflen;

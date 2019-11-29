@@ -55,7 +55,8 @@ namespace QyTech.ProtocalGlfJinLai
 
                     try
                     {
-                        byteIndex = 0X0070 * 2;
+                        byteIndex = 0;// 0X0070 * 2;
+                        buff = new byte[4];
                         Buffer.BlockCopy(GetData, byteIndex, buff, 0, 4); CrossHiLow(ref buff);
                         ggdyobj.JLOTGLCN65 = (decimal)Math.Round(BitConverter.ToSingle(buff, 0), 2);
                         Buffer.BlockCopy(GetData, byteIndex += 4, buff, 0, 4); CrossHiLow(ref buff);
@@ -139,7 +140,7 @@ namespace QyTech.ProtocalGlfJinLai
 
         public override DeviceCmd CreateReadCommand(string simno)
         {
-            return base.CreateModbusRtuReadCommand(simno, 0x01, 0x03, 0x0070, 0x008B - 0x0070 + 1);
+            return base.CreateModbusRtuReadCommand(simno, 0x01, 0x03, 0x0070, 0x0097 - 0x0070 + 1);
 
         }
     }

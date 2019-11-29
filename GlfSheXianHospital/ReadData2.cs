@@ -22,7 +22,7 @@ namespace QyTech.GlfSheXianHospital
 
 
         public static DateTime LastUpDate = DateTime.MaxValue;
-        private int hrzNo =1;
+        private int hrzNo =2;
 
         public ReadData2(int bsP_Id)
             : base(bsP_Id)

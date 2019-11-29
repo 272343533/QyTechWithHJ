@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Debug-NingHe\</OutputPath>
+    <OutputPath>..\PubDir\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -34,15 +34,17 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Debug\HjCommDA.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\PubDir\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\PubDir\QyTech.Core.dll</HintPath>
+      <HintPath>..\Debug\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="QyTech.Core.Refectioin">
-      <HintPath>..\PubDir\QyTech.Core.Refectioin.dll</HintPath>
+    <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\QyTech.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Core.Refectioin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\QyTech.Core.Refectioin.dll</HintPath>
     </Reference>
     <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
@@ -71,8 +73,12 @@
     <Compile Include="Protocal\Modbus\ModbusCommandForThread.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TypeChange\exHEATTEMP.cs" />
+    <Compile Include="TypeChange\exPackBIN_CN4.cs" />
+    <Compile Include="TypeChange\Coil05.cs" />
+    <Compile Include="TypeChange\exPackBIN_CN8.cs" />
     <Compile Include="TypeChange\IBytesConverter.cs" />
     <Compile Include="TypeChange\exPackZipBCD.cs" />
+    <Compile Include="TypeChange\multiJinZhiExchange.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Protocal\Modbus\vssver2.scc" />

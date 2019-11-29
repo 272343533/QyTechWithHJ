@@ -162,6 +162,7 @@ namespace QyTech.Protocal.Modbus
             {
                 switch (operatMode)
                 {
+                    case 0x01:
                     case 0x03:  //读数据
                         #region 03读数据
                         if (verifyMode == ASCII)//ASCII方式
@@ -189,7 +190,7 @@ namespace QyTech.Protocal.Modbus
 
                             tmpcomm = new byte[8];
                             tmpcomm[0] = slaveaddr;
-                            tmpcomm[1] = 0x03;
+                            tmpcomm[1] = (byte)operatMode;
                             tmpcomm[2] = (byte)(regStartAddr >> 8);
                             tmpcomm[3] = (byte)(regStartAddr & 0xFF);
                             tmpcomm[4] = (byte)(regOpNum >> 8);

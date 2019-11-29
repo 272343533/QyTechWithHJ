@@ -45,8 +45,9 @@
     <Reference Include="QyTech.Core.Refectioin">
       <HintPath>..\PubDir\QyTech.Core.Refectioin.dll</HintPath>
     </Reference>
-    <Reference Include="SunMvcExpress.Dao">
-      <HintPath>..\..\QinYiMvc\WebPub\SunMvcExpress.Dao.dll</HintPath>
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

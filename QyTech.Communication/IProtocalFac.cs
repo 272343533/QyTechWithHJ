@@ -55,7 +55,10 @@ namespace QyTech.Communication
         /// <returns></returns>
         protected int GetFlagWithPacketLength(byte[] packet)
         {
-            return (packet.Length-5)/2;
+            if (packet[1] != 0x01)
+                return (packet.Length - 5) / 2;//寄存器长度
+            else
+                return packet.Length - 5;//字节长度
         }
  
         //解码时知道具体解码项的bsP_Id
@@ -74,7 +77,6 @@ namespace QyTech.Communication
                         pobj = (IProtocal)Activator.CreateInstance(type, p.Id);
                         return pobj;
                     }
-
                 }
             }
             else
@@ -90,7 +92,6 @@ namespace QyTech.Communication
                         pobj = (IProtocal)Activator.CreateInstance(type, p.Id);
                         return pobj;
                     }
-
                 }
             }
             return null;

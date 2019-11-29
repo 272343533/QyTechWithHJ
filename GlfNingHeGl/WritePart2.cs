@@ -42,7 +42,7 @@ namespace QyTech.GlfNingHeGl
             {
                 OTStandDataHrzControl2 obj = new OTStandDataHrzControl2();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
-                obj.Det_Id = (Guid)hrzjzs[0].Id;
+                obj.Det_Id = (Guid)hrzjzs[5].Id;
                 obj.bsO_Id = Org.Id;
 
                 int bufflen;

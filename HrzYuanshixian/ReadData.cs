@@ -100,18 +100,18 @@ namespace QyTech.HrzYuanshixian
                 EntityManager<OTStandDataHrz>.Add<OTStandDataHrz>(obj);
 
                 
-                NewStandDataHrz newobj = EntityManager<NewStandDataHrz>.GetBySql<NewStandDataHrz>("Det_Id='" + obj.Det_Id.ToString() + "'");
-                if (newobj == null)
-                {
-                    newobj = EntityOperate.Copy<NewStandDataHrz>(obj);
-                    EntityManager<NewStandDataHrz>.Add<NewStandDataHrz>(newobj);
-                }
-                else
-                {
-                    //newobj = EntityOperate.Copy<NewStandDataHrz>(obj);
-                    EntityOperate.Copy<NewStandDataHrz>(obj, newobj, "Det_Id");
-                    EntityManager<NewStandDataHrz>.Modify<NewStandDataHrz>(newobj);
-                }
+                //NewStandDataHrz newobj = EntityManager<NewStandDataHrz>.GetBySql<NewStandDataHrz>("Det_Id='" + obj.Det_Id.ToString() + "'");
+                //if (newobj == null)
+                //{
+                //    newobj = EntityOperate.Copy<NewStandDataHrz>(obj);
+                //    EntityManager<NewStandDataHrz>.Add<NewStandDataHrz>(newobj);
+                //}
+                //else
+                //{
+                //    //newobj = EntityOperate.Copy<NewStandDataHrz>(obj);
+                //    EntityOperate.Copy<NewStandDataHrz>(obj, newobj, "Det_Id");
+                //    EntityManager<NewStandDataHrz>.Modify<NewStandDataHrz>(newobj);
+                //}
 
                 OnProtocalDataReceivedProgress(recdPtr.m_userid, obj);
 

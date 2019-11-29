@@ -19,7 +19,8 @@ namespace QyTech.GlfNingHeBgl
     {
         //采集数据
         //public static bsOrganize ORG=new bsOrganize();
-     
+        private int hrzNo = 1;
+
         public WritePart(int bsP_Id)
             : base(bsP_Id)
         {
@@ -41,7 +42,7 @@ namespace QyTech.GlfNingHeBgl
             {
                 OTStandDataGlfControl1 obj = new OTStandDataGlfControl1();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
-                obj.Det_Id = (Guid)hrzjzs[0].Id;
+                obj.Det_Id = (Guid)hrzjzs[hrzNo].Id;
                 obj.bsO_Id = Org.Id;
 
                 int bufflen;

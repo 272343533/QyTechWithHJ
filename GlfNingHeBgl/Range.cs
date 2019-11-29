@@ -16,6 +16,8 @@ namespace QyTech.GlfNingHeBgl
 {
     public class Range: IProtocal
     {
+        private int hrzNo = 4;
+
         //public clsHJGathData11 obj = new clsHJGathData11();
         public Range(int bsP_Id):base(bsP_Id)
         {
@@ -36,7 +38,7 @@ namespace QyTech.GlfNingHeBgl
             {
                 HrzGathRange obj = new HrzGathRange();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
-                obj.Det_Id = (Guid)hrzjzs[0].Id;
+                obj.Det_Id = (Guid)hrzjzs[hrzNo].Id;
                 obj.bsO_Id = Org.Id;
 
                 int bufflen;

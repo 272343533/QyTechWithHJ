@@ -30,13 +30,13 @@ namespace QyTech.GlfSheXianHospital
         }
 
 
-        public override DeviceCmd CreateReadCommand(string simno)
-        {
-            //return base.CreateReadCommand(simno);
+        //public override DeviceCmd CreateReadCommand(string simno)
+        //{
+        //    //return base.CreateReadCommand(simno);
 
-            return base.CreateModbusRtuReadCommand(simno, 0x01, 0x03, 0xA0, 0xCB - 0xA0 + 1);
+        //    return base.CreateModbusRtuReadCommand(simno, 0x01, 0x03, 0xA0, 0xCB - 0xA0 + 1);
    
-        }
+        //}
 
 
         public override int Parse(GPRS_DATA_RECORD recdPtr)

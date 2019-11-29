@@ -32,18 +32,26 @@
   <ItemGroup>
     <Reference Include="HjCommDA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Debug\HjCommDA.dll</HintPath>
+      <HintPath>..\PubDir\HjCommDA.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\PubLoclDir\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="QyTech.Communication">
-      <HintPath>..\PubLoclDir\QyTech.Communication.dll</HintPath>
+    <Reference Include="QyTech.Communication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\QyTech.Communication.dll</HintPath>
     </Reference>
-    <Reference Include="QyTech.Core">
+    <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\PubDir\QyTech.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SunMvcExpress.Dao">
+    <Reference Include="QyTech.Core.Refectioin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\QyTech.Core.Refectioin.dll</HintPath>
+    </Reference>
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\PubDir\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />

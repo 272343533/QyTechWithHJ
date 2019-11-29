@@ -28,7 +28,7 @@ namespace DTU_JiXun
     public class JXComm
     {
 
-        public static ILog log = log4net.LogManager.GetLogger("frmstart");
+        public static ILog log = log4net.LogManager.GetLogger("JXComm");
 
         DTUdll DTUService = DTUdll.Instance;
 

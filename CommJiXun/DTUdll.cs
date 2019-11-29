@@ -8,7 +8,7 @@ namespace DTU_JiXun
     internal class DTUdll
     {
 
-        public static ILog log = log4net.LogManager.GetLogger("frmstart");
+        public static ILog log = log4net.LogManager.GetLogger("DTUdll");
 
 
         #region API

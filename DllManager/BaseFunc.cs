@@ -32,21 +32,7 @@ namespace QyTech.Core.Refection
         //}
 
        
-        /// <summary>
-        /// 类型匹配
-        /// </summary>
-        /// <param name="type"></param>
-        /// <param name="typeName"></param>
-        /// <returns></returns>
-        public static bool IsType(Type type, string typeName)
-        {
-            if (type.ToString().Contains(typeName))
-                return true;
-            if (type.ToString() == "System.Object")
-                return false;
-
-            return IsType(type.BaseType, typeName);
-        }
+  
         public static T SetValue<T>(T obj, PropertyInfo propertyInfo, object val)
         {
 
@@ -86,11 +72,32 @@ namespace QyTech.Core.Refection
             {
                 propertyInfo.SetValue(obj, val.ToString(), null); 
             }
+            else if (IsType(propertyInfo.PropertyType, "System.Boolean"))
+            {
+                
+                propertyInfo.SetValue(obj, val, null);
+            }
             else
                 propertyInfo.SetValue(obj, val, null); //给对应属性赋值 
 
             return obj;
 
+        }
+
+        /// <summary>
+        /// 类型匹配
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="typeName"></param>
+        /// <returns></returns>
+        private static bool IsType(Type type, string typeName)
+        {
+            if (type.ToString().Contains(typeName))
+                return true;
+            if (type.ToString() == "System.Object")
+                return false;
+
+            return IsType(type.BaseType, typeName);
         }
     }
 }

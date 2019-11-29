@@ -83,7 +83,7 @@ namespace HjCommDA
 
         public static List<DetailDevice> GetDetailDevice(Guid dtuid)
         {
-            return EntityManager<DetailDevice>.GetListNoPaging<DetailDevice>("DTU_Id='" + dtuid.ToString() + "'", "SubDevNo");
+            return EntityManager<DetailDevice>.GetListNoPaging<DetailDevice>("DTU_Id='" + dtuid.ToString() + "' and DataStatus='正常'", "Convert(int,SubDevNo)");
 
         }
         public static List<DetailDevice> GetDetailDevice(string commno)

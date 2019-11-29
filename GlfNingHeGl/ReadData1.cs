@@ -52,7 +52,7 @@ namespace QyTech.GlfNingHeGl
 
 
             int resualt = 1;
-            OTStandDataGldy obj = new OTStandDataGldy();
+            OTStandDataGldy_ZZ obj = new OTStandDataGldy_ZZ();
 
             try
             {
@@ -74,7 +74,7 @@ namespace QyTech.GlfNingHeGl
                         Buffer.BlockCopy(GetData, (ItemAddr - InitAddr) * 2, buff, 0, bufflen);
                         CrossHiLow(ref buff);
 
-                        obj = (OTStandDataGldy)SetValueByReflectionFromBytes<OTStandDataGldy>(obj, pi, propertyInfo, buff);
+                        obj = (OTStandDataGldy_ZZ)SetValueByReflectionFromBytes<OTStandDataGldy_ZZ>(obj, pi, propertyInfo, buff);
                     }
                     catch (Exception ex)
                     {
@@ -91,7 +91,7 @@ namespace QyTech.GlfNingHeGl
                 #endregion
 
 
-                EntityManager<OTStandDataGldy>.Add<OTStandDataGldy>(obj);
+                EntityManager<OTStandDataGldy_ZZ>.Add<OTStandDataGldy_ZZ>(obj);
 
 
                 NewStandDataGldy newobj = EntityManager<NewStandDataGldy>.GetBySql<NewStandDataGldy>("Det_Id='" + obj.Det_Id.ToString() + "'");

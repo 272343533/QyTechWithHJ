@@ -30,7 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HjCommDA">
+    <Reference Include="HjCommDA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\PubDir\HjCommDA.dll</HintPath>
     </Reference>
     <Reference Include="log4net">
@@ -45,9 +46,9 @@
     <Reference Include="QyTech.Core.Refectioin">
       <HintPath>..\PubDir\QyTech.Core.Refectioin.dll</HintPath>
     </Reference>
-    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Debug\SunMvcExpress.Dao.dll</HintPath>
+      <HintPath>..\PubDir\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -29,7 +29,11 @@ namespace QyTech.GlfSheXianHospital
         /// <returns></returns>
         public override string[] GetNeedNormalReadClassMethodName()
         {
-            return new string[] { "ReadCommon.CreateReadCommand", "ReadData1.CreateReadCommand" };
+            return new string[] { "ReadCommon.CreateReadCommand"
+                , "ReadData1.CreateReadCommand"
+                , "ReadData2.CreateReadCommand"
+                , "ReadData3.CreateReadCommand"
+            };
         }
 
         /// <summary>

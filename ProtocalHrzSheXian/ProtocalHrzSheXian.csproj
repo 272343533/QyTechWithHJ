@@ -36,14 +36,16 @@
     <Reference Include="log4net">
       <HintPath>..\PubDir\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="QyTech.Communication">
-      <HintPath>..\Debug\QyTech.Communication.dll</HintPath>
+    <Reference Include="QyTech.Communication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\QyTech.Communication.dll</HintPath>
     </Reference>
     <Reference Include="QyTech.Core">
       <HintPath>..\PubDir\QyTech.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SunMvcExpress.Dao">
-      <HintPath>..\..\QinYiMvc\WebPub\SunMvcExpress.Dao.dll</HintPath>
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

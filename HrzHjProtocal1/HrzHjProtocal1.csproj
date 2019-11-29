@@ -33,17 +33,20 @@
     <Reference Include="HjCommDA">
       <HintPath>..\Debug\HjCommDA.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\PubDir\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\log4net.dll</HintPath>
     </Reference>
     <Reference Include="QyTech.Communication">
       <HintPath>..\Debug\QyTech.Communication.dll</HintPath>
     </Reference>
-    <Reference Include="QyTech.Core">
-      <HintPath>..\PubDir\QyTech.Core.dll</HintPath>
+    <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\QyTech.Core.dll</HintPath>
     </Reference>
-    <Reference Include="SunMvcExpress.Dao">
-      <HintPath>..\PubDir\SunMvcExpress.Dao.dll</HintPath>
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

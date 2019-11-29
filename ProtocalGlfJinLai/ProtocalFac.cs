@@ -21,7 +21,11 @@ namespace QyTech.ProtocalGlfJinLai
         }
         public override IProtocal Create(byte[] packet)
         {
-            IProtocal pobj = new QyTech.ProtocalGlfJinLai.ReadData1(79);
+            IProtocal pobj;
+            if (((packet.Length-5)/2)==109)
+                pobj= new QyTech.ProtocalGlfJinLai.ReadData1(79);
+            else
+                pobj= new QyTech.ProtocalGlfJinLai.ReadData2(142);
             return pobj;
         }
 

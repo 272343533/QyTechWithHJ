@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Debug-NingHe\</OutputPath>
+    <OutputPath>..\Debug_NingHe\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -30,11 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HjCommDA">
-      <HintPath>..\PubDir\HjCommDA.dll</HintPath>
+    <Reference Include="HjCommDA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug_NingHe\HjCommDA.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\PubDir\log4net.dll</HintPath>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug_NingHe\log4net.dll</HintPath>
     </Reference>
     <Reference Include="QyTech.Communication">
       <HintPath>..\PubDir\QyTech.Communication.dll</HintPath>

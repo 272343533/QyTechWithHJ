@@ -39,6 +39,7 @@ namespace QyTech.Core.BLL
                         || newobjtype.ToString().Contains(typeof(ulong).FullName)
                         || newobjtype.ToString().Contains(typeof(char).FullName)
                         || newobjtype.ToString().Contains(typeof(byte).FullName)
+                        || newobjtype.ToString().Contains(typeof(bool).FullName)
                        )
                     {
                         foreach (PropertyInfo pi in obj.GetType().GetProperties())
@@ -93,6 +94,7 @@ namespace QyTech.Core.BLL
                         || newobjtype.ToString().Contains(typeof(ulong).FullName)
                         || newobjtype.ToString().Contains(typeof(char).FullName)
                         || newobjtype.ToString().Contains(typeof(byte).FullName)
+                       || newobjtype.ToString().Contains(typeof(bool).FullName)
                        )
                     {
                         foreach (PropertyInfo pi in obj.GetType().GetProperties())

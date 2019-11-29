@@ -82,7 +82,6 @@ namespace QyTech.ProtocalHrzWd2
                 }
 
                 EntityManager<HrzGathAlarm>.Add<HrzGathAlarm>(obj);
-
                
                 OnProtocalDataReceivedProgress(recdPtr.m_userid, obj);
                 obj = null;

@@ -17,7 +17,17 @@ using QyTech.Core.Refection;
 namespace QyTech.Communication
 {
   
+    /// <summary>
+    /// 数据到达
+    /// </summary>
+    /// <param name="commno"></param>
+    /// <param name="obj"></param>
     public delegate void delProtocalDataReceived(string commno, object obj);
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="commno"></param>
+    /// <param name="cmds"></param>
     public delegate void delProtocalDeviceCommand(string commno, List<DeviceCmd> cmds);
 
     //public delegate void delHrzCommData(HrzCommGath hcg, int[,] CurvePoints);
@@ -473,7 +483,12 @@ namespace QyTech.Communication
             {
                 int fromaddr = Convert.ToInt32(bsProtocalObj.FromAddr.Substring(2, 4), 16);
                 int toaddr = Convert.ToInt32(bsProtocalObj.ToAddr.Substring(2, 4), 16);
-                return CreateModbusRtuReadCommand(simno, 0x01, 0x03, fromaddr, toaddr - fromaddr + 1);
+
+                int operflag = 0x03;
+                if (bsProtocalObj.ParseType == "ModBus_RTU_05")
+                    operflag = 0x01;
+
+                return CreateModbusRtuReadCommand(simno, 0x01, operflag, fromaddr, toaddr - fromaddr + 1);
             }
         }
 
@@ -536,8 +551,11 @@ namespace QyTech.Communication
                 log.Error("buildcommandsforgather: 卡号为" + simno + "-" + ex.Message);
             }
             cmd2send.NeedSendTime = DateTime.Now;
-            if (Convert.ToInt32(cmd2send.Command.Substring(10,2),16)*2>=10)
-                cmd2send.Response = "0103"+(Convert.ToInt32(cmd2send.Command.Substring(10,2),16)*2).ToString("X");
+            if (cmd2send.Command.Substring(0, 4) == "0101"){
+                cmd2send.Response = "0101"+ (Convert.ToInt32(cmd2send.Command.Substring(10, 2), 16) /8+1).ToString("X2");
+            }
+            else if (Convert.ToInt32(cmd2send.Command.Substring(10,2),16)*2>=10)
+                cmd2send.Response = "0103"+(Convert.ToInt32(cmd2send.Command.Substring(10,2),16)*2).ToString("X2");
             else
                 cmd2send.Response = "01030" + (Convert.ToInt32(cmd2send.Command.Substring(10, 2), 16) * 2).ToString("X");
             return cmd2send;
@@ -766,7 +784,7 @@ namespace QyTech.Communication
                 DTUProduct Dev = EntityManager<DTUProduct>.GetBySql<DTUProduct>("CommNo='" + simno + "'");
                 List<DetailDevice> hrzjzs = BaseDABll.GetDetailDevice(Dev.Id);
 
-                int InitAddr = Convert.ToInt32(bsProtItems[0].StartRegAddress.Substring(2), 16);
+                int InitAddr = Convert.ToInt32(bsProtocalObj.FromAddr, 16);
                 int ToAddr = Convert.ToInt32(bsProtocalObj.ToAddr, 16);
                
                 //获取曲线数据中的最大地址和最小地址
@@ -848,6 +866,12 @@ namespace QyTech.Communication
          
         }
 
+        /// <summary>
+        /// 有的参数解码后要乘以或除一个系数，才是真正的值，也就是用整形代替浮点型，或更大范围的数据
+        /// </summary>
+        /// <param name="val"></param>
+        /// <param name="subOrMul"></param>
+        /// <returns></returns>
         private static object GetFactVal(object val, string subOrMul)
         {
             try

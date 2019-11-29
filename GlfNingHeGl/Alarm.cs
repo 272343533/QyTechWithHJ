@@ -22,6 +22,7 @@ namespace QyTech.GlfNingHeGl
             : base(bsP_Id)
         {
             log = log4net.LogManager.GetLogger(this.GetType().Name);
+          
         }
 
 
@@ -40,7 +41,7 @@ namespace QyTech.GlfNingHeGl
             {
                 HrzGathAlarm obj = new HrzGathAlarm();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
-                obj.Det_Id = (Guid)hrzjzs[1].Id;
+                obj.Det_Id = (Guid)hrzjzs[4].Id;
                 obj.bsO_Id = Org.Id;
 
                 int bufflen;

@@ -36,7 +36,7 @@ namespace QyTech.GlfNingHeGl
             {
                 HrzGathRange obj = new HrzGathRange();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
-                obj.Det_Id = (Guid)hrzjzs[0].Id;
+                obj.Det_Id = (Guid)hrzjzs[3].Id;
                 obj.bsO_Id = Org.Id;
 
                 int bufflen;

@@ -74,15 +74,10 @@ namespace QyTech.GlfNingHeBgl
                 System.Reflection.PropertyInfo propertyInfo = type.GetProperty("Temp" + (i + 1).ToString()); //获取指定名称的属性
                 propertyInfo.SetValue(objtarget, val, null); //给对应属性赋值
 
-
             }
 
             return base.CreateModbusRtuWriteCommand<HjPlcParaControlCurve>(simno, objtarget, bsProtItems);
         }
-
-
-
-
 
         public override int Parse(GPRS_DATA_RECORD recdPtr)
         {

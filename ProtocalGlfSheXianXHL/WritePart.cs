@@ -40,7 +40,7 @@ namespace QyTech.ProtocalHrzSheXianXHL
             int resualt = 1;
             try
             {
-                HJHrzControlData2Part1 obj = new HJHrzControlData2Part1();
+                OTStandDataHrzControl1 obj = new OTStandDataHrzControl1();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
                 obj.Det_Id = (Guid)hrzjzs[0].Id;
                 obj.bsO_Id = Org.Id;
@@ -62,7 +62,7 @@ namespace QyTech.ProtocalHrzSheXianXHL
                         Buffer.BlockCopy(GetData, (ItemAddr - InitAddr) * 2, buff, 0, bufflen);
                         CrossHiLow(ref buff);
 
-                        obj = (HJHrzControlData2Part1)SetValueByReflectionFromBytes<HJHrzControlData2Part1>(obj, pi, propertyInfo, buff);
+                        obj = (OTStandDataHrzControl1)SetValueByReflectionFromBytes<OTStandDataHrzControl1>(obj, pi, propertyInfo, buff);
 
 
                     }
@@ -72,17 +72,17 @@ namespace QyTech.ProtocalHrzSheXianXHL
                     }
                 }
 
-                try
-                {
-                    obj.F11C_11F = Convert.ToDateTime("20" + obj.F11C.Substring(0, 2) + "-" + obj.F11C.Substring(2, 2) +
-                        "-" + obj.F11D.Substring(0, 2) + " " + obj.F11D.Substring(2, 2) + ":" + obj.F11E.Substring(0, 2) +
-                        ":" + obj.F11E.Substring(2, 2));
+                //try
+                //{
+                //    obj.F11C_11F = Convert.ToDateTime("20" + obj.F11C.Substring(0, 2) + "-" + obj.F11C.Substring(2, 2) +
+                //        "-" + obj.F11D.Substring(0, 2) + " " + obj.F11D.Substring(2, 2) + ":" + obj.F11E.Substring(0, 2) +
+                //        ":" + obj.F11E.Substring(2, 2));
 
-                }
-                catch { }
+                //}
+                //catch { }
 
 
-                EntityManager<HJHrzControlData2Part1>.Add<HJHrzControlData2Part1>(obj);
+                EntityManager<OTStandDataHrzControl1>.Add<OTStandDataHrzControl1>(obj);
                 
                 ////是否需要作为集中存储
                 //NewHJGathData2 Hj2Read = EntityManager<NewHJGathData2>.GetBySql<NewHJGathData2>("bsO_Id='" + obj.bsO_Id.ToString() + "'");
@@ -111,7 +111,7 @@ namespace QyTech.ProtocalHrzSheXianXHL
             if (ReadPacketCommand.CommNo != null && !ReadPacketCommand.CommNo.Equals(""))
                 return ReadPacketCommand;
             else
-                return base.CreateModbusRtuReadCommand(simno, 0x01, 0x03, 0x100, 0x0151 + 1 - 0x100);
+                return base.CreateModbusRtuReadCommand(simno, 0x01, 0x03, 0x70, 0x00D5 + 1 - 0x70);
             //010301000052C5CB
         }
 

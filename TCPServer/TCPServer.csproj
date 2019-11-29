@@ -43,7 +43,7 @@
     </Reference>
     <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Debug\QyTech.Core.dll</HintPath>
+      <HintPath>..\PubDir\QyTech.Core.dll</HintPath>
     </Reference>
     <Reference Include="SunMvcExpress.Dao, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

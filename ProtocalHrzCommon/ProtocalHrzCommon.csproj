@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E747BDD-497F-4CB2-99A5-7EF6A67A2814}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProtocalHrzCommon</RootNamespace>
+    <AssemblyName>ProtocalHrzCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug_NingHe\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HjCommDA, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Debug_NingHe\HjCommDA.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\PubDir\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Communication">
+      <HintPath>..\PubDir\QyTech.Communication.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Core">
+      <HintPath>..\PubDir\QyTech.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="QyTech.Core.Refectioin">
+      <HintPath>..\PubDir\QyTech.Core.Refectioin.dll</HintPath>
+    </Reference>
+    <Reference Include="SunMvcExpress.Dao">
+      <HintPath>..\..\QinYiMvc\WebPub\SunMvcExpress.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HRZCommonAlarm.cs" />
+    <Compile Include="HRZCommonProtocalFac.cs" />
+    <Compile Include="HRZCommonRange.cs" />
+    <Compile Include="HRZCommonReadDataStr.cs" />
+    <Compile Include="HRZCommonReadData.cs" />
+    <Compile Include="HRZCommonWritePart.cs" />
+    <Compile Include="HRZCommonWritePartCurve.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonAlarm_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonCoil_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonProtocalFac.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonRange_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonReadDataStr_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonReadGGUnit_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonReadGGUnit_DetNo_LY.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonReadGGUnit_DetNo_ZZ.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonReadHrz_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonReadLUnit_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonReadLUnit_DetNo_LY.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonReadLUnit_DetNo_ZZ.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonWritePartCurve_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\GLFCommonWritePart_DetNo.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="ProtocalGlfComm_DetNo\Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon.csproj.FileListAbsolute.txt" />
+    <Content Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon.dll" />
+    <Content Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon.pdb" />
+    <Content Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon_DetNo.csproj.FileListAbsolute.txt" />
+    <Content Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon_DetNo.dll" />
+    <Content Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon_DetNo.pdb" />
+    <Content Include="ProtocalGlfComm_DetNo\ProtocalGlfCommon_DetNo.csproj" />
+    <Content Include="ProtocalGlfComm_DetNo\ProtocalGlfCommon_DetNo.csproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ProtocalGlfComm_DetNo\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon.csproj.CopyComplete" />
+    <None Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon.csproj.CoreCompileInputs.cache" />
+    <None Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon_DetNo.csproj.CopyComplete" />
+    <None Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon_DetNo.csproj.CoreCompileInputs.cache" />
+    <None Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfCommon_DetNo.csprojAssemblyReference.cache" />
+    <None Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfJhkh.csproj.CoreCompileInputs.cache" />
+    <None Include="ProtocalGlfComm_DetNo\obj\Debug\ProtocalGlfJhkh.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProtocalGlfComm_DetNo\bin\Release\" />
+    <Folder Include="ProtocalGlfComm_DetNo\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -9,6 +9,13 @@ namespace QyTech.Communication
 {
     public class IBytesConverter
     {
+
+        /// <summary>
+        /// 对象转换为byte[]
+        /// </summary>
+        /// <param name="obj">对象</param>
+        /// <param name="UnifType">对象的统一类型</param>
+        /// <returns></returns>
         public static byte[] ToBytes(object obj,string UnifType)
         {
            byte[] buff= new byte[1];
@@ -38,9 +45,23 @@ namespace QyTech.Communication
                 buff = exPackZipBCD.ToBytes(Convert.ToUInt16(obj));
             else if (UnifType == "HEATTEMP")
                 buff = exHEATTEMP.ToBytes(obj.ToString());
+            else if (UnifType == "BIN_CN4")
+                buff = exPackBIN_CN4.ToBytes(Convert.ToSingle(obj));
+            else if (UnifType == "BIN_CN8")
+                buff = exPackBIN_CN8.ToBytes(Convert.ToDouble(obj));
+            else if (UnifType == "Coil05")
+                buff = Coil05.ToBytes(Convert.ToBoolean(obj));
 
             return buff;
         }
+
+
+        /// <summary>
+        /// byte[]转换为对象
+        /// </summary>
+        /// <param name="buff">字节数组</param>
+        /// <param name="UnifType">要转为的类型</param>
+        /// <returns></returns>
         public static object FromBytes(byte[] buff, string UnifType)
         {
             object val;
@@ -78,12 +99,24 @@ namespace QyTech.Communication
                 val = exHEATTEMP.FromBytes(buff);
             else if (UnifType == "DWORD")
                 val = BitConverter.ToUInt32(buff, 0).ToString();
+            else if (UnifType == "BIN_CN4")
+                val = exPackBIN_CN4.FromBytes(buff);
+            else if (UnifType == "BIN_CN8")
+                val = exPackBIN_CN8.FromBytes(buff);
+            else if (UnifType == "Coil05")
+                val = Coil05.FromBytes(buff);
             else
-                val = 0;
+                val = -9999;
 
             return val;
         }
      
+        /// <summary>
+        /// 把object转换为需要的UnifType类型
+        /// </summary>
+        /// <param name="obj">数据</param>
+        /// <param name="UnifType">要转换成的类型</param>
+        /// <returns></returns>
         public static object ToRightType(object obj, string UnifType)
         {
             object val;
@@ -120,8 +153,10 @@ namespace QyTech.Communication
             else if (UnifType == "HEATTEMP")
                 val = exHEATTEMP.ToUnifType(obj.ToString());
             else
-                val = Convert.ToSingle(obj);
+                val =-9999;
             return val;
         }
+
+        
     }
 }

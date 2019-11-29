@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Debug\</OutputPath>
+    <OutputPath>..\Debug_SheXian\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,21 +39,20 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\QinYiMvc\WebPub\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="QyTech.Communication">
-      <HintPath>..\Debug\QyTech.Communication.dll</HintPath>
+    <Reference Include="QyTech.Communication, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\QyTech.Communication.dll</HintPath>
     </Reference>
     <Reference Include="QyTech.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\PubDir\QyTech.Core.dll</HintPath>
     </Reference>
-    <Reference Include="QyTech.Core.Common">
-      <HintPath>..\..\QinYiMvc\WebPub\QyTech.Core.Common.dll</HintPath>
-    </Reference>
     <Reference Include="QyTech.Core.Refectioin">
       <HintPath>..\PubDir\QyTech.Core.Refectioin.dll</HintPath>
     </Reference>
-    <Reference Include="SunMvcExpress.Dao">
-      <HintPath>..\..\QinYiMvc\WebPub\SunMvcExpress.Dao.dll</HintPath>
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

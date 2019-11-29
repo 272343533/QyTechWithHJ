@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\Debug\</OutputPath>
+    <OutputPath>..\Debug_SheXian\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -33,8 +33,13 @@
     <Reference Include="HjCommDA">
       <HintPath>..\PubDir\HjCommDA.dll</HintPath>
     </Reference>
-    <Reference Include="log4net">
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\PubDir\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="ProtocalGlfCommon_DetNo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\ProtocalGlfCommon_DetNo.dll</HintPath>
     </Reference>
     <Reference Include="QyTech.Communication">
       <HintPath>..\PubDir\QyTech.Communication.dll</HintPath>
@@ -45,8 +50,9 @@
     <Reference Include="QyTech.Core.Refectioin">
       <HintPath>..\PubDir\QyTech.Core.Refectioin.dll</HintPath>
     </Reference>
-    <Reference Include="SunMvcExpress.Dao">
-      <HintPath>..\..\QinYiMvc\WebPub\SunMvcExpress.Dao.dll</HintPath>
+    <Reference Include="SunMvcExpress.Dao, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PubDir\SunMvcExpress.Dao.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -62,6 +68,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtocalFac.cs" />
     <Compile Include="Range.cs" />
+    <Compile Include="ReadData1.cs" />
     <Compile Include="ReadData.cs" />
     <Compile Include="WritePart.cs" />
   </ItemGroup>

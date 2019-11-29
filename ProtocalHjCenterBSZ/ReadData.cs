@@ -11,7 +11,6 @@ using QyTech.Protocal.Modbus;
 using QyTech.HDGprs;
 using QyTech.Protocal;
 using HjCommDA;
-using QyTech.Core.BLL;
 using log4net;
 
 namespace QyTech.HjCenterBSZ

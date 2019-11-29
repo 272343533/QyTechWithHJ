@@ -23,7 +23,8 @@ using SunMvcExpress.Core;
 using SunMvcExpress.Core.BLL;
 
 using log4net;
-
+ using System.Net;
+using System.Net.Sockets;
 
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
 namespace TCPServer
@@ -56,13 +57,13 @@ namespace TCPServer
         //通讯号与设备号注册时有：170911001------15995555673
         //设备号与ip port 对应起来
 
-        List<ZProxySocket> list = new List<ZProxySocket>();
+        List<ZProxySocket> lstProxySocket = new List<ZProxySocket>();
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+
             //ZdFT_Packet test = new Write130801();
             //byte[] bytes=test.Create("19.5,23");
-
+            this.textBox4.Text=GetLocalIP();
 
 
             ZdFT_Packet pack = new ZdFT_Packet();
@@ -178,6 +179,35 @@ namespace TCPServer
             //thrReStart.Start();
 
         }
+
+    /// <summary>
+    /// 获取本机IP地址
+    /// </summary>
+    /// <returns>本机IP地址</returns>
+    public static string GetLocalIP()
+    {
+        try
+        {
+            string HostName = Dns.GetHostName(); //得到主机名
+            IPHostEntry IpEntry = Dns.GetHostEntry(HostName);
+            for (int i = 0; i < IpEntry.AddressList.Length; i++)
+            {
+                //从IP地址列表中筛选出IPv4类型的IP地址
+                //AddressFamily.InterNetwork表示此IP为IPv4,
+                //AddressFamily.InterNetworkV6表示此地址为IPv6类型
+                if (IpEntry.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return IpEntry.AddressList[i].ToString();
+                }
+            }
+            return "";
+        }
+        catch (Exception ex)
+        {
+            return ex.Message;
+        }
+
+    }
         /// <summary>
         /// 接受消息
         /// </summary>
@@ -187,23 +217,29 @@ namespace TCPServer
         {
             int errPos = 1000;
             log.Info(DateTime.Now.ToString("HH:mm:ss") + ":信息来了");
-            this.Invoke((Action)(delegate()
+            this.Invoke((Action)(delegate ()
             {
-                BaseMessage bmsg = message as BaseMessage;
-                ZdFT_Packet msg = (message as BaseMessage).PackContent;
+            BaseMessage bmsg = message as BaseMessage;
+            ZdFT_Packet msg = (message as BaseMessage).PackContent;
 
-                log.Info(DateTime.Now.ToString("HH:mm:ss") + ":信息来了1");
-                if (bmsg.MsgType == 1)//注册
-                {
-                    // IpToCommNo.Add(msg.StrRawData.Substring(9, 11), proxySocket.RemoteIP + ":" + proxySocket.RemotePort);
-                    Ip2DtuNo.Add(proxySocket.RemoteIP + ":" + proxySocket.RemotePort, msg.StrRawData.Substring(0, 9));
+            log.Info(DateTime.Now.ToString("HH:mm:ss") + ":信息来了1");
+            if (bmsg.MsgType == 1)//注册
+            {
+                string DtuNo = msg.StrRawData.Substring(0, 9);
+                // IpToCommNo.Add(msg.StrRawData.Substring(9, 11), proxySocket.RemoteIP + ":" + proxySocket.RemotePort);
+                Ip2DtuNo.Add(proxySocket.RemoteIP + ":" + proxySocket.RemotePort, DtuNo);// msg.StrRawData.Substring(0, 9));
 
                     textBox6.AppendText("注册:" + DateTime.Now.ToString("MM-dd HH:mm:ss")  + "---" + proxySocket.RemoteIP + ":" + proxySocket.RemotePort + "->"+msg.StrRawData.Substring(0, 9) + "---" + msg.StrRawData.Substring(9)+ "\r\n");
-                    DtuNo2Socket.Add(msg.StrRawData.Substring(0, 9), proxySocket);
-                    Socket2DtuNo.Add(proxySocket, msg.StrRawData.Substring(0, 9));
-                    if (!LinkedDtu.Contains(msg.StrRawData.Substring(0, 9)))
+                    if (DtuNo2Socket.ContainsKey(DtuNo))
                     {
-                        LinkedDtu.Add(msg.StrRawData.Substring(0, 9));
+                        DtuNo2Socket.Remove(DtuNo);
+                    }
+                    DtuNo2Socket.Add(DtuNo, proxySocket);
+
+                    Socket2DtuNo.Add(proxySocket, DtuNo);
+                    if (!LinkedDtu.Contains(DtuNo))
+                    {
+                        LinkedDtu.Add(DtuNo);
                         nudMaxDtuCount.Value=LinkedDtu.Count;
                     }
                 }
@@ -362,9 +398,9 @@ namespace TCPServer
                 this.Invoke((Action)(delegate()
                 {
                     textBox6.AppendText("断开:" + DateTime.Now.ToString("MM-dd HH:mm:ss") + "---" + proxySocket.RemoteIP + ":" + proxySocket.RemotePort + "\r\n");
-                    if (list.Contains(proxySocket))
+                    if (lstProxySocket.Contains(proxySocket))
                     {
-                        list.Remove(proxySocket);
+                        lstProxySocket.Remove(proxySocket);
                         log.Error("list.Remove(proxySocket);");
                     }
 
@@ -373,13 +409,12 @@ namespace TCPServer
                         DtuNo2Socket.Remove(Socket2DtuNo[proxySocket]);
                         log.Error("DtuNo2Socket.Remove(Socket2DtuNo[proxySocket]);");
                     }
+
                     if   (Socket2DtuNo.ContainsKey(proxySocket)){
                         Socket2DtuNo.Remove(proxySocket);
                         log.Error(" Socket2DtuNo.Remove(proxySocket);");
                     }
                     textBox6.AppendText("断开:" + DateTime.Now.ToString("MM-dd HH:mm:ss") + "---" + proxySocket.RemoteIP + ":" + proxySocket.RemotePort + "Recorded \r\n");
-
-
                 }));
             }
             catch (Exception ex)
@@ -395,7 +430,7 @@ namespace TCPServer
         {
             this.Invoke((Action)(delegate()
             {
-                list.Add(proxySocket);
+                lstProxySocket.Add(proxySocket);
                 textBox6.AppendText("连接:" + DateTime.Now.ToString("MM-dd HH:mm:ss") + "---" + proxySocket.RemoteIP + ":" + proxySocket.RemotePort + "\r\n");
             }));
         }
@@ -428,6 +463,11 @@ namespace TCPServer
         private void button3_Click(object sender, EventArgs e)
         {
             string[] address = this.textBox4.Text.Replace(" ","").Split(new char[] { '.',',' });
+            if (address.Length!=4)
+            {
+                MessageBox.Show("请核对ip地址！");
+                return;
+            }
             int port = Convert.ToInt32(this.textBox3.Text);
 
             byte[] byteaddr = new byte[4];
@@ -522,7 +562,7 @@ namespace TCPServer
         {
             try
             {
-                foreach (ZProxySocket proxy in list)
+                foreach (ZProxySocket proxy in lstProxySocket)
                 {
                     proxy.SendMessage(new BaseMessage(2, sendpack));
                     log.Info("发送：" + sendpack.StrRawData);
@@ -541,7 +581,7 @@ namespace TCPServer
                 proxy.SendMessage(new BaseMessage(2, sendpack));
                 if (chkRecord.Checked && (comboBox3.Text == "" || comboBox3.Text == sendpack.DtuNo))
                 {
-                    textBox1.AppendText(sendpack.DtuNo + ":发送数据:" + sendpack.StrRawData + "\r\n");
+                    textBox1.AppendText(sendpack.DtuNo + ":发送数据:" +sendpack.CommFlag +"---"+ sendpack.StrRawData + "\r\n");
                 }
                 log.Info("发送：" + sendpack.StrRawData);
 
@@ -794,17 +834,36 @@ namespace TCPServer
                     if (m_Terminated)
                         break;
                 }
-
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             txtCurrSocket.Text = "";
-            foreach (ZProxySocket item in list)
+
+            foreach (string key in DtuNo2Socket.Keys)
             {
-                //asf
-                txtCurrSocket.AppendText(Socket2DtuNo[item] + ":" + item.RemoteIP + ":" + item.RemotePort + "\r\n\r\n");
+                try
+                {
+                    txtCurrSocket.AppendText(key + ":" + DtuNo2Socket[key].RemoteIP + ":" + DtuNo2Socket[key].RemotePort + "\r\n");
+                }
+                catch (Exception ex)
+                {
+                    txtCurrSocket.AppendText(":" + DtuNo2Socket[key].RemoteIP + ":" + DtuNo2Socket[key].RemotePort + "\r\n");
+                }
+            }
+
+            txtCurrSocket.AppendText("lst:\r\n");
+            foreach (ZProxySocket item in lstProxySocket)
+            {
+                try
+                {
+                    txtCurrSocket.AppendText(Socket2DtuNo[item] + ":" + item.RemoteIP + ":" + item.RemotePort + "\r\n");
+                }
+                catch(Exception ex)
+                {
+                    txtCurrSocket.AppendText(":" + item.RemoteIP + ":" + item.RemotePort + "\r\n");
+                }
             }
         }
 
@@ -828,11 +887,11 @@ namespace TCPServer
 
             FullSocketsCount=Convert.ToInt16(this.nudMaxDtuCount.Value);
 
-            if (list.Count < FullSocketsCount || DtuNo2Socket.Count < FullSocketsCount)
+            if (lstProxySocket.Count < FullSocketsCount || DtuNo2Socket.Count < FullSocketsCount)
             {
                 if (DateTime.Now.AddMinutes(-5) > LessFullSocketsDt)
                 {
-                    string disp=DateTime.Now.ToString("MM-dd HH:mm:ss") + "----：sockets:" + list.Count.ToString() + "---register:" + DtuNo2Socket.Count.ToString() + "\r\n";
+                    string disp=DateTime.Now.ToString("MM-dd HH:mm:ss") + "----：sockets:" + lstProxySocket.Count.ToString() + "---register:" + DtuNo2Socket.Count.ToString() + "\r\n";
                     log.Info("断开连接，不能重新连接，重新初始化："+disp);
                     txtCurrSocket.Text += disp;
                     _server = null;
@@ -845,7 +904,7 @@ namespace TCPServer
                     if(!FirstHappened )
                     {
                         LessFullSocketsDt = DateTime.Now;
-                        txtCurrSocket.Text += DateTime.Now.ToString("MM-dd HH:mm:ss") + "----sockets:" + list.Count.ToString()+"---register:"+DtuNo2Socket.Count.ToString()+"\r\n";
+                        txtCurrSocket.Text += DateTime.Now.ToString("MM-dd HH:mm:ss") + "----sockets:" + lstProxySocket.Count.ToString()+"---register:"+DtuNo2Socket.Count.ToString()+"\r\n";
                         FirstHappened=true;
                     }
                 }
@@ -857,7 +916,7 @@ namespace TCPServer
                 {
                     LessFullSocketsDt = DateTime.MaxValue;
                     FirstHappened = false;
-                    txtCurrSocket.Text += DateTime.Now.ToString("MM-dd HH:mm:ss") + "----sockets:" + list.Count.ToString() + "---register:" + DtuNo2Socket.Count.ToString() + "\r\n";
+                    txtCurrSocket.Text += DateTime.Now.ToString("MM-dd HH:mm:ss") + "----sockets:" + lstProxySocket.Count.ToString() + "---register:" + DtuNo2Socket.Count.ToString() + "\r\n";
                 }
                       
             }

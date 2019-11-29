@@ -286,7 +286,7 @@ namespace QyTech.Protocal.Modbus
                 slaveaddr = packet[0];
                 operatMode = packet[1];
                 Crc = new byte[2];
-                if (operatMode == 3)
+                if (operatMode == 3||operatMode==0x01)//0x01 add on 2019-02-20
                 {
                     DataLength = packet[2];
                     if (DataLength != packet.Length - 5)
@@ -331,6 +331,7 @@ namespace QyTech.Protocal.Modbus
                             return 1;
                     }
                 }
+                
             }
             catch (Exception ex)
             {

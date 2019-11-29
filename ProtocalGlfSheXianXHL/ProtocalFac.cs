@@ -40,7 +40,7 @@ namespace QyTech.ProtocalHrzSheXianXHL
 
         public override string[] GetNeedNormalReadClassMethodName()
         {
-            return new string[] { "ReadData.CreateReadCommand" };
+            return new string[] { "ReadData.CreateReadCommand", "ReadData1.CreateReadCommand" };
         }
 
 

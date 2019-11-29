@@ -39,7 +39,7 @@ namespace QyTech.GlfNingHeGl
             int resualt = 1;
             try
             {
-                OTStandDataGlf obj = new OTStandDataGlf();
+                OTStandDataGlf_ZZ obj = new OTStandDataGlf_ZZ();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
                 obj.Det_Id = (Guid)hrzjzs[0].Id;
                 obj.Det_Name = hrzjzs[0].DeviceName;
@@ -63,7 +63,7 @@ namespace QyTech.GlfNingHeGl
                         Buffer.BlockCopy(GetData, (ItemAddr - InitAddr) * 2, buff, 0, bufflen);
                         CrossHiLow(ref buff);
 
-                        obj = (OTStandDataGlf)SetValueByReflectionFromBytes<OTStandDataGlf>(obj, pi, propertyInfo, buff);
+                        obj = (OTStandDataGlf_ZZ)SetValueByReflectionFromBytes<OTStandDataGlf_ZZ>(obj, pi, propertyInfo, buff);
 
 
                     }
@@ -73,7 +73,7 @@ namespace QyTech.GlfNingHeGl
                     }
                 }
 
-                EntityManager<OTStandDataGlf>.Add<OTStandDataGlf>(obj);
+                EntityManager<OTStandDataGlf_ZZ>.Add<OTStandDataGlf_ZZ>(obj);
 
                 NewStandDataGlf newobj = EntityManager<NewStandDataGlf>.GetBySql<NewStandDataGlf>("Det_Id='" + obj.Det_Id.ToString() + "'");
 

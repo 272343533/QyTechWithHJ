@@ -19,7 +19,7 @@ namespace QyTech.GlfNingHeBgl
     {
         //采集数据
         //public static bsOrganize ORG=new bsOrganize();
-     
+        int hrzNo = 3;
         public WritePart1(int bsP_Id)
             : base(bsP_Id)
         {
@@ -41,7 +41,7 @@ namespace QyTech.GlfNingHeBgl
             {
                 OTStandDataHrzControl2 obj = new OTStandDataHrzControl2();
                 obj.GathDt = Convert.ToDateTime(recdPtr.m_recv_date);
-                obj.Det_Id = (Guid)hrzjzs[0].Id;
+                obj.Det_Id = (Guid)hrzjzs[3].Id;
                 obj.bsO_Id = Org.Id;
 
                 int bufflen;
@@ -62,8 +62,6 @@ namespace QyTech.GlfNingHeBgl
                         CrossHiLow(ref buff);
 
                         obj = (OTStandDataHrzControl2)SetValueByReflectionFromBytes<OTStandDataHrzControl2>(obj, pi, propertyInfo, buff);
-
-
                     }
                     catch (Exception ex)
                     {

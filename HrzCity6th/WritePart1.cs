@@ -45,7 +45,7 @@ namespace QyTech.HrzCity6th
 
                 int bufflen;
                 Type type = obj.GetType(); //获取类型
-                int InitAddr = Convert.ToInt32(bsProtItems[0].StartRegAddress.Substring(2), 16);
+                int InitAddr = Convert.ToInt32(bsProtocalObj.FromAddr.Substring(2), 16);
                 int ItemAddr;
 
                 foreach (bsProtItem pi in bsProtItems)
