@@ -103,12 +103,12 @@ namespace QyTech.HjProtocal1
         /// <returns></returns>
         public override DeviceCmd CreateModbusRtuWriteCommand(string simno, byte slaveaddr, int address, params object[] args)
         {
-            object[] willargs = new object[args.Length - 2];
-            for (int i = 0; i < willargs.Length; i++)
-            {
-                willargs[i] = args[i];
-            }
-            return base.CreateModbusRtuWriteCommand(simno, slaveaddr, address, willargs);
+            //object[] willargs = new object[args.Length - 2];
+            //for (int i = 0; i < willargs.Length; i++)
+            //{
+            //    willargs[i] = args[i];
+            //}
+            return base.CreateModbusRtuWriteCommand(simno, slaveaddr, address, args);
         }
 
 
