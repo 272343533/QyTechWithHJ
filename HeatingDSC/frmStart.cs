@@ -30,7 +30,8 @@ using DTU_JiXun;
 using System.Runtime.InteropServices;
 
 using QyTech.DtuDll;
-
+using qyTech.Services.UdpHeart;
+using System.Configuration;
 //using HeatingDSC.SR_DownCommand;
 
 //[assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
@@ -44,7 +45,7 @@ namespace HeatingDSC
         private frmProgParamSet frmconf = new frmProgParamSet();
 
         private bool m_Terminated = false;
-
+        HeartClient hclient;
         private SortedDictionary<string, string> OpSimNo = new SortedDictionary<string, string>();
 
           //定义窗口消息，用来响应DTU的消息
@@ -69,6 +70,8 @@ namespace HeatingDSC
         private SortedList<string, List<DeviceCmd>> slDeviceCmdsNoraml = new SortedList<string, List<DeviceCmd>>();
         private SortedList<string, List<DeviceCmd>> slDeviceCmdsUnNoraml = new SortedList<string, List<DeviceCmd>>();
 
+        //发送的队列，前面生成的sortedlist需要发送的话写入这个queue
+        private SortedList<string,Queue<DeviceCmd>> slSendQueue=new SortedList<string, Queue<DeviceCmd>>();
 
         private List<DeviceCmd> QxyCmds = new List<DeviceCmd>();
 
@@ -498,7 +501,8 @@ namespace HeatingDSC
                 try
                 {
                     List<DeviceCmd> cmds = CreateWeatDownCommand(bsP_Id, slSimnoWithbsP[bsP_Id]);
-
+                    if (cmds == null)
+                        continue;
                     foreach (DeviceCmd cmd in cmds)
                     {
 
@@ -513,7 +517,8 @@ namespace HeatingDSC
                 }
                 catch (Exception ex)
                 {
-                    LogHelper.Error(ex);
+                    //LogHelper.Error(ex);
+                    LogHelper.Info("",ex.Message);
                 }
             }
 
@@ -570,7 +575,7 @@ namespace HeatingDSC
             }
             catch (Exception ex)
             {
-                LogHelper.Error(ex);
+                LogHelper.Error("不需下发气象数据!",ex);
             }
             return cmds;
         }
@@ -930,7 +935,8 @@ namespace HeatingDSC
         }
         private void frmStart_Load(object sender, EventArgs e)
         {
-          
+            hclient = new HeartClient();
+            hclient.SendHeart();
             //PostMessage(this.Handle, USER + 1, 168, 51898);
     
 
@@ -1061,8 +1067,12 @@ namespace HeatingDSC
 
         private void SendUnNormalCommand()
         {
-            int IntervalBetweenCmds = 5;//5秒钟发送一条命令
-
+            int IntervalBetweenCmds = 10;
+            try
+            {
+                IntervalBetweenCmds=ProgParams.IntervalBetweenCmds_UnNormal;//5秒钟发送一条命令
+            }
+            catch { }
             while (!m_Terminated)
             {
                 try
@@ -1135,9 +1145,11 @@ namespace HeatingDSC
                                 lock (LockObjectSendCmd)
                                 {
                                     SendCommand(cmd);
-                                    slDeviceCmdsUnNoraml[key.ToString()][i].ExpiredTime = DateTime.Now;
+                                    //2020-01-19 begin 实际上一直没有使用该字段，所以从这里注释掉了，应该是过期后去掉该命令
+                                    //slDeviceCmdsUnNoraml[key.ToString()][i].ExpiredTime = DateTime.Now;
+                                    //2020-01-19 end
                                 }
-                                for (int t = 0; t < ProgParams.IntervalBetweenCmds; t++)
+                                for (int t = 0; t < ProgParams.IntervalBetweenCmds_UnNormal; t++)
                                 {
                                     if (m_Terminated)
                                         break;
@@ -1565,8 +1577,12 @@ namespace HeatingDSC
             else
             {
                 //缺省消息处理
-                base.WndProc(ref m);
-
+                try
+                {
+                    base.WndProc(ref m);
+                }
+                catch (Exception ex)
+                { }
             }
         }
 
@@ -1668,6 +1684,8 @@ namespace HeatingDSC
 
         private void frmStart_FormClosing(object sender, FormClosingEventArgs e)
         {
+            LogHelper.Error("Closing:", this.txtSimNo.Text);
+            hclient.Dispose();
             if (启动服务ToolStripMenuItem.Checked)
             {
                 启动服务ToolStripMenuItem.Checked = false;
@@ -2483,7 +2501,7 @@ namespace HeatingDSC
                                 if (OpSimNo.ContainsKey(ui.m_userid))
                                 {
                                     //if (OpSimNo[ui.m_userid].IndexOf("已掉线")==-1)
-                                    OpSimNo[ui.m_userid] = t_now.ToString("yyyy-MM-dd HH:mm:ss") + "超时(" + t_update.ToString("yyyy-MM-dd HH:mm:ss")+ ")";
+                                    OpSimNo[ui.m_userid] = t_loginDt.ToString("yyyy-MM-dd HH:mm:ss") + "超时(" + t_update.ToString("yyyy-MM-dd HH:mm:ss")+ ")";
                                     //else
                                     //    OpSimNo[ui.m_userid] = OpSimNo[ui.m_userid] +DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                                 }

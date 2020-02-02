@@ -117,11 +117,11 @@ namespace QyTech.HjProtocal12
                     newobj = EntityOperate.Copy<NewStandDataHrz>(obj);
                     EntityManager<NewStandDataHrz>.Add<NewStandDataHrz>(newobj);
                 }
-                else
-                {
-                    EntityOperate.Copy<NewStandDataHrz>(obj, newobj, "Det_Id");
-                    EntityManager<NewStandDataHrz>.Modify<NewStandDataHrz>(newobj);
-                }
+                //else
+                //{
+                //    EntityOperate.Copy<NewStandDataHrz>(obj, newobj, "Det_Id");
+                //    EntityManager<NewStandDataHrz>.Modify<NewStandDataHrz>(newobj);
+                //}
                 //数据已经准备好，准备采集，需要加入读取指令
                 if ((Convert.ToUInt16(obj.F118) & 0x01) == 0x01)
                 {

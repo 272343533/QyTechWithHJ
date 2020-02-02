@@ -88,11 +88,11 @@ namespace QyTech.HjCenterBSZ
                     newobj = EntityOperate.Copy<NewStandDataHrz>(obj);
                     EntityManager<NewStandDataHrz>.Add<NewStandDataHrz>(newobj);
                 }
-                else
-                {
-                    EntityOperate.Copy<NewStandDataHrz>(obj, newobj, "Det_Id");
-                    EntityManager<NewStandDataHrz>.Modify<NewStandDataHrz>(newobj);
-                }
+                //else
+                //{
+                //    EntityOperate.Copy<NewStandDataHrz>(obj, newobj, "Det_Id");
+                //    EntityManager<NewStandDataHrz>.Modify<NewStandDataHrz>(newobj);
+                //}
 
                 OnProtocalDataReceivedProgress(recdPtr.m_userid, obj);
             }

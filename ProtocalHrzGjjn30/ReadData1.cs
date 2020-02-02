@@ -19,7 +19,7 @@ namespace QyTech.ProtocalHrzGjjn30
     {
         public ReadData1(int bsP_Id):base(bsP_Id)
         {
-            DetailDevNo =1;
+            DetailDevNo =0;
         }
         
     }

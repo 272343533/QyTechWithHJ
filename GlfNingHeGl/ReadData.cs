@@ -82,11 +82,11 @@ namespace QyTech.GlfNingHeGl
                     newobj = EntityOperate.Copy<NewStandDataGlf>(obj);
                     EntityManager<NewStandDataGlf>.Add<NewStandDataGlf>(newobj);
                 }
-                else
-                {
-                    EntityOperate.Copy<NewStandDataGlf>(obj, newobj, "Det_Id");
-                    EntityManager<NewStandDataGlf>.Modify<NewStandDataGlf>(newobj);
-                }
+                //else
+                //{
+                //    EntityOperate.Copy<NewStandDataGlf>(obj, newobj, "Det_Id");
+                //    EntityManager<NewStandDataGlf>.Modify<NewStandDataGlf>(newobj);
+                //}
                 OnProtocalDataReceivedProgress(recdPtr.m_userid, obj);
 
                 obj = null;

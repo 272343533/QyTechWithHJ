@@ -768,7 +768,7 @@
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.Name = "frmStart";
-            this.Text = "数据采集程序";
+            this.Text = "数据采集程序W";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmStart_FormClosing);
             this.Load += new System.EventHandler(this.frmStart_Load);
             this.contextMenuStrip1.ResumeLayout(false);

@@ -25,7 +25,7 @@ namespace QyTech.ProtocalHrzGjjn30
         {
             string typename = this.GetType().Name;
             log = log4net.LogManager.GetLogger(typename);
-            DetailDevNo =2;
+            DetailDevNo =1;
         }
     }
 }

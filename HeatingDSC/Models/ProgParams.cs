@@ -13,6 +13,7 @@ namespace HeatingDSC.Models
         static public int dtutimeout;
         static public int IntervalBetweenCmds;
         static public int IntervalBetweenGath;
+        static public int IntervalBetweenCmds_UnNormal;
         static private int gprsComPort;
 
         static public int gprsComPort_JX { get; set; }
@@ -88,6 +89,8 @@ namespace HeatingDSC.Models
         {
             dtutimeout = int.Parse(XmlConfig.GetValue("DTUTimeout"));
             IntervalBetweenCmds = int.Parse(XmlConfig.GetValue("CmdInterval"));
+            IntervalBetweenCmds_UnNormal = int.Parse(XmlConfig.GetValue("CmdInterval_UnNormal"));
+            
             gprsComPort = int.Parse(XmlConfig.GetValue("GPRSPort"));
             IntervalBetweenGath = int.Parse(XmlConfig.GetValue("QueryTimer"));
             try

@@ -101,11 +101,11 @@ namespace QyTech.GlfNingHeGl
                     newobj = EntityOperate.Copy<NewStandDataGldy>(obj);
                     EntityManager<NewStandDataGldy>.Add<NewStandDataGldy>(newobj);
                 }
-                else
-                {
-                    EntityOperate.Copy<NewStandDataGldy>(obj, newobj, "Det_Id");
-                    EntityManager<NewStandDataGldy>.Modify<NewStandDataGldy>(newobj);
-                }
+                //else
+                //{
+                //    EntityOperate.Copy<NewStandDataGldy>(obj, newobj, "Det_Id");
+                //    EntityManager<NewStandDataGldy>.Modify<NewStandDataGldy>(newobj);
+                //}
 
                 OnProtocalDataReceivedProgress(recdPtr.m_userid, obj);
 
