@@ -16,7 +16,7 @@ using QyTech.Core.Refection;
 [assembly: log4net.Config.XmlConfigurator(ConfigFile = "log4net.config", Watch = true)]
 namespace QyTech.Communication
 {
-  
+
     /// <summary>
     /// 数据到达
     /// </summary>
@@ -158,15 +158,15 @@ namespace QyTech.Communication
 
         public event delProtocalDataReceived delProtocalDataReceivedhandler;
         public event delProtocalDeviceCommand delProtocalDeviceCommanddhandler;
-        
+
         protected string Simno;//sim卡号
         protected bsOrganize Org;
         protected DTUProduct Dev;
 
         public bsProtocal bsProtocalObj;
         public List<bsProtItem> bsProtItems;
-        public Dictionary<string,bsProtocal> subProtocals;//code,协议
-        
+        public Dictionary<string, bsProtocal> subProtocals;//code,协议
+
         public string Producttype;//的类型
 
         protected DateTime PacketTime;
@@ -180,7 +180,7 @@ namespace QyTech.Communication
         protected int PacketLength;
 
         //每个包都有一个读命令，如果已经建立，则直接使用,写不需要，因为需要从db中读取数据。
-        protected DeviceCmd ReadPacketCommand=new DeviceCmd();
+        protected DeviceCmd ReadPacketCommand = new DeviceCmd();
 
         /// <summary>
         /// 常用临时变量
@@ -192,14 +192,14 @@ namespace QyTech.Communication
             bsProtocalObj = null;
             bsProtItems = null;
             subProtocals = null;
-       }
+        }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="CodingOrDeCoding">0：编码 1：解码</param>
         /// <param name="bsP_Id">编码时的协议族bsP_id，解码时细节bsP_Id</param>
-        public IProtocal(int CodingOrDeCoding,int bsP_Id)
+        public IProtocal(int CodingOrDeCoding, int bsP_Id)
         {
             string classname = this.GetType().Name;
             log = log4net.LogManager.GetLogger(classname);
@@ -210,11 +210,11 @@ namespace QyTech.Communication
             }
             else
             {
-                bsProtocalObj = EntityManager<bsProtocal>.GetByPk<bsProtocal>("Id" , bsP_Id);
+                bsProtocalObj = EntityManager<bsProtocal>.GetByPk<bsProtocal>("Id", bsP_Id);
             }
             bsProtItems = EntityManager<bsProtItem>.GetListNoPaging<bsProtItem>("bsP_Id='" + bsProtocalObj.Id.ToString() + "' and FieldName is not null and DataMemo=1", "StartRegAddress");
-           
-         }
+
+        }
 
         public IProtocal(int bsP_Id)
         {
@@ -224,7 +224,7 @@ namespace QyTech.Communication
             {
                 //按照协议族处理，编码时
                 GetSubProtocalInfo(bsP_Id);
-                if (subProtocals.Count>0)
+                if (subProtocals.Count > 0)
                     bsProtocalObj = subProtocals[classname];
                 else
                     //按照协议处理，解码时
@@ -234,12 +234,12 @@ namespace QyTech.Communication
             {
                 //按照协议处理，解码时
                 bsProtocalObj = EntityManager<bsProtocal>.GetByPk<bsProtocal>("Id", bsP_Id);
-          
+
             }
             bsProtItems = EntityManager<bsProtItem>.GetListNoPaging<bsProtItem>("bsP_Id='" + bsProtocalObj.Id.ToString() + "' and FieldName is not null and DataMemo=1", "StartRegAddress");
 
         }
-      
+
         private void GetSubProtocalInfo(int bsP_Id)
         {
             List<bsProtocal> bsProtocals = EntityManager<bsProtocal>.GetListNoPaging<bsProtocal>("PId='" + bsP_Id + "'", "");
@@ -266,19 +266,19 @@ namespace QyTech.Communication
         }
 
 
-       /// <summary>
+        /// <summary>
         ///  把转换为字节数组
-       /// </summary>
-       /// <param name="obj">要转换的类对象</param>
-       /// <returns></returns>
-        public virtual byte[] Create(object obj) 
+        /// </summary>
+        /// <param name="obj">要转换的类对象</param>
+        /// <returns></returns>
+        public virtual byte[] Create(object obj)
         {
             //依赖于配置数据标准类型的正确，目前提供了把对象转换为单个对象的方式，这里暂时不使用，需要可自行实现
             byte[] bytes = new byte[255];
             try
             {
                 //获取数据
-             
+
                 int InitAddr = Convert.ToInt32(bsProtocalObj.FromAddr.Substring(2), 16);
                 Type type = obj.GetType(); //获取类型
                 int arrIndex = 0;
@@ -445,10 +445,10 @@ namespace QyTech.Communication
             }
             return str;
         }
-        public static string bytes2Hex(byte[] b,int len)
+        public static string bytes2Hex(byte[] b, int len)
         {
             string str = "";
-            for (int i = 0; i < (b.Length > len?len:b.Length); i++)
+            for (int i = 0; i < (b.Length > len ? len : b.Length); i++)
             {
                 str += b[i].ToString("X2");
             }
@@ -464,7 +464,15 @@ namespace QyTech.Communication
             }
             return str;
         }
-
+        public static byte[] Hex2Bytes(string hex)
+        {
+            byte[] bb = new byte[(hex.Length + 1) / 2];
+            for (int i = 0; i < bb.Length; i++)
+            {
+                bb[i] = Convert.ToByte(hex.Substring(i * 2, 2), 16);
+            }
+            return bb;
+        }
         protected void WriteError(string desp, Exception ex)
         {
             log.Error(desp + ":" + ex.InnerException + "-" + ex.Message);
@@ -492,7 +500,7 @@ namespace QyTech.Communication
             }
         }
 
-        public DeviceCmd CreateReadCommand(string simno,bsProtocal bsp)
+        public DeviceCmd CreateReadCommand(string simno, bsProtocal bsp)
         {
             if (ReadPacketCommand != null && ReadPacketCommand.CommNo != null && !ReadPacketCommand.CommNo.Equals(""))
             {
@@ -500,7 +508,7 @@ namespace QyTech.Communication
             }
             else
             {
-                int fromaddr = Convert.ToInt32(bsp.FromAddr.Substring(2,4),16);
+                int fromaddr = Convert.ToInt32(bsp.FromAddr.Substring(2, 4), 16);
                 int toaddr = Convert.ToInt32(bsp.ToAddr.Substring(2, 4), 16);
                 return CreateModbusRtuReadCommand(simno, 0x01, 0x03, fromaddr, toaddr - fromaddr + 1);
             }
@@ -551,11 +559,12 @@ namespace QyTech.Communication
                 log.Error("buildcommandsforgather: 卡号为" + simno + "-" + ex.Message);
             }
             cmd2send.NeedSendTime = DateTime.Now;
-            if (cmd2send.Command.Substring(0, 4) == "0101"){
-                cmd2send.Response = "0101"+ (Convert.ToInt32(cmd2send.Command.Substring(10, 2), 16) /8+1).ToString("X2");
+            if (cmd2send.Command.Substring(0, 4) == "0101")
+            {
+                cmd2send.Response = "0101" + (Convert.ToInt32(cmd2send.Command.Substring(10, 2), 16) / 8 + 1).ToString("X2");
             }
-            else if (Convert.ToInt32(cmd2send.Command.Substring(10,2),16)*2>=10)
-                cmd2send.Response = "0103"+(Convert.ToInt32(cmd2send.Command.Substring(10,2),16)*2).ToString("X2");
+            else if (Convert.ToInt32(cmd2send.Command.Substring(10, 2), 16) * 2 >= 10)
+                cmd2send.Response = "0103" + (Convert.ToInt32(cmd2send.Command.Substring(10, 2), 16) * 2).ToString("X2");
             else
                 cmd2send.Response = "01030" + (Convert.ToInt32(cmd2send.Command.Substring(10, 2), 16) * 2).ToString("X");
             return cmd2send;
@@ -586,8 +595,8 @@ namespace QyTech.Communication
 
             ModbusCommand.RegStartAddr = address;//首地址16进制
 
-            ModbusCommand.RegOpNum = buff.Length/2;
-         
+            ModbusCommand.RegOpNum = buff.Length / 2;
+
             try
             {
                 ModbusCommand.byteArr = buff;
@@ -623,7 +632,7 @@ namespace QyTech.Communication
         /// <param name="slaveaddr"></param>
         /// <param name="args"></param>
         /// <returns></returns>
-        public virtual DeviceCmd CreateModbusRtuWriteCommand(string simno, byte slaveaddr,int address, params object[] args)
+        public virtual DeviceCmd CreateModbusRtuWriteCommand(string simno, byte slaveaddr, int address, params object[] args)
         {
             byte[] sendData = new byte[2];
             byte[] sendDataTmp = new byte[255];
@@ -768,7 +777,7 @@ namespace QyTech.Communication
         {
             return new DeviceCmd();
         }
- 
+
         /// <summary>
         /// 标准下发转换接口,依赖于配置数据标准类型的正确
         /// </summary>
@@ -786,13 +795,13 @@ namespace QyTech.Communication
 
                 int InitAddr = Convert.ToInt32(bsProtocalObj.FromAddr, 16);
                 int ToAddr = Convert.ToInt32(bsProtocalObj.ToAddr, 16);
-               
+
                 //获取曲线数据中的最大地址和最小地址
                 List<object> lstargs = new List<object>();
 
                 Type type = obj.GetType(); //获取类型
 
-                for(int i=0;i<bsProtItems.Count;i++)
+                for (int i = 0; i < bsProtItems.Count; i++)
                 {
                     bsProtItem pi = bsProtItems[i];
                     object val;
@@ -800,11 +809,11 @@ namespace QyTech.Communication
                     {
                         System.Reflection.PropertyInfo propertyInfo = type.GetProperty(pi.FieldName); //获取指定名称的属性
                         val = GetValueByReflectionFromDb(obj, pi, propertyInfo);
-                        
-                        lstargs.Add(val==null?0:val);
 
-                        int CurAddr=Convert.ToInt16(pi.StartRegAddress.Substring(2),16);
-                        if (i < bsProtItems.Count-1)
+                        lstargs.Add(val == null ? 0 : val);
+
+                        int CurAddr = Convert.ToInt16(pi.StartRegAddress.Substring(2), 16);
+                        if (i < bsProtItems.Count - 1)
                         {
                             int NextAddr = Convert.ToInt16(bsProtItems[i + 1].StartRegAddress.Substring(2), 16);
                             if (NextAddr - CurAddr != pi.RegCount)
@@ -815,7 +824,7 @@ namespace QyTech.Communication
                                 }
                             }
                         }
-                     
+
                     }
                     catch (Exception ex)
                     {
@@ -823,9 +832,9 @@ namespace QyTech.Communication
                     }
                 }
                 object[] args = lstargs.ToArray();
-                
-                return CreateModbusRtuWriteCommand(simno, 0x01,InitAddr, args);
- 
+
+                return CreateModbusRtuWriteCommand(simno, 0x01, InitAddr, args);
+
             }
             catch (Exception ex)
             {
@@ -834,7 +843,7 @@ namespace QyTech.Communication
             }
             return new DeviceCmd();
         }
- 
+
 
         public static object SetValueByReflectionFromBytes<T>(T obj, bsProtItem pi, PropertyInfo propertyInfo, byte[] buff)
         {
@@ -844,7 +853,7 @@ namespace QyTech.Communication
                 object val = IBytesConverter.FromBytes(buff, pi.UnifType);
                 val = GetFactVal(val, pi.Memo);
                 obj = (T)BaseFunc.SetValue<T>(obj, propertyInfo, val);
-                 
+
                 //if (BaseFunc.IsType(propertyInfo.PropertyType, "System.Decimal"))
                 //{
                 //    if (val.ToString() != "")
@@ -858,12 +867,12 @@ namespace QyTech.Communication
             }
             catch (Exception ex)
             {
-                log.Error("SetValueByReflection:" + ex.Message + "(" + propertyInfo .Name+ ")");
+                log.Error("SetValueByReflection:" + ex.Message + "(" + propertyInfo.Name + ")");
                 throw ex;
             }
 
             return obj;
-         
+
         }
 
         /// <summary>
@@ -897,7 +906,7 @@ namespace QyTech.Communication
             try
             {
                 object val = propertyInfo.GetValue(obj);
-                return  IBytesConverter.ToRightType(val, pi.UnifType);
+                return IBytesConverter.ToRightType(val, pi.UnifType);
             }
             catch (Exception ex)
             {
